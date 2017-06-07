@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <title>Poster Works for FIT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="posters.css"> -->
+  <script src="vue.js"></script>
+  <script src="jquery.min.js"></script>
+    <script src="jquery.lazy.js"></script>
+    <script type='text/json' src='database.json'></script>
+  <!-- <script src="scrolltopHorizontal.js"></script> -->
+
+  <script src="horizontalscroll.js"></script>
+
+  <!-- <script src="scroll.js"></script> -->
+</head>
+<body style="display:flex">
+    <nav v-bind:style="styleObject" class="main-nav">
+      <div class="home selected">Rocco Piscatello: Poster Works for FIT</div>
+      <div class="nav-item selected"><a href="index.html">Book</a></div>
+      <div class="nav-item "><a href="posters.html">Posters</a></div>
+      <div class="nav-item">Cart (0)</div>
+          <!-- <nav-item
+            v-for="item in navPages"
+            v-bind:nav="item"
+            v-bind:key="item.id"
+            v-bind:class="classNames">
+          </nav-item> -->
+    </nav>
+    <section class="page1" style="display:flex;flex-direction:row;align-items:center;justify-content:center">
+      <!-- <button onClick ="cartCount++">
+      </button> -->
+      <div class="imgsquare poster1 lazy" style="width:80vw;height:100vh;background-size:cover;margin:0" id="poster1" data-src="img/VAP_Milton.jpg"></div>
+    </section>
+    <section class="page2" style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+        <div class="imgsquare poster1 lazy"></div>
+        <div class="imgsquare poster2 lazy"></div>
+        <div class="imgsquare poster3 lazy"></div>
+        <div class="imgsquare poster4 lazy"></div>
+        <div class="imgsquare poster5 lazy"></div>
+
+    </section>
+
+
+    <!-- <section class="page2" style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+      <div class="imgsquare poster25"></div>
+      <div class="imgsquare poster26"></div>
+    </section> -->
+
+
+
+</body>
+<!-- <script src="nav.js"></script> -->
+<script src="main.js"></script>
+
+</html>

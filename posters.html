@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <title>Poster Works for FIT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css" />
+  <script src="vue.js"></script>
+  <script src="jquery.min.js"></script>
+    <script src="jquery.lazy.js"></script>
+    <script type='text/json' src='database.json'></script>
+  <script src="scrolltopHorizontal.js"></script>
+
+  <script src="horizontalscroll.js"></script>
+
+  <!-- <script src="scroll.js"></script> -->
+</head>
+<body style="display:flex">
+    <nav v-bind:style="styleObject" class="main-nav">
+      <div class="home selected">Rocco Piscatello: Poster Works for FIT</div>
+      <div class="nav-item"><a href="index.html">Book</a></div>
+      <div class="nav-item selected"><a href="posters.html">Posters</a></div>
+      <div class="nav-item">Cart (0)</div>
+          <!-- <nav-item
+            v-for="item in navPages"
+            v-bind:nav="item"
+            v-bind:key="item.id"
+            v-bind:class="classNames">
+          </nav-item> -->
+    </nav>
+    <section class="page1" style="display:flex;flex-direction:row;align-items:center;justify-content:center">
+      <!-- <button onClick ="cartCount++">
+      </button> -->
+      <div class="intro" >
+        <h2 style="font-size:5vw;margin-top:0">Visiting Artist Program</h2>
+        <h3 style="font-weight:300" class="posterblurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.</h3>
+      </div>
+    </section>
+    <section class="page2" style="">
+        <div class="imgsquare poster1 lazy" id="poster1" data-src="img/weboptimized/noshadow/poster1.png"></div>
+        <div class="imgsquare poster2 lazy"  id="poster2"data-src="img/weboptimized/noshadow/poster2.png"></div>
+        <div class="imgsquare poster3 lazy"  id="poster3" data-src="img/weboptimized/noshadow/poster3.png"></div>
+        <div class="imgsquare poster4 lazy"  id="poster4" data-src="img/weboptimized/noshadow/poster4.png"></div>
+        <div class="imgsquare poster5 lazy"  id="poster5" data-src="img/weboptimized/noshadow/poster5.png"></div>
+        <div class="imgsquare poster6 lazy"  id="poster6" data-src="img/weboptimized/noshadow/poster6.png"></div>
+        <div class="imgsquare poster7 lazy"  id="poster7" data-src="img/weboptimized/noshadow/poster7.png"></div>
+        <div class="imgsquare poster8 lazy"  id="poster8" data-src="img/weboptimized/noshadow/poster8.png"></div>
+        <div class="imgsquare poster9 lazy"  id="poster9" data-src="img/weboptimized/noshadow/poster9.png"></div>
+        <div class="imgsquare poster10 lazy"  id="poster10" data-src="img/weboptimized/noshadow/poster10.png"></div>
+        <div class="imgsquare poster11 lazy"  id="poster11" data-src="img/weboptimized/noshadow/poster11.png"></div>
+        <div class="imgsquare poster12 lazy"  id="poster12" data-src="img/weboptimized/noshadow/poster12.png"></div>
+        <div class="imgsquare poster13 lazy"  id="poster13" data-src="img/weboptimized/noshadow/poster13.png"></div>
+        <div class="imgsquare poster14 lazy"  id="poster14" data-src="img/weboptimized/noshadow/poster14.png"></div>
+        <div class="imgsquare poster15 lazy"  id="poster15" data-src="img/weboptimized/noshadow/poster15.png"></div>
+        <div class="imgsquare poster16 lazy"  id="poster16" data-src="img/weboptimized/noshadow/poster16.png"></div>
+        <div class="imgsquare poster17 lazy"  id="poster17" data-src="img/weboptimized/noshadow/poster17.png"></div>
+        <div class="imgsquare poster18 lazy"  id="poster18" data-src="img/weboptimized/noshadow/poster18.png"></div>
+        <div class="imgsquare poster19 lazy"  id="poster19" data-src="img/weboptimized/noshadow/poster19.png"></div>
+        <div class="imgsquare poster20 lazy"  id="poster20" data-src="img/weboptimized/noshadow/poster20.png"></div>
+        <div class="imgsquare poster21 lazy"  id="poster21" data-src="img/weboptimized/noshadow/poster21.png"></div>
+        <div class="imgsquare poster22 lazy"  id="poster22" data-src="img/weboptimized/noshadow/poster22.png"></div>
+        <div class="imgsquare poster23 lazy"  id="poster23" data-src="img/weboptimized/noshadow/poster23.png"></div>
+        <div class="imgsquare poster24 lazy"  id="poster24" data-src="img/weboptimized/noshadow/poster24.png"></div>
+    </section>
+
+    <section class="hidden-page">
+      <nav class="button"><i class="fa fa-angle-double-up"></i></nav>
+      <div id="imgloader"></div>
+      <div id="copyContainer">
+        <h2 id="imgTitle"></h2>
+        <h3 id="imgCopy"></h3>
+        <div id="buy"><h3>Buy</h3></div>
+        <div id="share"><h3>Share</h3></div>
+      </div>
+
+    </section>
+    <!-- <section class="page2" style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+      <div class="imgsquare poster25"></div>
+      <div class="imgsquare poster26"></div>
+    </section> -->
+
+
+
+</body>
+<script src="nav.js"></script>
+<script src="main.js"></script>
+
+</html>
