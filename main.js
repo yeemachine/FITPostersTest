@@ -7,7 +7,7 @@ $(window).on('beforeunload', function() {
          $('#lazy-container .lazy').lazy({
              appendScroll: $('#lazy-container'),
              effect: "fadeIn",
-             effectTime: 1000,
+             effectTime: 500,
              threshold: 0
          });
      });
