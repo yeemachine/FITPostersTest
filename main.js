@@ -5,7 +5,10 @@ $(window).on('beforeunload', function() {
 
   $(function() {
          $('#lazy-container .lazy').lazy({
-             appendScroll: $('#lazy-container')
+             appendScroll: $('#lazy-container'),
+             effect: "fadeIn",
+             effectTime: 1000,
+             threshold: 0
          });
      });
 
@@ -45,8 +48,8 @@ $( document ).ready(function() {
               var imgcontainer = document.getElementById('imgloader');
               imgcontainer.style.backgroundImage = 'url('+imgURL+')';
               console.log(state);
-              // $('.page1,.page2').css({'margin-top':'-99vh','transition':'1s'});
-              // $('.main-nav').css({'top':'-99vh','transition':'1s'});
+              $('.page1,.page2').css({'margin-top':'-99vh','transition':'1s'});
+              $('.main-nav').css({'top':'-99vh','transition':'1s'});
             }
             $('#imgTitle').html(imgTitle);
             $('#imgCopy').html(imgPara);
