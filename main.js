@@ -3,14 +3,17 @@ $(window).on('beforeunload', function() {
   });
 
 
-
-
   $(function() {
-       $('.lazy').lazy();
-   });
+         $('#lazy-container .lazy').lazy({
+             appendScroll: $('#lazy-container')
+         });
+     });
 
 
 $( document ).ready(function() {
+
+
+
   var state = ""
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
   if (isMobile.matches) {
@@ -36,21 +39,22 @@ $( document ).ready(function() {
          var imgTitle = data.posters[posterID].title
          var imgPara = data.posters[posterID].para
             if (state === 'mobile'){
-               $('body').css({'overflow-y':'hidden'});
+
             }
             else{
               var imgcontainer = document.getElementById('imgloader');
               imgcontainer.style.backgroundImage = 'url('+imgURL+')';
               console.log(state);
-              $('.page1,.page2').css({'margin-top':'-99vh','transition':'1s'});
-              $('.main-nav').css({'top':'-99vh','transition':'1s'});
+              // $('.page1,.page2').css({'margin-top':'-99vh','transition':'1s'});
+              // $('.main-nav').css({'top':'-99vh','transition':'1s'});
             }
             $('#imgTitle').html(imgTitle);
             $('#imgCopy').html(imgPara);
        });
 
       //  $('body').css({'overflow-y':'auto'});
-       $('.hidden-page').css({'top':'0vh'});
+      $('body').css({'overflow-y':'hidden'});
+       $('.hidden-page').css({'top':'0'});
        $('body').attr('status', 'locked');
 
 

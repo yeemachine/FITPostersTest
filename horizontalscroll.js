@@ -91,14 +91,10 @@ function handler(event) {
 
 $(function(){
 
-		$('html, body').mousewheel(function(event, delta) {
+		$('#lazy-container').mousewheel(function(event, delta) {
       if ($('body').attr('status') != 'locked') {
 			this.scrollLeft -= (delta * 100);
       }
 		});
 
 	});
-
-
-
-//# sourceMappingURL=zooming.js.map

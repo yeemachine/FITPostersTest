@@ -3,7 +3,10 @@ body{
   margin: 0;
   font-family: helvetica;
   font-size: 16px;
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  overflow-y:auto;
+  align-items: flex-start;
 }
 a{
   text-decoration: none;
@@ -73,16 +76,19 @@ a{
 }*/
 
 
-
+#lazy-container{
+  display:flex;flex-direction:row;position:fixed;overflow-y:hidden;overflow-x:scroll;width:100vw;height:100vh;
+}
 
 .main-nav{
   background-color: rgba(30,30,30,1);
   color:rgba(255,255,255,.5);
   width:100vw;
   height: 7.5vh;
+
+  position: fixed;
   top:0;
   left:0;
-  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -90,6 +96,7 @@ a{
   font-size: 16px;
   z-index: 999;
   transition: .5s;
+  overflow: auto;
 }
 .hidden-page{
   height: 100vh;
@@ -97,9 +104,11 @@ a{
   background-color: rgba(30,30,30,1);
   position: fixed;
   top:100vh;
+  left:0;
   transition: 1s;
   z-index: 999;
   overflow-y: scroll;
+  overflow: auto;
 }
 .nav-item{
   margin-right: 10vw;
@@ -111,6 +120,10 @@ a{
 .home{
   position: fixed;
   left:10vw;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .button{
   color: rgba(255,255,255,0.5);
@@ -160,9 +173,7 @@ a{
   background-size: contain;
   background-repeat: no-repeat;
 }
-.blurb{
-  position:absolute;width:25vw;right: 10vh;bottom: 15vh
-}
+
 .page2{
   width: auto;
   height: 100vh;
@@ -236,26 +247,18 @@ h2{
   .nav-item{
     display: none;
   }
-  .blurb{
-    position:absolute;width:80vw;right: 10vw;bottom: 15vh
-  }
+
   body{
-    display: flex;
-    flex-direction: column;
-    overflow-y:auto;
-    align-items: flex-end;
+
+    /*flex-direction: column;*/
 
   }
   .page2{
     display: inline-block;
-    flex-direction: column;
     width: 100vw;
-    justify-content: flex-start;
-    align-items: center;
 
   }
   .imgsquare{
-    display: block;
     width: 80vw;
     height: 112.915vw;
     margin-bottom: 40vw;
@@ -287,4 +290,10 @@ h2{
   .hidden-page{
     background-color: rgba(0,0,0,0.85)
   }
+  #lazy-container{
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
 }

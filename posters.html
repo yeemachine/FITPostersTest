@@ -27,6 +27,7 @@
             v-bind:class="classNames">
           </nav-item> -->
     </nav>
+    <container id="lazy-container" style="">
     <section class="page1" style="display:flex;flex-direction:row;align-items:center;justify-content:center">
       <!-- <button onClick ="cartCount++">
       </button> -->
@@ -35,7 +36,7 @@
         <h3 style="font-weight:300" class="posterblurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.</h3>
       </div>
     </section>
-    <section class="page2" style="">
+    <section class="page2 lazy" style="">
         <div class="imgsquare poster1 lazy" id="poster1" data-src="img/weboptimized/noshadow/poster1.png"></div>
         <div class="imgsquare poster2 lazy"  id="poster2"data-src="img/weboptimized/noshadow/poster2.png"></div>
         <div class="imgsquare poster3 lazy"  id="poster3" data-src="img/weboptimized/noshadow/poster3.png"></div>
@@ -61,7 +62,7 @@
         <div class="imgsquare poster23 lazy"  id="poster23" data-src="img/weboptimized/noshadow/poster23.png"></div>
         <div class="imgsquare poster24 lazy"  id="poster24" data-src="img/weboptimized/noshadow/poster24.png"></div>
     </section>
-
+  </container>
     <section class="hidden-page">
       <nav class="button"><i class="fa fa-angle-double-up"></i></nav>
       <div id="imgloader"></div>
@@ -81,7 +82,7 @@
 
 
 </body>
-<script src="nav.js"></script>
+<!-- <script src="nav.js"></script> -->
 <script src="main.js"></script>
 
 </html>
