@@ -290,6 +290,12 @@ h2{
   .hidden-page{
     background-color: rgba(0,0,0,0.85)
   }
+  .imgsquare:hover{
+  /*opacity: .3;*/
+  -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+  -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+  box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+  }
   #lazy-container{
     display: block;
     overflow-y: scroll;
