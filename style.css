@@ -77,9 +77,25 @@ a{
 
 
 #lazy-container{
-  display:flex;flex-direction:row;position:fixed;overflow-y:hidden;overflow-x:scroll;width:100vw;height:100vh;
+  display:flex;
+  flex-direction:row;
+  position:fixed;
+  overflow-y:hidden;
+  overflow-x:scroll;
+  width:100vw;
+  height:100vh;
+  align-items: center;
 }
-
+#lazy-container>.cartMode{
+  display:flex;
+  flex-direction:row;
+  position:fixed;
+  flex-wrap: wrap;
+  overflow-y:hidden;
+  overflow-x:scroll;
+  width:100vw;
+  height:80vh;
+}
 .main-nav{
   background-color: rgba(30,30,30,1);
   color:rgba(255,255,255,.5);
@@ -109,6 +125,9 @@ a{
   z-index: 999;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+.hidden-page.cartMode{
+  display: none;
 }
 .nav-item{
   margin-right: 10vw;
@@ -169,9 +188,15 @@ a{
 .page1{
   height: 100vh;
   width: 100vw;
-
   background-size: contain;
   background-repeat: no-repeat;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center
+}
+#lazy-container>.page1.cartMode{
+  display: none;
 }
 
 .page2{
@@ -179,6 +204,9 @@ a{
   height: 100vh;
   background-color: transparent;
   display:flex;flex-direction:row;justify-content:center;align-items:center;
+}
+#lazy-container>.page2.cartMode{
+  height: 80vh;
 }
 .posterblurb{
   width: 30vw;
@@ -210,6 +238,27 @@ a{
    -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
    -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
    box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+}
+.imgsquare.cartMode{
+  background-color:gainsboro;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition:.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:rgba(0,0,0,0);
+  opacity:1;
+   position:relative;
+   -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+   -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+   box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+  width: 10.62vh;
+  height: 15vh;
+  margin-right:5.31vh;
+  margin-left:5.31vh;
 }
 
 .imgsquare:hover{
