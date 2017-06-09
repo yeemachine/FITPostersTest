@@ -233,8 +233,9 @@ a{
   position: fixed;
   top:13.75vh;
   right:10vh;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0);
   pointer-events: none;
+  font-size:1vw;
 }
 .posterblurb{
   width: 30vw;
