@@ -211,8 +211,8 @@ a{
 #lazy-container>.page2.cartMode{
   height: initial;
   width: 50vw;
-  margin-top: 8.75vh;
-  margin-left: calc(5vh);
+  padding-top: 8.75vh;
+  padding-left: 5vh;
   justify-content: flex-start;
 }
 .item-list{

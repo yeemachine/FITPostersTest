@@ -72,6 +72,7 @@ $( document ).ready(function() {
 
 ///Go to cart state
   $('.cart').click(function() {
+    $('.page1,.page2,.main-nav').css({'transition':''});
     $('.cart').addClass('selected');
     $('.posterNav').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
