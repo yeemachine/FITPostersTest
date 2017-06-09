@@ -47,8 +47,11 @@ $( document ).ready(function() {
         $('body').css({'overflow-y':'hidden'});
         $('.hidden-page').css({'top':'0'});
         $('body').attr('status', 'locked');
-       }
+      }
 //////Cart view click
+      else{
+        $(this).toggleClass('selected');
+      }
    });
 
 ///Back to poster view

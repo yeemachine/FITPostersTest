@@ -207,6 +207,7 @@ a{
 }
 #lazy-container>.page2.cartMode{
   height: 80vh;
+  justify-content: flex-start;
 }
 .posterblurb{
   width: 30vw;
@@ -250,7 +251,7 @@ a{
   align-items: center;
   justify-content: center;
   color:rgba(0,0,0,0);
-  opacity:1;
+  opacity:.2;
    position:relative;
    -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
    -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
@@ -260,7 +261,9 @@ a{
   margin-right:5.31vh;
   margin-left:5.31vh;
 }
-
+.imgsquare.cartMode.selected{
+  opacity: 1
+}
 .imgsquare:hover{
 /*opacity: .3;*/
 transition: .25s;
