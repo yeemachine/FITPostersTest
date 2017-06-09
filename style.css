@@ -222,6 +222,10 @@ a{
 .item-list{
   display: none;
 }
+.item-list>ul>li{
+  text-decoration: none;
+  list-style: none;
+}
 #lazy-container>.item-list.cartMode{
   display: block;
   width: 40vw;
