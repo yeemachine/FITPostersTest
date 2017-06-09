@@ -4,19 +4,18 @@ $(window).on('beforeunload', function() {
 
 
 
-
-
+var selectedItems = []
+var state;
+var posterID;
 
 $( document ).ready(function() {
 
-  var state = ""
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
   if (isMobile.matches) {
       state="mobile"
   }else{
     state="desktop"
   }
-  console.log(state);
   $(window).resize(function() {
     if (isMobile.matches) {
         state="mobile"
@@ -27,11 +26,12 @@ $( document ).ready(function() {
   });
 ////Click Posters for more info
 
-   $('.imgsquare').click(function() {
 
+   $('.imgsquare').click(function() {
+     posterID = $(this).attr('id');
 //////Poster view click
      if ($('.imgsquare').attr('state') != 'cartMode') {
-         var posterID = $(this).attr('id');
+
          $.getJSON("database.json", function(data) {
              var imgURL = data.posters[posterID].url
              var imgTitle = data.posters[posterID].title
@@ -41,8 +41,7 @@ $( document ).ready(function() {
                   else{
                       var imgcontainer = document.getElementById('imgloader');
                       imgcontainer.style.backgroundImage = 'url('+imgURL+')';
-                      console.log(state);
-                      $('.page1,.page2').css({'margin-top':'-99vh','transition':'1s'});
+                       $('.page1,.page2').css({'margin-top':'-99vh','transition':'1s'});
                       $('.main-nav').css({'top':'-99vh','transition':'1s'});
                   }
               $('#imgTitle').html(imgTitle);
@@ -54,10 +53,38 @@ $( document ).ready(function() {
       }
 //////Cart view click
       else{
-        $(this).toggleClass('selected');
+        var cartItem = this
+         $.getJSON("database.json", function(data) {
+           var imgTitle = data.posters[posterID].title
+           var price = data.posters[posterID].price
+              // imgTitle = imgTitle.replace('<br><br>', ", ");
+
+
+           $(cartItem).toggleClass('selected');
+
+
+        if ($(cartItem).attr('status') != 'selected') {
+          $(cartItem).attr('status', 'selected');
+          selectedItems.push(imgTitle);
+          console.log(selectedItems);
+        }else{
+          $(cartItem).attr('status', '');
+          selectedItems = selectedItems.filter(function(item) {
+            return item !== imgTitle
+          })
+          console.log(selectedItems);
+        }
+        });
+
       }
    });
 
+
+
+   $('#buy').click(function() {
+     $('#'+posterID).addClass('selected');
+     $('#'+posterID).attr('status', 'selected');
+   });
 ///Back to poster view
    $('.button').click(function() {
      $('.page1,.page2').css({'margin-top':'','transition':'1s'});

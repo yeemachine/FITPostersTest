@@ -4,122 +4,146 @@
 		    "poster1": {
             "url":"img/weboptimized/noshadow/poster1.png",
             "title":"Milton Glaser",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster2": {
             "url":"img/weboptimized/noshadow/poster2.png",
             "title":"Glen Cummings",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster3": {
             "url":"img/weboptimized/noshadow/poster3.png",
             "title":"Jessica Walsh",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster4": {
             "url":"img/weboptimized/noshadow/poster4.png",
             "title":"Jake Barton",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster5": {
             "url":"img/weboptimized/noshadow/poster5.png",
             "title":"Julia Hoffman",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster6": {
             "url":"img/weboptimized/noshadow/poster6.png",
             "title":"Jessica Hische",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster7": {
             "url":"img/weboptimized/noshadow/poster7.png",
             "title":"David Gibson",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster8": {
             "url":"img/weboptimized/noshadow/poster8.png",
             "title":"Matteo Bologna",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster9": {
             "url":"img/weboptimized/noshadow/poster9.png",
             "title":"Stefan Sagmeister",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster10": {
             "url":"img/weboptimized/noshadow/poster10.png",
             "title":"David Carson",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster11": {
             "url":"img/weboptimized/noshadow/poster11.png",
             "title":"Paula Scher",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster12": {
             "url":"img/weboptimized/noshadow/poster12.png",
             "title":"Paula Scher",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster13": {
             "url":"img/weboptimized/noshadow/poster13.png",
             "title":"Takaaki Matsumoto",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster14": {
             "url":"img/weboptimized/noshadow/poster14.png",
             "title":"Takaaki Matsumoto",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+"price":28
         },
         "poster15": {
             "url":"img/weboptimized/noshadow/poster15.png",
             "title":"Helfand + Drenttel",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster16": {
             "url":"img/weboptimized/noshadow/poster16.png",
             "title":"Ivan Cher",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster17": {
             "url":"img/weboptimized/noshadow/poster17.png",
             "title":"Rocco Piscatello",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster18": {
             "url":"img/weboptimized/noshadow/poster18.png",
             "title":"Jan Wilker",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster19": {
             "url":"img/weboptimized/noshadow/poster19.png",
-            "title":"Michael Bierut<br><br>Massimo Vignelli",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "title":"Michael Bierut, Massimo Vignelli",
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster20": {
             "url":"img/weboptimized/noshadow/poster20.png",
             "title":"Rock Schultz",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster21": {
             "url":"img/weboptimized/noshadow/poster21.png",
-            "title":"Willi Kunz<br><br>Julia Hasting",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "title":"Willi Kunz, Julia Hasting",
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster22": {
             "url":"img/weboptimized/noshadow/poster22.png",
-            "title":"Bridget de Socio<br><br>Kenneth ed Benguiat",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "title":"Bridget de Socio, Kenneth ed Benguiat",
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster23": {
             "url":"img/weboptimized/noshadow/poster23.png",
-            "title":"Marshall Arisman<br><br>Scott Stowell",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "title":"Marshall Arisman, Scott Stowell",
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         },
         "poster24": {
             "url":"img/weboptimized/noshadow/poster24.png",
-            "title":"Lisa Strausfeld<br><br>Steven Heller<br><br>Milton Glaser",
-            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan."
+            "title":"Lisa Strausfeld, Steven Heller, Milton Glaser",
+            "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
+            "price":28
         }
 
 
