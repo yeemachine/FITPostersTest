@@ -3,6 +3,10 @@ $(window).on('beforeunload', function() {
   });
 
 
+
+
+
+
 $( document ).ready(function() {
 
   var state = ""
@@ -70,7 +74,7 @@ $( document ).ready(function() {
   $('.cart').click(function() {
     $('.cart').addClass('selected');
     $('.posterNav').removeClass('selected');
-    $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page').addClass('cartMode');
+    $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
     $('.lazy').lazy({
                bind: "event",

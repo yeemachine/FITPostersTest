@@ -35,4 +35,18 @@ $( document ).ready(function() {
     }
 
 
+
+
+    document.body.addEventListener("mousemove", function(event) {
+        window.innerHTML = event.clientY;
+        windowHeight = document.documentElement.clientHeight * 0.075;
+
+        //Check if we are in the top area of the page.
+        if(event.clientY < windowHeight) {
+              $('.main-nav').css({'margin-top':''})
+        }
+
+    });
+
+
 });

@@ -89,12 +89,15 @@ a{
 #lazy-container>.cartMode{
   display:flex;
   flex-direction:row;
-  position:fixed;
   flex-wrap: wrap;
-  overflow-y:hidden;
   overflow-x:scroll;
   width:100vw;
   height:80vh;
+}
+#lazy-container.cartMode{
+
+  overflow-y:scroll;
+  align-items: flex-start;
 }
 .main-nav{
   background-color: rgba(30,30,30,1);
@@ -130,7 +133,7 @@ a{
   display: none;
 }
 .nav-item{
-  margin-right: 10vw;
+  margin-right: 10vh;
 }
 .nav-item:hover{
   color:rgba(255,255,255,1);
@@ -138,7 +141,7 @@ a{
 }
 .home{
   position: fixed;
-  left:10vw;
+  left:10vh;
   height: 7.5vh;
   display: flex;
   align-items: center;
@@ -206,8 +209,24 @@ a{
   display:flex;flex-direction:row;justify-content:center;align-items:center;
 }
 #lazy-container>.page2.cartMode{
-  height: 80vh;
+  height: initial;
+  width: 50vw;
+  margin-top: 8.75vh;
+  margin-left: calc(5vh);
   justify-content: flex-start;
+}
+.item-list{
+  display: none;
+}
+#lazy-container>.item-list.cartMode{
+  display: block;
+  width: 40vw;
+  height: 80vh;
+  position: fixed;
+  top:13.75vh;
+  right:10vh;
+  background-color: red;
+  pointer-events: none;
 }
 .posterblurb{
   width: 30vw;
@@ -217,7 +236,7 @@ a{
   height: 70vh;
   display: flex;
   flex-direction: column;
-  margin-left: 10vw;
+  margin-left: 10vh;
 }
 .imgsquare{
   width: 49.56vh;
@@ -258,8 +277,7 @@ a{
    box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
   width: 10.62vh;
   height: 15vh;
-  margin-right:5.31vh;
-  margin-left:5.31vh;
+  margin:5vh;
 }
 .imgsquare.cartMode.selected{
   opacity: 1
