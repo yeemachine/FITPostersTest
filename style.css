@@ -205,6 +205,9 @@ a{
 #lazy-container>.page1.cartMode{
   display: none;
 }
+#lazy-container>.page1.bookMode{
+  display: none;
+}
 
 .page2{
   width: auto;
@@ -219,6 +222,9 @@ a{
   padding-left: 5vh;
   justify-content: flex-start;
 }
+#lazy-container>.page2.bookMode{
+  display: none;
+}
 .item-list{
   display: none;
 }
@@ -227,7 +233,6 @@ a{
   list-style: none;
 }
 #lazy-container>.item-list.cartMode{
-  display: block;
   width: 40vw;
   height: 80vh;
   position: fixed;
@@ -236,6 +241,9 @@ a{
   background-color: rgba(0,0,0,0);
   pointer-events: none;
   font-size:1vw;
+}
+#lazy-container>.item-list.bookMode{
+  display: none;
 }
 .posterblurb{
   width: 30vw;

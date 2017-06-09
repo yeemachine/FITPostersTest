@@ -50,10 +50,12 @@ $( document ).ready(function() {
         $('body').css({'overflow-y':'hidden'});
         $('.hidden-page').css({'top':'0'});
         $('body').attr('status', 'locked');
+
+        $('#buy').addClass(posterID)
       }
 //////Cart view click
       else{
-        var cartItem = this
+        var cartItem = '.'+posterID
          $.getJSON("database.json", function(data) {
            var imgTitle = data.posters[posterID].title
            var price = data.posters[posterID].price
@@ -83,6 +85,7 @@ $( document ).ready(function() {
           console.log(selectedItems.length);
           console.log(selectedItems);
           console.log(selectedItemscontainer);
+          $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
           $('.item-list').html(selectedItemscontainer)
 
         });
@@ -93,11 +96,22 @@ $( document ).ready(function() {
 
 
    $('#buy').click(function() {
-     $('#'+posterID).addClass('selected');
-     $('#'+posterID).attr('status', 'selected');
+    //  buttonClass = $(this).attr('class')
+     $('.'+posterID).addClass('selected');
+     $('.'+posterID).attr('status', 'selected');
       $.getJSON("database.json", function(data) {
         var imgTitle = data.posters[posterID].title
+
         selectedItems.push(imgTitle);
+
+        var selectedItemscontainer = $('<ul></ul>')
+
+        for (i = 0; i < selectedItems.length; i++) {
+          var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
+            selectedItemscontainer.append(selectedItemsnode)
+        }
+        $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
+        $('.item-list').html(selectedItemscontainer)
       });
    });
 ///Back to poster view
@@ -109,14 +123,16 @@ $( document ).ready(function() {
       $('body').css({'overflow-y':''});
       $('body').attr('status', '');
       $('.hidden-page').animate({scrollTop: (0)}, 200);
+      $('#buy').attr('class','');
 
    });
 
 ///Go to cart state
   $('.cart').click(function() {
+    $('.bookMode').removeClass('bookMode');
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.cart').addClass('selected');
-    $('.posterNav').removeClass('selected');
+    $('.book, .posterNav').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
     $('.lazy').lazy({
@@ -125,12 +141,23 @@ $( document ).ready(function() {
            });
   });
 
+///Go to book page
+  $('.book').click(function() {
+    $('.page1,.page2,.main-nav').css({'transition':''});
+    $('.book').addClass('selected');
+    $('.posterNav , .cart').removeClass('selected');
+    $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
+    $('.cartMode').attr('state', 'bookMode');
+  });
+
+
 ///Return to poster state
   $('.posterNav').click(function() {
-    $('.cartMode').attr('state', '');
+    $('.cartMode, .bookMode').attr('state', '');
     $('.cartMode').removeClass('cartMode');
+    $('.bookMode').removeClass('bookMode');
     $('.posterNav').addClass('selected');
-    $('.cart').removeClass('selected');
+    $('.cart,.book').removeClass('selected');
   });
 
 });
