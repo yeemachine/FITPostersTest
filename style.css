@@ -108,7 +108,7 @@ a{
   transition: 1s;
   z-index: 999;
   overflow-y: scroll;
-  overflow: auto;
+  overflow-x: hidden;
 }
 .nav-item{
   margin-right: 10vw;
