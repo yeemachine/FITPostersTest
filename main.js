@@ -66,14 +66,25 @@ $( document ).ready(function() {
         if ($(cartItem).attr('status') != 'selected') {
           $(cartItem).attr('status', 'selected');
           selectedItems.push(imgTitle);
-          console.log(selectedItems);
         }else{
           $(cartItem).attr('status', '');
           selectedItems = selectedItems.filter(function(item) {
             return item !== imgTitle
           })
+          }
+
+
+          var selectedItemscontainer = $('<ul></ul>')
+
+          for (i = 0; i < selectedItems.length; i++) {
+            var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
+              selectedItemscontainer.append(selectedItemsnode)
+          }
+          console.log(selectedItems.length);
           console.log(selectedItems);
-        }
+          console.log(selectedItemscontainer);
+          $('.item-list').html(selectedItemscontainer)
+
         });
 
       }
@@ -84,6 +95,10 @@ $( document ).ready(function() {
    $('#buy').click(function() {
      $('#'+posterID).addClass('selected');
      $('#'+posterID).attr('status', 'selected');
+      $.getJSON("database.json", function(data) {
+        var imgTitle = data.posters[posterID].title
+        selectedItems.push(imgTitle);
+      });
    });
 ///Back to poster view
    $('.button').click(function() {
