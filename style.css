@@ -221,6 +221,7 @@ a{
   padding-top: 8.75vh;
   padding-left: 5vh;
   justify-content: flex-start;
+  overflow-x: hidden;
 }
 #lazy-container>.page2.bookMode{
   display: none;
@@ -241,6 +242,7 @@ a{
   background-color: rgba(0,0,0,0);
   pointer-events: none;
   font-size:1vw;
+  overflow-x: hidden;
 }
 #lazy-container>.item-list.bookMode{
   display: none;
