@@ -118,7 +118,7 @@ a{
   justify-content: flex-end;
   font-size: 16px;
   z-index: 999;
-  transition: .5s;
+  transition: .25s;
   overflow: auto;
 }
 .hidden-page{
@@ -128,7 +128,7 @@ a{
   position: fixed;
   top:100vh;
   left:0;
-  transition: 1s;
+  transition: .4s;
   z-index: 999;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -212,6 +212,7 @@ a{
 .page2{
   width: auto;
   height: 100vh;
+  transition: top .4s;
   background-color: transparent;
   display:flex;flex-direction:row;justify-content:center;align-items:center;
 }
