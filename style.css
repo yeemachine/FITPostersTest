@@ -152,7 +152,7 @@ a{
   justify-content: center;
 }
 .button{
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.3);
   width: 100vw;
   text-align: center;
   font-size: 5vh;
@@ -171,6 +171,7 @@ a{
   color: rgba(255,255,255,1);
   cursor:pointer;
 }
+
 .selected{
   color:rgba(255,255,255,1);
 }
@@ -309,7 +310,18 @@ cursor: pointer;
 -webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
 -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
 box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
+color:rgba(0,0,0,0.3);
 }
+.imgsquare .fa{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+    top: 75vh;
+    font-size: 5vh;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
 h2{
   width: 15vw;
   text-align: left;
