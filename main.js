@@ -1,5 +1,6 @@
 $(window).on('beforeunload', function() {
     $(window).scrollLeft(0);
+
   });
 
 
@@ -9,6 +10,8 @@ var state;
 var posterID;
 
 $( document ).ready(function() {
+  $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
+  $('.cartMode').attr('state', 'bookMode');
 
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
   if (isMobile.matches) {
@@ -51,7 +54,10 @@ $( document ).ready(function() {
         $('.hidden-page').css({'top':'0'});
         $('body').attr('status', 'locked');
 
-        $('#buy').addClass(posterID)
+        // $('#buy').addClass(posterID);
+        if (posterID.attr('status') === 'selected'){
+            $('#buy').attr('status','selected');
+        }
       }
 //////Cart view click
       else{
@@ -59,34 +65,31 @@ $( document ).ready(function() {
          $.getJSON("database.json", function(data) {
            var imgTitle = data.posters[posterID].title
            var price = data.posters[posterID].price
-              // imgTitle = imgTitle.replace('<br><br>', ", ");
-
-
            $(cartItem).toggleClass('selected');
 
 
-        if ($(cartItem).attr('status') != 'selected') {
-          $(cartItem).attr('status', 'selected');
-          selectedItems.push(imgTitle);
-        }else{
-          $(cartItem).attr('status', '');
-          selectedItems = selectedItems.filter(function(item) {
-            return item !== imgTitle
-          })
-          }
+                if ($(cartItem).attr('status') != 'selected') {
+                  $(cartItem).attr('status', 'selected');
+                  selectedItems.push(imgTitle);
+                }else{
+                  $(cartItem).attr('status', '');
+                  selectedItems = selectedItems.filter(function(item) {
+                    return item !== imgTitle
+                  })
+                  }
 
 
-          var selectedItemscontainer = $('<ul></ul>')
+                  var selectedItemscontainer = $('<ul></ul>')
 
-          for (i = 0; i < selectedItems.length; i++) {
-            var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
-              selectedItemscontainer.append(selectedItemsnode)
-          }
-          console.log(selectedItems.length);
-          console.log(selectedItems);
-          console.log(selectedItemscontainer);
-          $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
-          $('.item-list').html(selectedItemscontainer)
+                  for (i = 0; i < selectedItems.length; i++) {
+                    var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
+                      selectedItemscontainer.append(selectedItemsnode)
+                  }
+                  console.log(selectedItems.length);
+                  console.log(selectedItems);
+                  console.log(selectedItemscontainer);
+                  $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
+                  $('.item-list').html(selectedItemscontainer)
 
         });
 
