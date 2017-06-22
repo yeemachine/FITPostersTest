@@ -304,6 +304,12 @@ a{
 .imgsquare.cartMode.selected{
   opacity: 1
 }
+.imgsquare.cartMode:hover{
+  opacity: 0.5
+}
+.imgsquare.cartMode.selected:hover{
+  opacity: 1
+}
 .imgsquare:hover{
 /*opacity: .3;*/
 transition: .25s;
