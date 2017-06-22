@@ -224,6 +224,7 @@ a{
   padding-left: 5vh;
   justify-content: flex-start;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 #lazy-container>.page2.bookMode{
   display: none;
