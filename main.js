@@ -5,7 +5,7 @@ $(window).on('beforeunload', function() {
 
 
 
-var selectedItems = []
+var selectedItems = {}
 var state;
 var posterID;
 
@@ -54,68 +54,27 @@ $( document ).ready(function() {
         $('.hidden-page').css({'top':'0'});
         $('body').attr('status', 'locked');
 
-        // $('#buy').addClass(posterID);
-        if (posterID.attr('status') === 'selected'){
+////////reloads saved status
+        if ($('#'+posterID).attr('status') === 'selected'){
             $('#buy').attr('status','selected');
+            $('#buy h3').html('Remove from Cart');
+            $('#buy h3').addClass('selected');
+        }else{
+          $('#buy h3').html('Add to Cart');
+          $('#buy h3').removeClass('selected');
         }
       }
 //////Cart view click
       else{
         var cartItem = '.'+posterID
-         $.getJSON("database.json", function(data) {
-           var imgTitle = data.posters[posterID].title
-           var price = data.posters[posterID].price
-           $(cartItem).toggleClass('selected');
-
-
-                if ($(cartItem).attr('status') != 'selected') {
-                  $(cartItem).attr('status', 'selected');
-                  selectedItems.push(imgTitle);
-                }else{
-                  $(cartItem).attr('status', '');
-                  selectedItems = selectedItems.filter(function(item) {
-                    return item !== imgTitle
-                  })
-                  }
-
-
-                  var selectedItemscontainer = $('<ul></ul>')
-
-                  for (i = 0; i < selectedItems.length; i++) {
-                    var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
-                      selectedItemscontainer.append(selectedItemsnode)
-                  }
-                  console.log(selectedItems.length);
-                  console.log(selectedItems);
-                  console.log(selectedItemscontainer);
-                  $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
-                  $('.item-list').html(selectedItemscontainer)
-
-        });
-
+        addCart();
       }
    });
 
 
 
    $('#buy').click(function() {
-    //  buttonClass = $(this).attr('class')
-     $('.'+posterID).addClass('selected');
-     $('.'+posterID).attr('status', 'selected');
-      $.getJSON("database.json", function(data) {
-        var imgTitle = data.posters[posterID].title
-
-        selectedItems.push(imgTitle);
-
-        var selectedItemscontainer = $('<ul></ul>')
-
-        for (i = 0; i < selectedItems.length; i++) {
-          var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
-            selectedItemscontainer.append(selectedItemsnode)
-        }
-        $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
-        $('.item-list').html(selectedItemscontainer)
-      });
+     addCart();
    });
 ///Back to poster view
    $('.button').click(function() {

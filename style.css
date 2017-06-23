@@ -1,3 +1,17 @@
+@keyframes bob {
+  0% {
+    margin-top: 0px;
+  }
+
+  25% {
+    margin-top: 5px
+  }
+  100% {
+    margin-top: 0px
+  }
+
+}
+
 body{
   background-color:gainsboro;
   margin: 0;
@@ -45,15 +59,26 @@ a{
 #buy, #share{
   position: relative;
   height: inherit;
-  width: inherit;
+  width: auto;
   display: flex;
   align-items: flex-end;
+
 }
 #buy > h3, #share > h3{
-  margin-bottom: 1vh;
+  padding-top: 4vh;
+  padding-bottom: 1vh;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.3)
 }
-#buy:hover, #share:hover{
-  color:red;
+#buy h3.selected{
+  color: red;
+  border-bottom: 1px solid rgba(255,0,0,0.3)
+}
+#buy h3.selected:hover{
+  border-bottom: 1px solid rgba(255,0,0,1)
+}
+#buy h3:hover, #share h3:hover{
+  border-bottom: 1px solid rgba(255,255,255,1);
   cursor: pointer;
 }
 /*#buy:before,#share:before {
@@ -327,6 +352,9 @@ color:rgba(0,0,0,0.3);
     font-size: 5vh;
     -webkit-filter: blur(2px);
     filter: blur(2px);
+    /*animation: bob 1s forwards;
+    animation-iteration-count: infinite;*/
+
 }
 
 h2{
