@@ -347,7 +347,9 @@ color:rgba(0,0,0,0.3);
 .imgsquare.selected:hover{
   color:rgba(255,0,0,0.3);
 }
-
+.imgsquare.cartMode .fa{
+  display: none;
+}
 .imgsquare .fa{
   position: absolute;
   text-align: center;
@@ -358,7 +360,6 @@ color:rgba(0,0,0,0.3);
     filter: blur(2px);
     /*animation: bob 1s forwards;
     animation-iteration-count: infinite;*/
-
 }
 
 h2{

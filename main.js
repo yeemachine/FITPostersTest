@@ -123,13 +123,17 @@ $( document ).ready(function() {
   });
 
 
-// for(var s = 0; s < 24; s ++) {
-// $('.poster'+s).on("mouseenter", function(){
-//   $('.poster'+s).addClass('pinked');
-//   console.log('workingggg')
-// //do something
-// });
-// }
+for(let s = 0; s < 24; s ++) {
+$(document).on("mouseover",'.poster'+s, function(){
+  $('li.poster'+s).css({'color':'red'});
+});
+$(document).on("mouseout",'.poster'+s, function(){
+  $('li.poster'+s).css({'color':''});
+});
+
+
+
+}
 
 
 
