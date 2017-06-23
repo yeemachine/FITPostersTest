@@ -344,6 +344,10 @@ cursor: pointer;
 box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
 color:rgba(0,0,0,0.3);
 }
+.imgsquare.selected:hover{
+  color:rgba(255,0,0,0.3);
+}
+
 .imgsquare .fa{
   position: absolute;
   text-align: center;

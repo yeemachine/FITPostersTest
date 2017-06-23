@@ -122,4 +122,15 @@ $( document ).ready(function() {
     $('.cart,.book').removeClass('selected');
   });
 
+
+// for(var s = 0; s < 24; s ++) {
+// $('.poster'+s).on("mouseenter", function(){
+//   $('.poster'+s).addClass('pinked');
+//   console.log('workingggg')
+// //do something
+// });
+// }
+
+
+
 });
