@@ -123,12 +123,12 @@ $( document ).ready(function() {
   });
 
 
-for(let s = 0; s < 24; s ++) {
+for(let s = 0; s < 25; s ++) {
 $(document).on("mouseover",'.poster'+s, function(){
   $('li.poster'+s).css({'color':'red'});
 });
 $(document).on("mouseout",'.poster'+s, function(){
-  $('li.poster'+s).css({'color':''});
+  $('li.poster'+s).css({'color':'','animation':''});
 });
 
 

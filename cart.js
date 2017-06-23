@@ -37,6 +37,7 @@ $.getJSON("database.json", function(data) {
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Cart ("+objectSelector.length+")</a>")
   $('.item-list').html(selectedItemscontainer)
-  // $('.'+posterID).css({'color':'red'});
+
+  $('li.'+posterID).css({'animation':'red 1s linear'});
 });
 }

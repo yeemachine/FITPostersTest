@@ -11,6 +11,17 @@
   }
 
 }
+@keyframes red {
+  0% {
+    color: red;
+  }
+
+
+  100% {
+    color: black
+  }
+
+}
 
 body{
   background-color:gainsboro;
