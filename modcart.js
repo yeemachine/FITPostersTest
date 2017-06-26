@@ -1,4 +1,4 @@
-function addCart(){
+function modCart(){
 
 $.getJSON("database.json", function(data) {
   var imgTitle = data.posters[posterID].title
