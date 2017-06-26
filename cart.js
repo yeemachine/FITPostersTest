@@ -28,7 +28,7 @@ $.getJSON("database.json", function(data) {
   totalPrice = 0
   for (i = 0; i < objectSelector.length; i++) {
     objectSelector2 = objectSelector[i];
-    var selectedItemsnode = $('<li class="'+objectSelector2+'">'+selectedItems[objectSelector2].imgTitle+"<br>"+selectedItems[objectSelector2].price+' Quantity: '+selectedItems[objectSelector2].qty+'<br><br></li>')
+    var selectedItemsnode = $('<li class="'+objectSelector2+'">'+selectedItems[objectSelector2].imgTitle+"<br>"+selectedItems[objectSelector2].price+' Quantity: '+selectedItems[objectSelector2].qty+'</li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + selectedItems[objectSelector2].price*selectedItems[objectSelector2].qty
   }
