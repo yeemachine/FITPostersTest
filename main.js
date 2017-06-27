@@ -138,6 +138,17 @@ $(document).on("mouseout",'.poster'+s, function(){
 
 }
 
+// $(document).on("mouseover",'.minus', function(){
+//   container = $(this).closest('.quantity').children('.qtyNum')
+//   container.css({'opacity':'.5'});
+// });
+// $(document).on("mouseout",'.minus', function(){
+//   container = $(this).closest('.quantity').children('.qtyNum')
+//   container.css({'opacity':''});
+// });
+
+
+
 
 
 

@@ -2,6 +2,8 @@ function minus(){
 
 $.getJSON("database.json", function(data) {
   var imgTitle = data.posters[posterID].title
+  imgTitle = imgTitle.replace(/&lt;br&gt;/g, ' ');
+
   var price = data.posters[posterID].price
   var qty = 1
   var selectedItemscontainer = $('<ul></ul>')
@@ -30,10 +32,16 @@ $.getJSON("database.json", function(data) {
   totalItems = 0
   for (i = 0; i < objectSelector.length; i++) {
     objectSelector2 = objectSelector[i];
-    var selectedItemsnode = $('<li class="'+objectSelector2+'">'+selectedItems[objectSelector2].imgTitle+"<br>"+selectedItems[objectSelector2].price+' Quantity: '+selectedItems[objectSelector2].qty+'<br><br></li>')
+
+    name = selectedItems[objectSelector2].imgTitle
+    pricePer = selectedItems[objectSelector2].price
+    unit = selectedItems[objectSelector2].qty
+    subPrice = pricePer * unit
+
+    var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div><div>'+unit+'</div><div>$'+subPrice+'</div></li>')
       selectedItemscontainer.append(selectedItemsnode)
-      totalPrice = totalPrice + selectedItems[objectSelector2].price*selectedItems[objectSelector2].qty
-      totalItems = totalItems + selectedItems[objectSelector2].qty
+      totalPrice = totalPrice + subPrice
+      totalItems = totalItems + unit
   }
   console.log(totalPrice);
   var subTotal = $('<li class="subTotal">Subtotal: '+totalPrice+'</li>')
