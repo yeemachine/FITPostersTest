@@ -396,7 +396,7 @@ a{
   width: 30vw;
 }
 .intro{
-  width: 40vw;
+  width: calc(100vw - 70vh - 24.78vh);
   height: 72.5vh;
   display: flex;
   flex-direction: column;
