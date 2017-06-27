@@ -397,14 +397,14 @@ a{
 }
 .intro{
   width: 40vw;
-  height: 70vh;
+  height: 72.5vh;
   display: flex;
   flex-direction: column;
   margin-left: 10vh;
 }
 .imgsquare{
-  width: 49.56vh;
-  height: 70vh;
+  width: 51.33vh;
+  height: 72.5vh;
   background-color:gainsboro;
   margin-right:24.78vh;
   margin-left:24.78vh;
