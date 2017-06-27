@@ -44,8 +44,8 @@ $( document ).ready(function() {
                   else{
                       var imgcontainer = document.getElementById('imgloader');
                       imgcontainer.style.backgroundImage = 'url('+imgURL+')';
-                       $('.page1,.page2').css({'margin-top':'-99vh','transition':'.4s'});
-                      $('.main-nav').css({'top':'-99vh','transition':'.4s'});
+                       $('.page1,.page2').css({'margin-top':'-99vh','transition':'.25s'});
+                      $('.main-nav').css({'opacity':'0'});
                   }
               $('#imgTitle').html(imgTitle);
               $('#imgCopy').html(imgPara);
@@ -67,10 +67,15 @@ $( document ).ready(function() {
 //////Cart view click
       else{
         var cartItem = '.'+posterID
-        addCart();
+        // addCart();
       }
    });
-
+   $('.plus').click(function() {
+     plus();
+    });
+    $('.minus').click(function() {
+      minus();
+     });
 
 
    $('#buy').click(function() {
@@ -78,8 +83,8 @@ $( document ).ready(function() {
    });
 ///Back to poster view
    $('.button').click(function() {
-     $('.page1,.page2').css({'margin-top':'','transition':'.4s'});
-     $('.main-nav').css({'top':'','transition':'.4s'});
+     $('.page1,.page2').css({'margin-top':'','transition':'.25s'});
+     $('.main-nav').css({'opacity':''});
      $('.hidden-page').css({'top':''});
       $('body').css({'overflow-x':''});
       $('body').css({'overflow-y':''});
@@ -131,9 +136,9 @@ $(document).on("mouseout",'.poster'+s, function(){
   $('li.poster'+s).css({'color':'','animation':''});
 });
 
-
-
 }
+
+
 
 
 

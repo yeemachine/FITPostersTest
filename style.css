@@ -79,9 +79,9 @@ a{
   padding-top: 4vh;
   padding-bottom: 1vh;
   margin: 0;
-  border-bottom: 1px solid rgba(255,255,255,0.3)
+  /*border-bottom: 1px solid rgba(255,255,255,0.3)*/
 }
-#buy h3.selected{
+/*#buy h3.selected{
   color: red;
   border-bottom: 1px solid rgba(255,0,0,0.3)
 }
@@ -91,6 +91,61 @@ a{
 #buy h3:hover, #share h3:hover{
   border-bottom: 1px solid rgba(255,255,255,1);
   cursor: pointer;
+}*/
+
+#buy h3{
+  display: inline-block;
+}
+#buy h3.selected{
+  color:red;
+}
+#buy h3.selected:hover{
+  color:red;
+}
+#buy h3.selected::after{
+  background-color: rgba(255,0,0,1);
+}
+
+#buy h3:hover{
+  color:rgba(255,255,255,1);
+  cursor: pointer;
+}
+#buy h3::after {
+  width: 100%;
+  margin-top: 3px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+#buy h3:hover::after {
+    width: 100%;
+}
+
+
+#share h3{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#share h3:hover{
+  color:rgba(255,255,255,1);
+  cursor: pointer;
+}
+#share h3::after {
+    width: 100%;
+    margin-top: 3px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+#share h3:hover::after {
+    width: 100%;
 }
 /*#buy:before,#share:before {
   content: "";
@@ -140,11 +195,11 @@ a{
   align-items: flex-start;
 }
 .main-nav{
-  background-color: rgba(30,30,30,1);
-  color:rgba(255,255,255,.5);
+  background-color: rgba(30,30,30,0);
+  color:rgba(0,0,0,.5);
   width:100vw;
   height: 7.5vh;
-
+  font-weight: bold;
   position: fixed;
   top:0;
   left:0;
@@ -154,7 +209,7 @@ a{
   justify-content: flex-end;
   font-size: 16px;
   z-index: 999;
-  transition: .25s;
+  transition: opacity .25s;
   overflow: auto;
 }
 .hidden-page{
@@ -164,7 +219,7 @@ a{
   position: fixed;
   top:100vh;
   left:0;
-  transition: .4s;
+  transition: .25s;
   z-index: 999;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -176,9 +231,28 @@ a{
   margin-right: 10vh;
   width: 10vh;
 }
-.nav-item:hover{
-  color:rgba(255,255,255,1);
+.nav-item a{
+  display: inline-block;
+}
+.nav-item.selected a::after{
+  width: 100%;
+}
+.nav-item a:hover{
+  color:rgba(0,0,0,1);
   cursor: pointer;
+}
+
+.nav-item a::after {
+    margin-top: 3px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+.nav-item a:hover::after {
+    width: 100%;
 }
 .home{
   position: fixed;
@@ -210,7 +284,7 @@ a{
 }
 
 .selected{
-  color:rgba(255,255,255,1);
+  color:rgba(0,0,0,1);
 }
 .word.selected{
   color:rgba(255,255,255,1);
@@ -283,13 +357,14 @@ a{
   position: fixed;
   top: 0;
   right: 0;
-  background-color: gainsboro;
+  background-color: transparent;
   pointer-events: none;
   font-size: 16px;
   overflow-x: hidden;
   padding-top: 13.75vh;
   padding-bottom: 13.75vh;
   padding-left: 5vh;
+  border-left: 1px solid black;
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -362,6 +437,7 @@ a{
 .quantity{
   opacity: 0;
   transition: .25s;
+  pointer-events: none;
 }
 .cartMode .quantity{
     opacity: 1;
@@ -373,6 +449,7 @@ a{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    pointer-events: all;
 }
 
 .cartMode .quantity:hover{
@@ -386,23 +463,50 @@ a{
 .selected.cartMode .quantity:hover{
   background-color: rgba(255,255,255,0.9);
 }
+.minus, .plus{
+  height: 95%;
+  font-size: 4vh;
+  text-align: center;
+  font-weight: lighter;
+  -webkit-touch-callout: none; /* iOS Safari */
+ -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+         user-select: none; /* Non-prefixed version, currently
+                               supported by Chrome and Opera */
+ padding-bottom: 5%;
+ display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: .3;
+  overflow: hidden;
+}
+.minus{
+  width: 0%;
+
+}
+.plus{
+    width: 100%;
+}
 .qtyNum{
     font-size: 10vh;
     pointer-events: none;
+    font-weight: bold;
 }
 .plusMin{
   display: flex;
   position: absolute;
   bottom: 0;
+  width: 100%;
+  height: 100%;
 }
-.plus{
-    width: 6vh;
-    height: 6vh;
-    font-size: 4vh;
-    text-align: center;
+.selected .minus,.selected .plus{
+    width: 50%;
+
 }
-.plus:hover{
-  color:red
+.minus:hover, .plus:hover{
+  opacity: 1;
 }
 /*.imgsquare.cartMode.selected:hover{
   opacity: 1
@@ -428,8 +532,9 @@ color:rgba(0,0,0,0.3);
   width: 100%;
     top: 75vh;
     font-size: 5vh;
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
+    pointer-events: none;
+    /*-webkit-filter: blur(2px);
+    filter: blur(2px);*/
     /*animation: bob 1s forwards;
     animation-iteration-count: infinite;*/
 }
