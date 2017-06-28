@@ -70,12 +70,12 @@ $( document ).ready(function() {
         // addCart();
       }
    });
-   $('.plus').click(function() {
+   $('.imgsquare').click(function() {
      addCart();
     });
-    $('.minus').click(function() {
-      addCart();
-     });
+    // $('.minus').click(function() {
+    //   addCart();
+    //  });
 
 
    $('#buy').click(function() {
