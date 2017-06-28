@@ -487,8 +487,8 @@ a{
   background-color: rgba(0,0,0,0);
 }
 .selected.cartMode .quantity:hover{
-  background-color: rgba(255,255,255,0.9);
-  color:black;
+  background-color: rgba(255,255,255,0.8);
+  color:black
 }
 .plus{
 
