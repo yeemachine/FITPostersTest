@@ -97,13 +97,13 @@ a{
   display: inline-block;
 }
 #buy h3.selected{
-  color:red;
+  color:crimson;
 }
 #buy h3.selected:hover{
-  color:red;
+  color:crimson;
 }
 #buy h3.selected::after{
-  background-color: rgba(255,0,0,1);
+  background-color: crimson
 }
 
 #buy h3:hover{
@@ -445,13 +445,15 @@ a{
   height: 20vh;
   margin:7.08vh;
   transition: .25s;
+  filter: grayscale(.2);
 
 }
 .imgsquare.cartMode.selected{
   opacity: 1;
-  /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
+  filter: grayscale(0);
+  -webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
-  box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
+  box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
 }
 .imgsquare.cartMode:hover{
   /*opacity: 1;*/
@@ -470,7 +472,7 @@ a{
     opacity: 1;
     display: flex;
     width: 100%;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.65);
     color:rgba(255,255,255,0);
     height: 100%;
     align-items: center;
@@ -496,8 +498,8 @@ a{
   color:transparent
 }
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(255,255,255,0.7);
-  color:black;
+  background-color: rgba(255,255,255,0);
+  color:transparent;
 }
 .plus{
 
@@ -514,11 +516,12 @@ a{
   transition: outline-color .25s;
 }
 .hovered .plus{
-  outline-color: black;
+  outline-color: rgba(0,0,0,1);
 }
 .selected .hovered .plus{
-  outline-color: red;
-  color:red
+  outline-color: crimson
+  /*color:red*/
+
 }
 
 .plusMin{
