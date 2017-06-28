@@ -390,7 +390,7 @@ a{
     margin-right: 5vh;
     padding-right: 5vh;
     padding-left: 5vh;
-    border: 2px solid black;
+    outline: 2px solid black;
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -580,8 +580,18 @@ h2{
   overflow-y: hidden;
   align-items: center;
 }
-.item-list ul li.hovered{
-  border-bottom: solid black 2px;
+.item-list ul li:after{
+  content: '';
+  display: block;
+  position: absolute;
+  margin-top: calc(80vh * 0.02 - 2px);
+  width: 0;
+  height: 2px;
+  background-color: rgba(0,0,0,0.1);
+  transition: .25s;
+}
+.item-list ul li.hovered:after {
+  width: 50vh
 }
 .item-list ul li div{
   width: 10vh
