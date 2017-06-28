@@ -18,7 +18,7 @@ $.getJSON("database.json", function(data) {
     selectedItems[posterID] = {imgTitle,price,qty};
     $('.'+posterID).addClass(imgTitle);
     console.log(Object.keys(selectedItems)[0]);
-    $('.'+posterID+' .plus').hide(125).html('&minus;').show(125);
+    $('.'+posterID+' .plus').hide(0).html('').show(200);
   }else{
     $('.'+posterID).removeClass('selected');
     $('.'+posterID).attr('status', '');
@@ -27,7 +27,7 @@ $.getJSON("database.json", function(data) {
     $('#buy h3').removeClass('selected');
     delete selectedItems[posterID];
     $('.'+posterID).removeClass(imgTitle);
-    $('.'+posterID+' .plus').hide(125).html('+').show(125);;
+    $('.'+posterID+' .plus').hide(0).html('+').show(200);;
   }
 
   objectSelector = Object.keys(selectedItems)
