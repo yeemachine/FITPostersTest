@@ -451,9 +451,9 @@ a{
 .imgsquare.cartMode.selected{
   opacity: 1;
   filter: grayscale(0);
-  -webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
+  /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
-  box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
+  box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
 }
 .imgsquare.cartMode:hover{
   /*opacity: 1;*/
