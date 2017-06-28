@@ -130,10 +130,12 @@ $( document ).ready(function() {
 
 for(let s = 0; s < 25; s ++) {
 $('.poster'+s).on("mouseenter", function(){
-  $('li.poster'+s).css({'border-bottom':'2px solid black'});
+  $('li.poster'+s).addClass('hovered');
+  $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
 });
 $('.poster'+s).on("mouseleave", function(){
-  $('li.poster'+s).css({'border-bottom':'','animation':''});
+  $('li.poster'+s).removeClass('hovered');
+  $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
 });
 
 }

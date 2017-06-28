@@ -464,6 +464,7 @@ a{
   opacity: 0;
   transition: .25s;
   pointer-events: none;
+
 }
 .cartMode .quantity{
     opacity: 1;
@@ -485,10 +486,15 @@ a{
 }
 .selected.cartMode .quantity{
   background-color: rgba(0,0,0,0);
+  /*mix-blend-mode: multiply;*/
 }
 .selected.cartMode .quantity:hover{
-  background-color: rgba(255,255,255,0.8);
-  color:black
+  /*background-color: rgba(255,255,255,0.9);*/
+  color:transparent
+}
+.selected.cartMode .quantity.hovered{
+  background-color: rgba(255,255,255,0.9);
+  color:black;
 }
 .plus{
 
@@ -573,6 +579,9 @@ h2{
   height: 3.6%;
   overflow-y: hidden;
   align-items: center;
+}
+.item-list ul li.hovered{
+  border-bottom: solid black 2px;
 }
 .item-list ul li div{
   width: 10vh
