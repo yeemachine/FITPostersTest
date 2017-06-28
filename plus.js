@@ -3,6 +3,9 @@ function plus(){
 $.getJSON("database.json", function(data) {
   var imgTitle = data.posters[posterID].title
   imgTitle = imgTitle.replace(/&lt;br&gt;/g, ' ');
+  if (imgTitle.length > 10){
+    console.log('too long');
+  }
   var price = data.posters[posterID].price
   var qty = 1
   var selectedItemscontainer = $('<ul></ul>')
@@ -48,6 +51,7 @@ $.getJSON("database.json", function(data) {
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Cart ("+totalItems+")</a>")
   $('.item-list').html(selectedItemscontainer)
+  $('li.'+posterID).css({'border-bottom':'2px solid black'});
 
   // $('li.'+posterID).css({'animation':'red .5s linear'});
 });

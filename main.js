@@ -71,10 +71,10 @@ $( document ).ready(function() {
       }
    });
    $('.plus').click(function() {
-     plus();
+     addCart();
     });
     $('.minus').click(function() {
-      minus();
+      addCart();
      });
 
 
@@ -129,11 +129,11 @@ $( document ).ready(function() {
 
 
 for(let s = 0; s < 25; s ++) {
-$(document).on("mouseover",'.poster'+s, function(){
-  $('li.poster'+s).css({'color':'red'});
+$('.poster'+s).on("mouseenter", function(){
+  $('li.poster'+s).css({'border-bottom':'2px solid black'});
 });
-$(document).on("mouseout",'.poster'+s, function(){
-  $('li.poster'+s).css({'color':'','animation':''});
+$('.poster'+s).on("mouseleave", function(){
+  $('li.poster'+s).css({'border-bottom':'','animation':''});
 });
 
 }

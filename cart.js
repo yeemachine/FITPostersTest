@@ -2,6 +2,10 @@ function addCart(){
 
 $.getJSON("database.json", function(data) {
   var imgTitle = data.posters[posterID].title
+  if (imgTitle.length > 23){
+    console.log('too long');
+    imgTitle = imgTitle.substring(0, 26) + '...';
+  }
   var price = data.posters[posterID].price
   var qty = 1
   var selectedItemscontainer = $('<ul></ul>')
@@ -14,7 +18,7 @@ $.getJSON("database.json", function(data) {
     selectedItems[posterID] = {imgTitle,price,qty};
     $('.'+posterID).addClass(imgTitle);
     console.log(Object.keys(selectedItems)[0]);
-    $('.'+posterID+' .qtyNum').html('1');
+    $('.'+posterID+' .plus').html('&minus;');
   }else{
     $('.'+posterID).removeClass('selected');
     $('.'+posterID).attr('status', '');
@@ -23,7 +27,7 @@ $.getJSON("database.json", function(data) {
     $('#buy h3').removeClass('selected');
     delete selectedItems[posterID];
     $('.'+posterID).removeClass(imgTitle);
-    $('.'+posterID+' .qtyNum').html('0');
+    $('.'+posterID+' .plus').html('+');
   }
 
   objectSelector = Object.keys(selectedItems)
@@ -38,7 +42,7 @@ $.getJSON("database.json", function(data) {
     unit = selectedItems[objectSelector2].qty
     subPrice = pricePer * unit
 
-    var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div><div>'+unit+'</div><div>$'+subPrice+'</div></li>')
+    var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + subPrice
       totalItems = totalItems + unit

@@ -185,12 +185,11 @@ a{
   display:flex;
   flex-direction:row;
   flex-wrap: wrap;
-  overflow-x:scroll;
+  overflow-x:hidden;
   width:100vw;
   height:80vh;
 }
 #lazy-container.cartMode{
-
   overflow-y:scroll;
   align-items: flex-start;
 }
@@ -352,7 +351,7 @@ a{
 }
 #lazy-container>.page2.cartMode{
   height: initial;
-  width: calc(100vw - 61vh);
+  width: calc(100vw - 68vh);
   padding-top: calc(8.75vh - 2.08vh);
   padding-left: calc(10vh - 7.08vh);
   padding-bottom: calc(8.75vh - 2.08vh);
@@ -375,19 +374,23 @@ a{
   padding: 0;
 }
 #lazy-container>.item-list.cartMode{
-  width: 60vh;
-  height: 80vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  pointer-events: none;
-  font-size: 16px;
-  overflow-x: hidden;
-  margin-top: 13.75vh;
-  margin-bottom: 13.75vh;
-  padding-left: 5vh;
-  border-left: 1px solid black;
+  width: 50vh;
+    height: 80vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    pointer-events: none;
+    font-size: 16px;
+    overflow-x: hidden;
+    margin-top: 8.75vh;
+    padding-top: 5vh;
+    /* padding-bottom: 5vh; */
+    margin-bottom: 8.75vh;
+    margin-right: 5vh;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    border: 2px solid black;
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -484,9 +487,10 @@ a{
   background-color: rgba(0,0,0,0);
 }
 .selected.cartMode .quantity:hover{
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(255,255,255,0.9);
+  color:black;
 }
-.minus, .plus{
+.plus{
 
   font-size: 4vh;
   text-align: center;
@@ -502,28 +506,14 @@ a{
 
   justify-content: center;
   overflow: hidden;
-}
-.minus{
-  width: 0%;
-  opacity: .3;
-
-
-}
-.plus{
-    width: 100%;
-    align-items: center;
-    height: 100%;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  font-size: 10vh;
 }
 
-.qtyNum{
-    font-size: 10vh;
-    pointer-events: none;
-    font-weight: bold;
-    display: none;
-}
-.selected .qtyNum{
-  display: block;
-}
+
+
 .plusMin{
   display: flex;
   position: absolute;
@@ -531,20 +521,7 @@ a{
   width: 100%;
   height: 100%;
 }
-.selected .minus,.selected .plus{
-    width: 50%;
-    height: 95%;
-    padding-bottom: 5%;
-    align-items: flex-end;
-    opacity: .3
 
-}
-.minus:hover, .plus:hover{
-  opacity: 1;
-}
-/*.imgsquare.cartMode.selected:hover{
-  opacity: 1
-}*/
 .imgsquare:hover{
 /*opacity: .3;*/
 transition: .25s;
@@ -586,25 +563,29 @@ h2{
   flex-wrap: wrap;
   justify-content: flex-start;
   height: 80vh;
-  width: 55vh;
+  width: 50vh;
 
 }
 .item-list ul li{
   display: flex;
   flex-direction: row;
-  width: 60vh;
+  width: 100%;
+  height: 3.6%;
+  overflow-y: hidden;
+  align-items: center;
 }
 .item-list ul li div{
   width: 10vh
+
 }
 .item-list ul li div:first-child{
-  width: 30vh;
+  width: 40vh;
 }
 .item-list ul li.subTotal{
   position: fixed;
   width: 60vh;
   right: 0;
-  bottom:6.25vh;
+  bottom:11.25vh;
   display: table-cell;
   vertical-align: bottom;
 }
