@@ -92,9 +92,17 @@ function handler(event) {
 $(function(){
 
 		$('#lazy-container').mousewheel(function(event, delta) {
-      if ($('body').attr('status') != 'locked') {
-			this.scrollLeft -= (delta * 100);
+      var isMobile = window.matchMedia("only screen and (max-width: 800px)");
+
+      if (isMobile.matches) {
+     state="mobile"
+      }else{
+        state="desktop"
+        if ($('body').attr('status') != 'locked') {
+  			this.scrollLeft -= (delta * 100);
+        }
       }
+
 		});
 
 	});

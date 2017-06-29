@@ -732,5 +732,8 @@ h2{
     overflow-x: hidden;
      -webkit-overflow-scrolling: touch;
   }
+  .quantity:after{
+    display: none;
+  }
 
 }
