@@ -196,7 +196,7 @@ a{
 }
 .main-nav{
   background-color: rgba(30,30,30,0);
-  color:rgba(0,0,0,.5);
+  color:rgba(0,0,0,.3);
   width:100vw;
   height: 7.5vh;
   font-weight: bold;
@@ -481,8 +481,8 @@ a{
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(0,0,0,.8);
-    color:rgba(255,255,255,1);
+    background-color: rgba(255,255,255,.95);
+    color:rgba(0,0,0,1);
 }
 .selected.cartMode .quantity{
   background-color: rgba(0,0,0,0);
@@ -490,8 +490,8 @@ a{
 }
 
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(0,0,0,0.8);
-  color:#fff
+  background-color: rgba(255,255,255,.95);
+  color:#000
 }
 
 
@@ -505,20 +505,18 @@ a{
     margin-top: calc(100% + 6vh + 10px);
     left:50%;
     height: 10px;
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.15);
     transition: .25s;
 
 }
 .quantity:hover:after{
     left:calc((100% - 10px) / 2);
     width: 10px;
-    background-color: rgba(0,0,0,.1);
 
 }
 .selected .quantity:after{
   left:0;
   width: 100%;
-  background-color: rgba(0,0,0,.1);
 }
 
 
@@ -644,10 +642,12 @@ h2{
   width: 60vh;
   right: 0;
   bottom:11.25vh;
-  display: table-cell;
-  vertical-align: bottom;
+  display: flex;
+  font-weight: bold;
 }
-
+.item-list ul li.subTotal div:first-child{
+  width: 40vh;
+}
 .item-list ul li:after{
   z-index: -1;
   content: '';

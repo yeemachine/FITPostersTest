@@ -19,6 +19,9 @@ $.getJSON("database.json", function(data) {
     $('.'+posterID).addClass(imgTitle);
     console.log(Object.keys(selectedItems)[0]);
     $('.'+posterID+' .plus').html('&minus;');
+    $('.'+posterID+'.cartMode .quantity').removeClass('hovered');
+
+
   }else{
     $('.'+posterID).removeClass('selected');
     $('.'+posterID).attr('status', '');
@@ -48,12 +51,13 @@ $.getJSON("database.json", function(data) {
       totalItems = totalItems + unit
   }
   console.log(totalPrice);
-  var subTotal = $('<li class="subTotal">Subtotal: '+totalPrice+'</li>')
+  var subTotal = $('<li class="subTotal"><div>Subtotal:</div><div>$'+totalPrice+'</div></li>')
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Buy ("+totalItems+")</a>")
   $('.item-list').html(selectedItemscontainer)
   $('li.'+posterID).css({'animation':'red .5s linear'});
   $('li.'+posterID).addClass('hovered');
+
 
 });
 }
