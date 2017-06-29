@@ -2,9 +2,9 @@ function addCart(){
 
 $.getJSON("database.json", function(data) {
   var imgTitle = data.posters[posterID].title
-  if (imgTitle.length > 23){
+  if (imgTitle.length > 34){
     console.log('too long');
-    imgTitle = imgTitle.substring(0, 26) + '...';
+    imgTitle = imgTitle.substring(0, 34) + '...';
   }
   var price = data.posters[posterID].price
   var qty = 1
@@ -44,6 +44,9 @@ $.getJSON("database.json", function(data) {
     pricePer = selectedItems[objectSelector2].price
     unit = selectedItems[objectSelector2].qty
     subPrice = pricePer * unit
+
+    fraction = 1 - objectSelector.length/24
+    fontSize = 2 + 1 * fraction
 
     var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
