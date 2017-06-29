@@ -97,13 +97,13 @@ a{
   display: inline-block;
 }
 #buy h3.selected{
-  color:crimson;
+  color:red;
 }
 #buy h3.selected:hover{
-  color:crimson;
+  color:red;
 }
 #buy h3.selected::after{
-  background-color: crimson
+  background-color: rgba(255,0,0,1);
 }
 
 #buy h3:hover{
@@ -191,6 +191,7 @@ a{
 }
 #lazy-container.cartMode{
   overflow-y:scroll;
+  overflow-x:hidden;
   align-items: flex-start;
 }
 .main-nav{
@@ -390,7 +391,7 @@ a{
     margin-right: 5vh;
     padding-right: 5vh;
     padding-left: 5vh;
-    outline: 2px solid black;
+    border: 2px solid black;
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -445,12 +446,10 @@ a{
   height: 20vh;
   margin:7.08vh;
   transition: .25s;
-  filter: grayscale(.2);
 
 }
 .imgsquare.cartMode.selected{
   opacity: 1;
-  filter: grayscale(0);
   /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
@@ -466,80 +465,118 @@ a{
   opacity: 0;
   transition: .25s;
   pointer-events: none;
-
 }
 .cartMode .quantity{
     opacity: 1;
     display: flex;
     width: 100%;
-    background-color: rgba(255,255,255,0.65);
+    background-color: rgba(255,255,255,0.8);
     color:rgba(255,255,255,0);
     height: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     pointer-events: all;
-    font-size: 4vh;
-
 }
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(255,255,255,.9);
-    color:rgba(0,0,0,1);
-
+    background-color: rgba(0,0,0,.7);
+    color:rgba(255,255,255,1);
 }
 .selected.cartMode .quantity{
   background-color: rgba(0,0,0,0);
-  /*mix-blend-mode: multiply;*/
 }
 .selected.cartMode .quantity:hover{
-  /*background-color: rgba(255,255,255,0.9);*/
-  color:transparent
+  background-color: rgba(0,0,0,0.7);
 }
-.selected.cartMode .quantity.hovered{
-  background-color: rgba(255,255,255,0);
-  color:transparent;
+
+
+.quantity:after{
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 0;
+    top:0;
+    margin-top: calc(100% + 7vh);
+    left:50%;
+    height: 10px;
+    background-color: rgba(0,0,0,.1);
+    transition: .25s;
+
 }
-.plus{
-  -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
+.quantity:hover:after{
+    left:calc((100% - 10px) / 2);
+    width: 10px;
+    background-color: rgba(0,0,0,.1);
+
+}
+.selected .quantity:after{
+  left:0;
+  width: 100%;
+  background-color: rgba(0,0,0,.1);
+}
+
+.minus, .plus{
+
+  font-size: 10vh;
   text-align: center;
   font-weight: lighter;
-  display: flex;
+  -webkit-touch-callout: none; /* iOS Safari */
+ -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+         user-select: none; /* Non-prefixed version, currently
+                               supported by Chrome and Opera */
+ display: flex;
+
   justify-content: center;
   overflow: hidden;
-  width: calc(100% - 14px);
-  align-items: center;
-  height: calc(100% - 14px);
-  font-size: 10vh;
-  outline: 7px solid transparent;
-  transition: outline-color .25s;
 }
-.hovered .plus{
-  outline-color: rgba(0,0,0,1);
-}
-.selected .hovered .plus{
-  outline-color: crimson
-  /*color:red*/
+.minus{
+  width: 0%;
+  opacity: .3;
+
 
 }
+.plus{
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
 
+.qtyNum{
+    font-size: 10vh;
+    pointer-events: none;
+    font-weight: bold;
+    display: none;
+}
+.selected .qtyNum{
+  display: block;
+}
 .plusMin{
   display: flex;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
 }
+.selected .minus,.selected .plus{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5%;
+    align-items: center;
+    opacity: 1
 
+}
+.minus:hover, .plus:hover{
+  opacity: 1;
+}
+/*.imgsquare.cartMode.selected:hover{
+  opacity: 1
+}*/
 .imgsquare:hover{
 /*opacity: .3;*/
 transition: .25s;
@@ -590,27 +627,12 @@ h2{
   width: 100%;
   height: 3.6%;
   overflow-y: hidden;
-  align-items: center;
-}
-.item-list ul li:after{
-  content: '';
-  display: block;
-  position: absolute;
-  margin-top: calc(80vh * 0.02 - 2px);
-  width: 0;
-  height: 2px;
-  background-color: rgba(0,0,0,0.1);
-  transition: .25s;
-}
-.item-list ul li.hovered:after {
-  width: 50vh
 }
 .item-list ul li div{
   width: 10vh
-
 }
 .item-list ul li div:first-child{
-  width: 40vh;
+  width: 30vh;
 }
 .item-list ul li.subTotal{
   position: fixed;
