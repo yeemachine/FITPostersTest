@@ -70,7 +70,7 @@ $( document ).ready(function() {
         // addCart();
       }
    });
-   $('.imgsquare').click(function() {
+   $('.quantity').click(function() {
      addCart();
     });
     // $('.minus').click(function() {

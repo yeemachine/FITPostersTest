@@ -462,11 +462,13 @@ a{
 
 }
 .quantity{
+  pointer-events: none;
   opacity: 0;
   transition: .25s;
   pointer-events: none;
 }
 .cartMode .quantity{
+    pointer-events: all;
     opacity: 1;
     display: flex;
     width: 100%;
@@ -589,7 +591,7 @@ box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);*/
 color:rgba(0,0,0,0.3);
 }
 .imgsquare.selected:hover{
-  color:rgba(255,0,0,0.3);
+  color:rgba(0,0,0,1);
 }
 .imgsquare.cartMode .fa{
   display: none;
