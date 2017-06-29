@@ -13,7 +13,7 @@ $.getJSON("database.json", function(data) {
     $('.'+posterID).addClass('selected');
     $('.'+posterID).attr('status', 'selected');
     $('#buy').attr('status','selected');
-    $('#buy h3').html('Remove from Cart');
+    $('#buy h3').html('Remove from Bag');
     $('#buy h3').addClass('selected');
     selectedItems[posterID] = {imgTitle,price,qty};
     $('.'+posterID).addClass(imgTitle);
@@ -23,7 +23,7 @@ $.getJSON("database.json", function(data) {
     $('.'+posterID).removeClass('selected');
     $('.'+posterID).attr('status', '');
     $('#buy').attr('status','');
-    $('#buy h3').html('Add to Cart');
+    $('#buy h3').html('Add to Bag');
     $('#buy h3').removeClass('selected');
     delete selectedItems[posterID];
     $('.'+posterID).removeClass(imgTitle);
@@ -50,7 +50,7 @@ $.getJSON("database.json", function(data) {
   console.log(totalPrice);
   var subTotal = $('<li class="subTotal">Subtotal: '+totalPrice+'</li>')
   selectedItemscontainer.append(subTotal)
-  $('.cart').html("<a>Cart ("+totalItems+")</a>")
+  $('.cart').html("<a>Buy ("+totalItems+")</a>")
   $('.item-list').html(selectedItemscontainer)
   $('li.'+posterID).css({'animation':'red .5s linear'});
   $('li.'+posterID).addClass('hovered');

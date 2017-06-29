@@ -375,12 +375,12 @@ a{
   padding: 0;
 }
 #lazy-container>.item-list.cartMode{
-  width: 50vh;
+    width: 50vh;
     height: 80vh;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.1);
     pointer-events: none;
     font-size: 16px;
     overflow-x: hidden;
@@ -391,7 +391,7 @@ a{
     margin-right: 5vh;
     padding-right: 5vh;
     padding-left: 5vh;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -481,7 +481,7 @@ a{
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.8);
     color:rgba(255,255,255,1);
 }
 .selected.cartMode .quantity{
@@ -490,7 +490,7 @@ a{
 }
 
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   color:#fff
 }
 
@@ -499,7 +499,7 @@ a{
     content: '';
     display: block;
     position: absolute;
-
+    z-index: -1;
     width: 0;
     top:0;
     margin-top: calc(100% + 6vh + 10px);
@@ -646,6 +646,21 @@ h2{
   bottom:11.25vh;
   display: table-cell;
   vertical-align: bottom;
+}
+
+.item-list ul li:after{
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  left:0;
+  width: 0;
+  height: calc(80vh * 0.036);
+  background-color: white;
+  transition: .25s;
+}
+.item-list ul li.hovered:after {
+  width: 100%
 }
 @media screen and (max-width: 800px) {
   .nav-item{

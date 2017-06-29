@@ -57,10 +57,10 @@ $( document ).ready(function() {
 ////////reloads saved status
         if ($('#'+posterID).attr('status') === 'selected'){
             $('#buy').attr('status','selected');
-            $('#buy h3').html('Remove from Cart');
+            $('#buy h3').html('Remove from Bag');
             $('#buy h3').addClass('selected');
         }else{
-          $('#buy h3').html('Add to Cart');
+          $('#buy h3').html('Add to Bag');
           $('#buy h3').removeClass('selected');
         }
       }
