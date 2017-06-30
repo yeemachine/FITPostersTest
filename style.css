@@ -1,3 +1,5 @@
+
+
 @keyframes bob {
   0% {
     margin-top: 0px;
@@ -22,11 +24,13 @@
   }
 
 }
-
+*{
+  font-weight: normal;
+}
 body{
   background-color:white;
   margin: 0;
-  font-family: helvetica;
+  font-family:'NeueHaasGroteskText W01';
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -65,7 +69,7 @@ a{
   font-size:5vw
 }
 #copyContainer > h3{
-  width:25vw;font-weight:300
+  width:25vw;
 }
 #buy, #share{
   position: relative;
@@ -73,6 +77,7 @@ a{
   width: auto;
   display: flex;
   align-items: flex-end;
+  font-family:'NHaasGroteskTXW01-75Bd';
 
 }
 #buy > h3, #share > h3{
@@ -199,7 +204,7 @@ a{
   color:rgba(0,0,0,.3);
   width:100vw;
   height: 7.5vh;
-  font-weight: bold;
+  font-family:'NHaasGroteskTXW01-75Bd';
   position: fixed;
   top:0;
   left:0;
@@ -243,7 +248,7 @@ a{
 }
 
 .nav-item a::after {
-    margin-top: 3px;
+    margin-top: 2px;
     content: '';
     display: block;
     width: 0;
@@ -335,7 +340,8 @@ a{
   display: block;
   width: 100%;
   font-size: 5vw;
-  font-weight: bold;
+  font-family:'NHaasGroteskDSW01-75Bd';
+
   margin:7.08vh;
 
 }
@@ -346,7 +352,8 @@ a{
   display: block;
   width: 100%;
   font-size: 5vw;
-  font-weight: bold;
+  font-family:'NHaasGroteskDSW01-75Bd';
+
   margin:7.08vh;
 
 }
@@ -506,7 +513,7 @@ a{
     top:0;
     margin-top: calc(100% + 6vh + 10px);
     left:50%;
-    height: 10px;
+    height: 4px;
     background-color: rgba(0,0,0,1);
     transition: .25s;
 
@@ -524,9 +531,9 @@ a{
 
 .minus, .plus{
 
-  font-size: 10vh;
+  font-size: 7vh;
   text-align: center;
-  font-weight: normal;
+  font-weight: lighter;
   -webkit-touch-callout: none; /* iOS Safari */
  -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -554,7 +561,8 @@ a{
 .qtyNum{
     font-size: 10vh;
     pointer-events: none;
-    font-weight: bold;
+    font-family:'NHaasGroteskDSW01-75Bd';
+
     display: none;
 }
 .selected .qtyNum{
@@ -612,7 +620,10 @@ color:rgba(0,0,0,0.3);
 h2{
   width: 15vw;
   text-align: left;
-  z-index: 5
+  z-index: 5;
+  font-family:'NHaasGroteskDSW01-75Bd';
+
+
 }
 .item-list ul{
   margin: 0;
@@ -652,7 +663,7 @@ h2{
   bottom:0;
   height: 7.5vh;
   display: flex;
-  font-weight: bold;
+  font-family:'NHaasGroteskTXW01-75Bd';
   font-size: 16px;
 }
 .item-list ul li.subTotal div:first-child{
