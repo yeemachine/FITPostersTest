@@ -526,7 +526,7 @@ a{
     top:0;
     margin-top: calc(100% + 6vh - 2px);
     left:50%;
-    height: 4px;
+    height: 5px;
     background-color: rgba(0,0,0,1);
     transition: .25s;
 
@@ -538,7 +538,7 @@ a{
 }
 .selected .quantity:after{
   left:0;
-  background-color: rgba(0,0,0,0);
+  background-color: MediumSeaGreen ;
   width: 100%;
 }
 
