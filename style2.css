@@ -634,6 +634,9 @@ h2{
   font-family:'Univers LT W01_75 Black1475980';
 
 }
+.item-list section{
+  width: 100%;
+}
 .item-list ul{
   margin: 0;
   padding: 0;
@@ -668,7 +671,7 @@ h2{
   pointer-events: none;
   width: 60vh;
   right: 0;
-  bottom:5vh;
+  bottom:6vh;
   height: 7.5vh;
   display: flex;
   font-family:'Univers LT W01_65 Bold1475968';
@@ -679,19 +682,22 @@ h2{
   pointer-events: none;
   color:rgba(0,0,0,0.2);
   width: 60vh;
-  right: 0;
+  right: 5vh;
   bottom:0vh;
   height: 7.5vh;
   display: flex;
   align-items: center;
   font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
+
+
 }
 .item-list .checkout.selected a{
   color: rgba(0,0,0,1);
   pointer-events: all;
 }
 .item-list .checkout a{
+  margin-left: 5vh;
   display: inline-block;
   width: auto;
   position: relative;
@@ -712,7 +718,24 @@ h2{
 .item-list .checkout a:hover:after{
   width: 100%;
 }
-
+.item-list .checkout:after{
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  margin-top: 100%;
+  height: 0;
+  background-color: white;
+  transition: .25s;
+  overflow-y: hidden;
+}
+.item-list .checkout:hover:after{
+  margin-top: 0;
+  height: 100%;
+}
 .item-list ul li.subTotal div:first-child{
   width: 40vh;
   padding-left: 0;
