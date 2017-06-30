@@ -56,13 +56,17 @@ $.getJSON("database.json", function(data) {
   console.log(totalPrice);
   if (objectSelector.length === 0){
     idleCart = $('<li class="idleCart"><div>You currently have no items selected.</div></li>')
-
     selectedItemscontainer.append(idleCart)
+  }
+  if (objectSelector.length > 0){
+    $('.checkout').addClass('selected')
+  }else{
+    $('.checkout').removeClass('selected')
   }
   var subTotal = $('<li class="subTotal"><div>Subtotal:</div><div>$'+totalPrice+'</div></li>')
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Bag ("+totalItems+")</a>")
-  $('.item-list').html(selectedItemscontainer)
+  $('.item-list section').html(selectedItemscontainer)
   $('li.'+posterID).css({'animation':'red .5s linear'});
   // $('li.'+posterID).addClass('hovered');
 

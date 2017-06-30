@@ -665,14 +665,54 @@ h2{
 }
 .item-list ul li.subTotal{
   position: fixed;
+  pointer-events: none;
   width: 60vh;
   right: 0;
-  bottom:0;
+  bottom:5vh;
   height: 7.5vh;
   display: flex;
   font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
 }
+.item-list .checkout{
+  position: fixed;
+  pointer-events: none;
+  color:rgba(0,0,0,0.2);
+  width: 60vh;
+  right: 0;
+  bottom:0vh;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  font-family:'Univers LT W01_65 Bold1475968';
+  font-size: 16px;
+}
+.item-list .checkout.selected a{
+  color: rgba(0,0,0,1);
+  pointer-events: all;
+}
+.item-list .checkout a{
+  display: inline-block;
+  width: auto;
+  position: relative;
+}
+.item-list .checkout a:hover{
+  cursor: pointer;
+}
+.item-list .checkout a:after{
+  margin-top: 2px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+.item-list .checkout a:hover:after{
+  width: 100%;
+}
+
 .item-list ul li.subTotal div:first-child{
   width: 40vh;
   padding-left: 0;
