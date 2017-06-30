@@ -66,7 +66,8 @@ a{
 
 }
 #copyContainer > h2{
-  font-size:5vw
+  font-size:5vw;
+  line-height: 1;
 }
 #copyContainer > h3{
   width:25vw;
@@ -102,13 +103,13 @@ a{
   display: inline-block;
 }
 #buy h3.selected{
-  color:red;
+  color:crimson;
 }
 #buy h3.selected:hover{
-  color:red;
+  color:crimson;
 }
 #buy h3.selected::after{
-  background-color: rgba(255,0,0,1);
+  background-color: crimson;
 }
 
 #buy h3:hover{
@@ -341,9 +342,9 @@ a{
   width: 100%;
   font-size: 5vw;
   font-family:'Univers LT W01_75 Black1475980';
-
   margin:7.08vh;
-  margin-top: 5.08vh;
+  margin-top: 6.08vh;
+  line-height: 1
 
 }
 .posterheader{
@@ -393,8 +394,8 @@ a{
     font-size: 16px;
     overflow-x: hidden;
     /*margin-top: 8.75vh;*/
-    padding-top: 13.75vh;
-     padding-bottom: 13.75vh;
+    padding-top: 12.75vh;
+     padding-bottom: 14.75vh;
     /*margin-bottom: 8.75vh;*/
     margin-right: 5vh;
     /*padding-right: 5vh;
@@ -416,10 +417,12 @@ a{
 }
 .intro h2{
   font-size: 5vw;
-    margin-top: -2vh;
+    margin-top: -1vh;
     display: inline-block;
-    margin-bottom: 12.5vh;
+    margin-bottom: 11.5vh;
     height: 30vh;
+    width: 60vw;
+    line-height: 1;
 }
 .imgsquare{
   width: 51.33vh;
@@ -508,9 +511,12 @@ a{
 
 .selected.cartMode .quantity.hovered{
   background-color: rgba(255,255,255,.95);
-  color:#000
+  color:crimson
 }
 
+.selected.cartMode .quantity.hovered:after{
+  background-color: crimson;
+}
 
 .quantity:after{
     content: '';
@@ -680,6 +686,9 @@ h2{
   height: 100%;
   background-color: white;
   transition: .25s;
+}
+.item-list ul li.hovered{
+  color:crimson
 }
 .item-list ul li.hovered:after {
   width: 100%
