@@ -519,8 +519,8 @@ a{
 
 }
 .quantity:hover:after{
-    left:calc((100% - 10px) / 2);
-    width: 10px;
+    left:calc((100% - 25%) / 2);
+    width: 25%;
 
 }
 .selected .quantity:after{
