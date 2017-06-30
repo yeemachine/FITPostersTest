@@ -54,6 +54,11 @@ $.getJSON("database.json", function(data) {
       totalItems = totalItems + unit
   }
   console.log(totalPrice);
+  if (objectSelector.length === 0){
+    idleCart = $('<li class="idleCart"><div>You currently have no items selected.</div></li>')
+
+    selectedItemscontainer.append(idleCart)
+  }
   var subTotal = $('<li class="subTotal"><div>Subtotal:</div><div>$'+totalPrice+'</div></li>')
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Bag ("+totalItems+")</a>")

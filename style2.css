@@ -641,7 +641,6 @@ h2{
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  height: 80vh;
   width: 100%;
   margin-top: -.75vh;
 
@@ -652,9 +651,8 @@ h2{
   flex-direction: row;
   align-items: center;
   width: 100%;
-  padding-bottom: .65vh;
-  padding-top: .65vh;
-  overflow-y: hidden;
+  padding-bottom: .5vh;
+  padding-top: .5vh;
    position:relative;
 }
 .item-list ul li div{
@@ -685,6 +683,7 @@ h2{
   display: block;
   position: absolute;
   left:0;
+  top:0;
   width: 0;
   height: 100%;
   background-color: white;
