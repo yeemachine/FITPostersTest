@@ -1,0 +1,750 @@
+
+
+@keyframes bob {
+  0% {
+    margin-top: 0px;
+  }
+
+  25% {
+    margin-top: 5px
+  }
+  100% {
+    margin-top: 0px
+  }
+
+}
+@keyframes red {
+  0% {
+    color: gainsboro;
+  }
+
+
+  100% {
+    color: black
+  }
+
+}
+*{
+  font-weight: normal;
+}
+body{
+  background-color:white;
+  margin: 0;
+  font-family:'Univers LT W01_55 Roman1475956';
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  overflow-y:auto;
+  align-items: flex-start;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.gallery{
+  overflow-y: scroll;
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+#imgloader{
+  width: 60vw;
+  height: 0;
+  margin: 0;
+  margin-left: 5vw;
+  padding-top: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#copyContainer{
+  position:absolute;top:15vh;left:70vw;display:flex;flex-direction:column;color:white;width: 25vw
+
+}
+#copyContainer > h2{
+  font-size:5vw
+}
+#copyContainer > h3{
+  width:25vw;
+}
+#buy, #share{
+  position: relative;
+  height: inherit;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  font-family:'Univers LT W01_65 Bold1475968';
+
+}
+#buy > h3, #share > h3{
+  padding-top: 4vh;
+  padding-bottom: 1vh;
+  margin: 0;
+  /*border-bottom: 1px solid rgba(255,255,255,0.3)*/
+}
+/*#buy h3.selected{
+  color: red;
+  border-bottom: 1px solid rgba(255,0,0,0.3)
+}
+#buy h3.selected:hover{
+  border-bottom: 1px solid rgba(255,0,0,1)
+}
+#buy h3:hover, #share h3:hover{
+  border-bottom: 1px solid rgba(255,255,255,1);
+  cursor: pointer;
+}*/
+
+#buy h3{
+  display: inline-block;
+}
+#buy h3.selected{
+  color:red;
+}
+#buy h3.selected:hover{
+  color:red;
+}
+#buy h3.selected::after{
+  background-color: rgba(255,0,0,1);
+}
+
+#buy h3:hover{
+  color:rgba(255,255,255,1);
+  cursor: pointer;
+}
+#buy h3::after {
+  width: 100%;
+  margin-top: 3px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+#buy h3:hover::after {
+    width: 100%;
+}
+
+
+#share h3{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#share h3:hover{
+  color:rgba(255,255,255,1);
+  cursor: pointer;
+}
+#share h3::after {
+    width: 100%;
+    margin-top: 3px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+#share h3:hover::after {
+    width: 100%;
+}
+/*#buy:before,#share:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#buy:hover, #share:hover{
+  cursor: pointer;
+}
+#buy:hover:before, #share:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}*/
+
+
+#lazy-container{
+  display:flex;
+  flex-direction:row;
+  position:fixed;
+  overflow-y:hidden;
+  overflow-x:scroll;
+  width:100vw;
+  height:100vh;
+  align-items: center;
+}
+#lazy-container>.cartMode{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  overflow-x:hidden;
+  width:100vw;
+  height:80vh;
+}
+#lazy-container.cartMode{
+  overflow-y:scroll;
+  overflow-x:hidden;
+  align-items: flex-start;
+}
+.main-nav{
+  background-color: rgba(30,30,30,0);
+  color:rgba(0,0,0,.3);
+  width:100vw;
+  height: 7.5vh;
+  font-family:'Univers LT W01_65 Bold1475968';
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  z-index: 999;
+  transition: opacity .25s;
+  overflow: auto;
+}
+.hidden-page{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(30,30,30,1);
+  position: fixed;
+  top:100vh;
+  left:0;
+  transition: .25s;
+  z-index: 999;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.hidden-page.cartMode{
+  display: none;
+}
+.nav-item{
+  margin-right: 10vh;
+  width: 10vh;
+}
+.nav-item a{
+  display: inline-block;
+}
+.nav-item.selected a::after{
+  width: 100%;
+}
+.nav-item a:hover{
+  color:rgba(0,0,0,1);
+  cursor: pointer;
+}
+
+.nav-item a::after {
+    margin-top: 2px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+.nav-item a:hover::after {
+    width: 100%;
+}
+.home{
+  position: fixed;
+  left:10vh;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button{
+  color: rgba(255,255,255,0.3);
+  width: 100vw;
+  text-align: center;
+  font-size: 5vh;
+  height: 10vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .25s;
+}
+.button.fa{
+  font-size: 10vh;
+
+}
+.button:hover{
+  color: rgba(255,255,255,1);
+  cursor:pointer;
+}
+
+.selected{
+  color:rgba(0,0,0,1);
+}
+.word.selected{
+  color:rgba(255,255,255,1);
+}
+.wordContainer{
+  width: 85vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.word{
+  height:3vw;
+  font-size: 2.5vw;
+  color:rgba(255,255,255,.3)
+}
+.word:hover{
+  color:rgba(255,255,255,1);
+  cursor: pointer;
+}
+.page1{
+  height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center
+}
+#lazy-container>.page1.cartMode{
+  display: none;
+}
+#lazy-container>.page1.bookMode{
+  display: none;
+}
+
+.page2{
+  width: auto;
+  height: 100vh;
+  transition: top .4s;
+  background-color: transparent;
+  display:flex;flex-direction:row;justify-content:center;align-items:center;
+}
+.bookheader{
+  display: none
+}
+.cartMode .bookheader{
+  display: block;
+  width: 100%;
+  font-size: 5vw;
+  font-family:'Univers LT W01_75 Black1475980';
+
+  margin:7.08vh;
+  margin-top: 5.08vh;
+
+}
+.posterheader{
+  display: none
+}
+.cartMode .posterheader{
+  display: block;
+  width: 100%;
+  font-size: 5vw;
+  font-family:'Univers LT W01_75 Black1475980';
+
+  margin:7.08vh;
+
+}
+#lazy-container>.page2.cartMode{
+  height: initial;
+  width: calc(100vw - 68vh);
+  padding-top: calc(8.75vh - 2.08vh);
+  padding-left: calc(10vh - 7.08vh);
+  padding-bottom: calc(8.75vh - 2.08vh);
+  padding-right: 3vh;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#lazy-container>.page2.bookMode{
+  display: none;
+}
+.item-list{
+  display: none;
+}
+.item-list>ul>li{
+  text-decoration: none;
+  list-style: none;
+  width: 15vw;
+  margin: 0;
+  padding: 0;
+}
+#lazy-container>.item-list.cartMode{
+    width: 60vh;
+    height: 80vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.1);
+    pointer-events: none;
+    font-size: 16px;
+    overflow-x: hidden;
+    /*margin-top: 8.75vh;*/
+    padding-top: 13.75vh;
+     padding-bottom: 13.75vh;
+    /*margin-bottom: 8.75vh;*/
+    margin-right: 5vh;
+    /*padding-right: 5vh;
+    padding-left: 5vh;*/
+    /*border: 2px solid black;*/
+}
+#lazy-container>.item-list.bookMode{
+  display: none;
+}
+.posterblurb{
+  width: 30vw;
+  margin: 0;
+}
+.intro{
+  width: calc(100vw - 70vh - 24.78vh);
+  height: 72.5vh;
+  display: block;
+  margin-left: 10vh;
+}
+.intro h2{
+  font-size: 5vw;
+    margin-top: -2vh;
+    display: inline-block;
+    margin-bottom: 12.5vh;
+    height: 30vh;
+}
+.imgsquare{
+  width: 51.33vh;
+  height: 72.5vh;
+  background-color:gainsboro;
+  margin-right:24.78vh;
+  margin-left:24.78vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition:.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:rgba(0,0,0,0);
+  opacity:1;
+   position:relative;
+   -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+   -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+   box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+}
+.imgsquare.cartMode{
+  background-color:gainsboro;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color:rgba(0,0,0,0);
+  opacity:1;
+   position:relative;
+   -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
+   -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
+   box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
+  width: 14.16vh;
+  height: 20vh;
+  margin:7.08vh;
+  transition: .25s;
+
+}
+.imgsquare.cartMode.selected{
+  opacity: 1;
+  /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
+  -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
+  box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
+}
+.imgsquare.cartMode:hover{
+  /*opacity: 1;*/
+  /*-webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
+  -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
+  box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);*/
+
+}
+.quantity{
+  pointer-events: none;
+  opacity: 0;
+  transition: .25s;
+  pointer-events: none;
+}
+.cartMode .quantity{
+    pointer-events: all;
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+    color:rgba(255,255,255,0);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: all;
+}
+
+.cartMode .quantity:hover{
+    opacity: 1;
+    background-color: rgba(255,255,255,.95);
+    color:rgba(0,0,0,1);
+}
+.selected.cartMode .quantity{
+  background-color: rgba(0,0,0,0);
+  color:transparent;
+}
+
+.selected.cartMode .quantity.hovered{
+  background-color: rgba(255,255,255,.95);
+  color:#000
+}
+
+
+.quantity:after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    top:0;
+    margin-top: calc(100% + 6vh + 10px);
+    left:50%;
+    height: 4px;
+    background-color: rgba(0,0,0,1);
+    transition: .25s;
+
+}
+.quantity:hover:after{
+    left:calc((100% - 25%) / 2);
+    width: 25%;
+
+}
+.selected .quantity:after{
+  left:0;
+  width: 100%;
+}
+
+
+.minus, .plus{
+
+  font-size: 7vh;
+  text-align: center;
+  font-weight: lighter;
+  -webkit-touch-callout: none; /* iOS Safari */
+ -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+         user-select: none; /* Non-prefixed version, currently
+                               supported by Chrome and Opera */
+ display: flex;
+
+  justify-content: center;
+  overflow: hidden;
+}
+.minus{
+  width: 0%;
+  opacity: .3;
+
+
+}
+.plus{
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.selected .qtyNum{
+  display: block;
+}
+.plusMin{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.selected .minus,.selected .plus{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5%;
+    align-items: center;
+    opacity: 1
+
+}
+.minus:hover, .plus:hover{
+  opacity: 1;
+}
+/*.imgsquare.cartMode.selected:hover{
+  opacity: 1
+}*/
+.imgsquare:hover{
+/*opacity: .3;*/
+transition: .25s;
+cursor: pointer;
+/*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
+-moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
+box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);*/
+color:rgba(0,0,0,0.3);
+}
+.imgsquare.selected:hover{
+  color:rgba(0,0,0,1);
+}
+.imgsquare.cartMode .fa{
+  display: none;
+}
+.imgsquare .fa{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+    top: 75vh;
+    font-size: 5vh;
+    pointer-events: none;
+    /*-webkit-filter: blur(2px);
+    filter: blur(2px);*/
+    /*animation: bob 1s forwards;
+    animation-iteration-count: infinite;*/
+}
+
+h2{
+  width: 15vw;
+  text-align: left;
+  z-index: 5;
+  font-family:'Univers LT W01_75 Black1475980';
+
+}
+.item-list ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 80vh;
+  width: 100%;
+  margin-top: -.75vh;
+
+}
+.item-list ul li{
+  font-size: 1.6vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-bottom: .65vh;
+  padding-top: .65vh;
+  overflow-y: hidden;
+   position:relative;
+}
+.item-list ul li div{
+  width: 10vh
+}
+.item-list ul li div:first-child{
+  width: 40vh;
+  padding-left: 5vh;
+
+}
+.item-list ul li.subTotal{
+  position: fixed;
+  width: 60vh;
+  right: 0;
+  bottom:0;
+  height: 7.5vh;
+  display: flex;
+  font-family:'Univers LT W01_65 Bold1475968';
+  font-size: 16px;
+}
+.item-list ul li.subTotal div:first-child{
+  width: 40vh;
+  padding-left: 0;
+}
+.item-list ul li:after{
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  left:0;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  transition: .25s;
+}
+.item-list ul li.hovered:after {
+  width: 100%
+}
+@media screen and (max-width: 800px) {
+  .nav-item{
+    display: none;
+  }
+
+  body{
+
+    /*flex-direction: column;*/
+
+  }
+  .page2{
+    display: inline-block;
+    width: 100vw;
+
+  }
+  .imgsquare{
+    width: 80vw;
+    height: 112.915vw;
+    margin-bottom: 40vw;
+    margin-left: 10vw;
+  }
+  .intro{
+    width: 80vw;
+    margin-left: 0;
+    height: auto;
+  }
+  .posterblurb{
+    width: 80vw
+  }
+  #imgloader{
+    display: none;
+  }
+  #copyContainer{
+    width: 80vw;
+    margin-left: 10vw;
+    left: auto
+  }
+  #copyContainer > h3{
+    width: 80vw;
+
+  }
+  #copyContainer > h2{
+    width: 80vw;
+  }
+  .hidden-page{
+    background-color: rgba(0,0,0,0.85)
+  }
+  .imgsquare:hover{
+  /*opacity: .3;*/
+  /*-webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+  -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+  box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);*/
+  }
+  #lazy-container{
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+     -webkit-overflow-scrolling: touch;
+  }
+  .quantity:after{
+    display: none;
+  }
+
+}
