@@ -517,33 +517,86 @@ a{
   color:crimson
 }
 
+.selected.cartMode .quantity.hovered:before{
+  border-color: crimson;
+}
 .selected.cartMode .quantity.hovered:after{
-  background-color: crimson;
+  border-color: crimson;
 }
 
+.quantity:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    bottom:0;
+    /*margin-top: calc(100% + 6vh - 2px);*/
+    left:50%;
+    height: 5px;
+    /*background-color: rgba(0,0,0,1);*/
+    transition: .25s, height ease-in .35s;
+    /*border: solid 5px transparent;*/
+    border-bottom: solid transparent 5px;
+}
 .quantity:after{
     content: '';
     display: block;
     position: absolute;
     width: 0;
     top:0;
-    margin-top: calc(100% + 6vh - 2px);
+    /*margin-top: calc(100% + 6vh - 2px);*/
     left:50%;
     height: 5px;
-    background-color: rgba(0,0,0,1);
-    transition: .25s;
-
+    /*background-color: rgba(0,0,0,1);*/
+    transition: .25s, height ease-in .35s;
+    /*border: solid 5px transparent;*/
+    border-top: solid transparent 5px;
+}
+/*.quantity:hover:before{
+    left:calc((100% - 25%) / 2);
+    width: 25%;
 }
 .quantity:hover:after{
     left:calc((100% - 25%) / 2);
     width: 25%;
-
+}*/
+.selected .quantity:before{
+  border: solid transparent 5px;
+  left:0;
+  /*background-color: MediumSeaGreen ;*/
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-left-color:  MediumSeaGreen ;
+  border-right-color:  MediumSeaGreen ;
+  /*border-top-color:  MediumSeaGreen ;*/
+  border-bottom-color:  MediumSeaGreen ;
 }
 .selected .quantity:after{
+  border: solid transparent 5px;
   left:0;
-  background-color: MediumSeaGreen ;
-  width: 100%;
+  /*background-color: MediumSeaGreen ;*/
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-left-color:  MediumSeaGreen ;
+  border-right-color:  MediumSeaGreen ;
+  border-top-color:  MediumSeaGreen ;
+  /*border-bottom-color:  MediumSeaGreen ;*/
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .minus, .plus{
