@@ -522,6 +522,7 @@ a{
 }
 .selected.cartMode .quantity.hovered:after{
   border-color: crimson;
+
 }
 
 .quantity:before{
@@ -537,6 +538,7 @@ a{
     transition: .15s, height ease-in .45s;
     /*border: solid 5px transparent;*/
     border-bottom: solid transparent 5px;
+
 }
 .quantity:after{
     content: '';
@@ -570,6 +572,8 @@ a{
   border-right-color:  MediumSeaGreen ;
   /*border-top-color:  MediumSeaGreen ;*/
   border-bottom-color:  MediumSeaGreen ;
+  /*background-color: MediumSeaGreen;
+  mix-blend-mode: multiply;*/
 }
 .selected .quantity:after{
   border: solid transparent 5px;
@@ -580,6 +584,8 @@ a{
   border-left-color:  MediumSeaGreen ;
   border-right-color:  MediumSeaGreen ;
   border-top-color:  MediumSeaGreen ;
+  /*background-color: MediumSeaGreen;
+  mix-blend-mode: multiply;*/
   /*border-bottom-color:  MediumSeaGreen ;*/
 
 
