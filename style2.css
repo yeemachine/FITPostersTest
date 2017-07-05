@@ -548,7 +548,8 @@ a{
     left:50%;
     height: 5px;
     /*background-color: rgba(0,0,0,1);*/
-    transition: .25s, height ease-in .35s;
+    transition: .25s, height ease-in-out .35s;
+     transition-delay: .25s;
     /*border: solid 5px transparent;*/
     border-top: solid transparent 5px;
 }
@@ -707,8 +708,8 @@ h2{
   flex-direction: row;
   align-items: center;
   width: 100%;
-  padding-bottom: .5vh;
-  padding-top: .5vh;
+  padding-bottom: .25vh;
+  padding-top: .25vh;
    position:relative;
 }
 .item-list ul li div{
