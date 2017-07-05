@@ -534,7 +534,7 @@ a{
     left:50%;
     height: 5px;
     /*background-color: rgba(0,0,0,1);*/
-    transition: .25s, height ease-in .35s;
+    transition: .15s, height ease-in .45s;
     /*border: solid 5px transparent;*/
     border-bottom: solid transparent 5px;
 }
@@ -548,8 +548,7 @@ a{
     left:50%;
     height: 5px;
     /*background-color: rgba(0,0,0,1);*/
-    transition: .25s, height ease-in-out .35s;
-     transition-delay: .25s;
+    transition: .15s, height ease-in .45s;
     /*border: solid 5px transparent;*/
     border-top: solid transparent 5px;
 }
@@ -767,9 +766,12 @@ h2{
   width: 0;
   height: 2px;
   background: #000;
-  transition: .3s;
+
+
 }
 .item-list .checkout a:hover:after{
+  transition: .3s;
+  transition-delay: .35s ;
   width: 100%;
 }
 .item-list .checkout:after{
