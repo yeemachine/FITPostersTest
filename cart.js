@@ -36,6 +36,7 @@ $.getJSON("database.json", function(data) {
   objectSelector = Object.keys(selectedItems)
   totalPrice = 0
   totalItems = 0
+  taxed = 0
 
   for (i = 0; i < objectSelector.length; i++) {
     objectSelector2 = objectSelector[i];
@@ -51,6 +52,8 @@ $.getJSON("database.json", function(data) {
     var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + subPrice
+      taxed = (totalPrice * 1.10 + 5).toFixed(2);
+      tax = (totalPrice * 0.10 + 5).toFixed(2);
       totalItems = totalItems + unit
   }
   console.log(totalPrice);
@@ -63,9 +66,10 @@ $.getJSON("database.json", function(data) {
   }else{
     $('.checkout').removeClass('selected')
   }
-  var subTotal = $('<li class="subTotal"><div>Subtotal:</div><div>$'+totalPrice+'</div></li>')
+  var subTotal = $('<li class="subTotal"><div>Total:</div><div>$'+taxed+'</div></li>')
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Bag ("+totalItems+")</a>")
+  $('.tax').html("<div>Tax(11.54%):</div><a>$"+tax+"</a>")
   $('.item-list section').html(selectedItemscontainer)
   $('li.'+posterID).css({'animation':'red .5s linear'});
   // $('li.'+posterID).addClass('hovered');
