@@ -466,6 +466,7 @@ a{
 }
 .imgsquare.cartMode.selected{
   opacity: 1;
+  transform: scale(1.3);
   /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
@@ -505,11 +506,12 @@ a{
 .selected.cartMode .quantity{
   background-color: rgba(0,0,0,0);
   color:transparent;
+  mix-blend-mode: multiply;
 }
 
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(220,20,60,.8);
-  color:white
+  background-color: rgba(220,20,60,1);
+  color:transparent
 }
 
 .selected.cartMode .quantity.hovered:before{
@@ -521,6 +523,8 @@ a{
 }
 
 .quantity:before{
+  mix-blend-mode:multiply;
+
     content: '';
     display: block;
     position: absolute;
@@ -530,61 +534,43 @@ a{
     left:50%;
     height: 5px;
     /*background-color: rgba(0,0,0,1);*/
-    transition: .15s, height ease-in .45s;
+    transition: .25s, height ease-in .45s;
     /*border: solid 5px transparent;*/
     border-bottom: solid transparent 5px;
 
 }
-.quantity:after{
+/*.quantity:after{
+  mix-blend-mode:multiply;
+
     content: '';
     display: block;
     position: absolute;
     width: 0;
     top:0;
-    /*margin-top: calc(100% + 6vh - 2px);*/
     left:50%;
     height: 5px;
-    /*background-color: rgba(0,0,0,1);*/
-    transition: .15s, height ease-in .45s;
-    /*border: solid 5px transparent;*/
+    transition: .25s, height ease-in .45s;
     border-top: solid transparent 5px;
 }
-/*.quantity:hover:before{
-    left:calc((100% - 25%) / 2);
-    width: 25%;
-}
-.quantity:hover:after{
-    left:calc((100% - 25%) / 2);
-    width: 25%;
-}*/
+
 .selected .quantity:before{
   border: solid transparent 5px;
   left:0;
-  /*background-color: MediumSeaGreen ;*/
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   border-left-color:  MediumSeaGreen ;
   border-right-color:  MediumSeaGreen ;
-  /*border-top-color:  MediumSeaGreen ;*/
   border-bottom-color:  MediumSeaGreen ;
-  /*background-color: MediumSeaGreen;
-  mix-blend-mode: multiply;*/
 }
 .selected .quantity:after{
   border: solid transparent 5px;
   left:0;
-  /*background-color: MediumSeaGreen ;*/
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   border-left-color:  MediumSeaGreen ;
   border-right-color:  MediumSeaGreen ;
   border-top-color:  MediumSeaGreen ;
-  /*background-color: MediumSeaGreen;
-  mix-blend-mode: multiply;*/
-  /*border-bottom-color:  MediumSeaGreen ;*/
-
-
-}
+}*/
 
 
 
