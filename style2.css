@@ -387,8 +387,8 @@ a{
   padding: 0;
 }
 #lazy-container>.item-list.cartMode{
-    width: 60vh;
-    height: 80vh;
+  width: 60vh;
+    height: 62.5vh;
     position: fixed;
     top: 0;
     right: 0;
@@ -396,14 +396,9 @@ a{
     pointer-events: none;
     font-size: 16px;
     overflow-x: hidden;
-    /*margin-top: 8.75vh;*/
     padding-top: 12.75vh;
-     padding-bottom: 14.75vh;
-    /*margin-bottom: 8.75vh;*/
+    padding-bottom: 27.25vh;
     margin-right: 5vh;
-    /*padding-right: 5vh;
-    padding-left: 5vh;*/
-    /*border: 2px solid black;*/
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -695,6 +690,8 @@ h2{
 }
 .item-list section{
   width: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 .item-list ul{
   margin: 0;

@@ -52,8 +52,8 @@ $.getJSON("database.json", function(data) {
     var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + subPrice
-      taxed = (totalPrice * 1.10 + 5).toFixed(2);
-      tax = (totalPrice * 0.10 + 5).toFixed(2);
+      taxed = (totalPrice * 1.1154 + 5).toFixed(2);
+      tax = (totalPrice * 0.1154 + 5).toFixed(2);
       totalItems = totalItems + unit
   }
   console.log(totalPrice);
