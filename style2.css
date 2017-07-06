@@ -66,7 +66,7 @@ a{
 
 }
 #copyContainer > h2{
-  font-size:5vw;
+  font-size:4vw;
   line-height: 1;
 }
 #copyContainer > h3{
@@ -343,7 +343,7 @@ a{
 .cartMode .bookheader{
   display: block;
   width: 100%;
-  font-size: 5vw;
+  font-size: 4vw;
   font-family:'Univers LT W01_75 Black1475980';
   margin:7.08vh;
   margin-top: 6.08vh;
@@ -356,7 +356,7 @@ a{
 .cartMode .posterheader{
   display: block;
   width: 100%;
-  font-size: 5vw;
+  font-size: 4vw;
   font-family:'Univers LT W01_75 Black1475980';
 
   margin:7.08vh;
@@ -414,7 +414,7 @@ a{
   margin-left: 10vh;
 }
 .intro h2{
-  font-size: 5vw;
+  font-size: 4vw;
     margin-top: -1vh;
     display: inline-block;
     margin-bottom: 11.5vh;
@@ -508,8 +508,8 @@ a{
 }
 
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(255,255,255,.95);
-  color:crimson
+  background-color: rgba(220,20,60,.8);
+  color:white
 }
 
 .selected.cartMode .quantity.hovered:before{

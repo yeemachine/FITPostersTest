@@ -52,24 +52,26 @@ $.getJSON("database.json", function(data) {
     var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + subPrice
-      taxed = (totalPrice * 1.1154 + 5).toFixed(2);
-      tax = (totalPrice * 0.1154 + 5).toFixed(2);
+      taxed = ((totalPrice * 1.1154) + 20.0).toFixed(2);
+      tax = ((totalPrice + 20) * 0.1154).toFixed(2);
       totalItems = totalItems + unit
   }
   console.log(totalPrice);
   if (objectSelector.length === 0){
     idleCart = $('<li class="idleCart"><div>You currently have no items selected.</div></li>')
     selectedItemscontainer.append(idleCart)
+    $('.tax').html("<div>Tax(11.54%):</div><a>$"+0+"</a>")
   }
   if (objectSelector.length > 0){
     $('.checkout').addClass('selected')
+    $('.tax').html("<div>Tax(11.54%):</div><a>$"+tax+"</a>")
   }else{
     $('.checkout').removeClass('selected')
   }
   var subTotal = $('<li class="subTotal"><div>Total:</div><div>$'+taxed+'</div></li>')
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Bag ("+totalItems+")</a>")
-  $('.tax').html("<div>Tax(11.54%):</div><a>$"+tax+"</a>")
+
   $('.item-list section').html(selectedItemscontainer)
   $('li.'+posterID).css({'animation':'red .5s linear'});
   // $('li.'+posterID).addClass('hovered');
