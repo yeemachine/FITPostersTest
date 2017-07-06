@@ -364,14 +364,15 @@ a{
 }
 #lazy-container>.page2.cartMode{
   height: initial;
-  width: calc(100vw - 68vh);
+  width: calc(100vw - 72.5vh);
   padding-top: calc(8.75vh - 2.08vh);
   padding-left: calc(10vh - 7.08vh);
   padding-bottom: calc(8.75vh - 2.08vh);
-  padding-right: 3vh;
+  /*padding-right: 3vh;*/
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: hidden;
+  box-shadow:-5px 27px 74px -8px rgba(0,0,0,0.41)
 }
 #lazy-container>.page2.bookMode{
   display: none;
