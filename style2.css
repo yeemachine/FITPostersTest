@@ -364,7 +364,7 @@ a{
 }
 #lazy-container>.page2.cartMode{
   height: initial;
-  width: calc(100vw - 59vh);
+  width: calc(100vw - 63vh);
   padding-top: calc(8.75vh - 2.08vh);
   padding-left: calc(10vh - 7.08vh);
   padding-bottom: calc(8.75vh - 2.08vh);
@@ -372,7 +372,7 @@ a{
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: 999
+  z-index: 91
   /*box-shadow:-5px 27px 74px -8px rgba(0,0,0,0.41)*/
 }
 #lazy-container>.page2.bookMode{
@@ -743,6 +743,7 @@ h2{
   align-items: center;
   font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
+  z-index: 92
 
 
 }
