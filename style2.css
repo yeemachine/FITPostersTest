@@ -713,14 +713,14 @@ h2{
 .item-list ul li div:first-child{
   width: 40vh;
   padding-left: 10vh;
-
+  transition: padding .25s;
 }
 .item-list ul li.subTotal{
   position: fixed;
   pointer-events: none;
   width: 60vh;
   right: 0;
-  bottom:8vh;
+  bottom:7.5vh;
   height: 7.5vh;
   display: flex;
   font-family:'Univers LT W01_65 Bold1475968';
@@ -858,7 +858,7 @@ right: 10vh;
   content: '';
   display: block;
   position: absolute;
-  left:7vh;
+  left:5vh;
   top:0;
   width: 0;
   height: calc(50% - 1px);
@@ -869,8 +869,12 @@ right: 10vh;
 .item-list ul li.hovered{
   color:crimson
 }
+.item-list ul li.hovered div:first-child{
+  padding-left: 7.5vh;
+  /*padding-right: 2.5vh;*/
+}
 .item-list ul li.hovered:after {
-  width: 2vh
+  width: 1.5vh
 }
 @media screen and (max-width: 800px) {
   .nav-item{
