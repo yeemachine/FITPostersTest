@@ -63,12 +63,14 @@ $.getJSON("database.json", function(data) {
     $('.tax').html("<div>Tax(11.54%):</div><a>$"+0+"</a>")
   }
   if (objectSelector.length > 0){
-    $('.checkout').addClass('selected')
+    $('.checkout, .tax, .shipping, .subtotal').addClass('selected')
     $('.tax').html("<div>Tax(11.54%):</div><a>$"+tax+"</a>")
+     subTotal = $('<li class="subTotal selected"><div>Total:</div><div>$'+taxed+'</div></li>')
   }else{
-    $('.checkout').removeClass('selected')
+    $('.checkout, .tax, .shipping, .subtotal').removeClass('selected')
+     subTotal = $('<li class="subTotal"><div>Total:</div><div>$'+taxed+'</div></li>')
   }
-  var subTotal = $('<li class="subTotal"><div>Total:</div><div>$'+taxed+'</div></li>')
+
   selectedItemscontainer.append(subTotal)
   $('.cart').html("<a>Bag ("+totalItems+")</a>")
 

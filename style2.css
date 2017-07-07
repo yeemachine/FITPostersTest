@@ -364,7 +364,7 @@ a{
 }
 #lazy-container>.page2.cartMode{
   height: initial;
-  width: calc(100vw - 72.5vh);
+  width: calc(100vw - 59vh);
   padding-top: calc(8.75vh - 2.08vh);
   padding-left: calc(10vh - 7.08vh);
   padding-bottom: calc(8.75vh - 2.08vh);
@@ -372,7 +372,8 @@ a{
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: hidden;
-  box-shadow:-5px 27px 74px -8px rgba(0,0,0,0.41)
+  z-index: 999
+  /*box-shadow:-5px 27px 74px -8px rgba(0,0,0,0.41)*/
 }
 #lazy-container>.page2.bookMode{
   display: none;
@@ -399,6 +400,7 @@ a{
     overflow-x: hidden;
     padding-top: 12.75vh;
     padding-bottom: 27.25vh;
+    z-index: 90
 
 }
 #lazy-container>.item-list.bookMode{
@@ -462,6 +464,7 @@ a{
   width: 14.16vh;
   height: 20vh;
   margin:7.08vh;
+  margin-bottom: 10.12vh;
   transition: .25s;
 
 }
@@ -473,9 +476,9 @@ a{
   box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
 }
 .imgsquare.cartMode.selected:hover{
-  transform: scale(1.3);
-
+  /*transform: scale(1.3);*/
 }
+
 .imgsquare.cartMode:hover{
   /*opacity: 1;*/
   /*-webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
@@ -493,7 +496,7 @@ a{
     opacity: 1;
     display: flex;
     width: 100%;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.5);
     color:rgba(255,255,255,0);
     height: 100%;
     align-items: center;
@@ -504,7 +507,7 @@ a{
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,0);
     color:rgba(0,0,0,0);
 }
 .selected.cartMode .quantity{
@@ -722,7 +725,12 @@ h2{
   display: flex;
   font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
+  color: rgba(0,0,0,0.2)
 }
+.item-list ul li.subTotal.selected{
+  color: rgba(0,0,0,1)
+}
+
 .item-list .checkout{
   position: fixed;
   pointer-events: none;
@@ -791,29 +799,34 @@ h2{
 height: 1px;
 border: 0;
 margin: 0;
-border-top: solid 2px;
+border-top: solid 2px rgba(0,0,0,0.05);
 bottom: 14.5vh;
 position: fixed;
 right: 10vh;
 }
 .item-list hr:nth-child(3){
   width: 50vh;
-  height: 1px;
-  border: 0;
-  margin: 0;
-  border-top: solid 1px;
-  bottom: 20vh;
-  position: fixed;
-  right: 10vh;
+height: 1px;
+border: 0;
+margin: 0;
+border-top: solid 2px rgba(0,0,0,0.05);
+bottom: 23vh;
+position: fixed;
+right: 10vh;
 }
+
 .tax{
   height: 7.5vh;
   width: 60vh;
   position: fixed;
-  bottom: 13.5vh;
+  bottom: 14vh;
   display: flex;
   font-size: 1.6vh;
   align-items: center;
+  color:rgba(0,0,0,0.2);
+}
+.tax.selected{
+  color:rgba(0,0,0,1);
 }
 .tax div{
   margin-left: 10vh;
@@ -823,10 +836,14 @@ right: 10vh;
   height: 7.5vh;
     width: 60vh;
     position: fixed;
-    bottom: 16vh;
+    bottom: 16.5vh;
     display: flex;
     font-size: 1.6vh;
     align-items: center;
+    color:rgba(0,0,0,0.2);
+}
+.shipping.selected{
+  color:rgba(0,0,0,1);
 }
 .shipping div{
   margin-left: 10vh;
@@ -841,7 +858,7 @@ right: 10vh;
   content: '';
   display: block;
   position: absolute;
-  left:2.5vh;
+  left:7vh;
   top:0;
   width: 0;
   height: calc(50% - 1px);
@@ -853,7 +870,7 @@ right: 10vh;
   color:crimson
 }
 .item-list ul li.hovered:after {
-  width: 5vh
+  width: 2vh
 }
 @media screen and (max-width: 800px) {
   .nav-item{
