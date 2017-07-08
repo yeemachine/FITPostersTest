@@ -470,6 +470,7 @@ a{
 
 }
 .imgsquare.cartMode.selected{
+  transition: .15s;
   opacity: 1;
   transform: scale(1.4);
   filter: grayscale(0);
