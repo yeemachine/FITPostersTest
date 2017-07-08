@@ -522,7 +522,7 @@ a{
 }
 
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(220,20,60,.5);
+  background-color: rgba(220,20,60,.8);
   color:transparent
 }
 
