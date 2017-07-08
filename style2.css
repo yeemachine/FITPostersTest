@@ -30,7 +30,7 @@
 body{
   background-color:white;
   margin: 0;
-  font-family:'NeueHaasGroteskText W01';
+  font-family:'Univers LT W01_55 Roman1475956';
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -66,7 +66,8 @@ a{
 
 }
 #copyContainer > h2{
-  font-size:5vw
+  font-size:4vw;
+  line-height: 1;
 }
 #copyContainer > h3{
   width:25vw;
@@ -77,7 +78,7 @@ a{
   width: auto;
   display: flex;
   align-items: flex-end;
-  font-family:'NHaasGroteskTXW01-75Bd';
+  font-family:'Univers LT W01_65 Bold1475968';
 
 }
 #buy > h3, #share > h3{
@@ -102,13 +103,13 @@ a{
   display: inline-block;
 }
 #buy h3.selected{
-  color:red;
+  color:crimson;
 }
 #buy h3.selected:hover{
-  color:red;
+  color:crimson;
 }
 #buy h3.selected::after{
-  background-color: rgba(255,0,0,1);
+  background-color: crimson;
 }
 
 #buy h3:hover{
@@ -204,7 +205,7 @@ a{
   color:rgba(0,0,0,.3);
   width:100vw;
   height: 7.5vh;
-  font-family:'NHaasGroteskTXW01-75Bd';
+  font-family:'Univers LT W01_65 Bold1475968';
   position: fixed;
   top:0;
   left:0;
@@ -235,6 +236,9 @@ a{
 .nav-item{
   margin-right: 10vh;
   width: 10vh;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
 }
 .nav-item a{
   display: inline-block;
@@ -339,10 +343,11 @@ a{
 .cartMode .bookheader{
   display: block;
   width: 100%;
-  font-size: 5vw;
-  font-family:'NHaasGroteskDSW01-75Bd';
-
+  font-size: 4vw;
+  font-family:'Univers LT W01_75 Black1475980';
   margin:7.08vh;
+  margin-top: 6.08vh;
+  line-height: 1
 
 }
 .posterheader{
@@ -351,8 +356,8 @@ a{
 .cartMode .posterheader{
   display: block;
   width: 100%;
-  font-size: 5vw;
-  font-family:'NHaasGroteskDSW01-75Bd';
+  font-size: 4vw;
+  font-family:'Univers LT W01_75 Black1475980';
 
   margin:7.08vh;
 
@@ -363,10 +368,12 @@ a{
   padding-top: calc(8.75vh - 2.08vh);
   padding-left: calc(10vh - 7.08vh);
   padding-bottom: calc(8.75vh - 2.08vh);
-  padding-right: 3vh;
+  /*padding-right: 3vh;*/
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: hidden;
+  z-index: 91
+  /*box-shadow:-5px 27px 74px -8px rgba(0,0,0,0.41)*/
 }
 #lazy-container>.page2.bookMode{
   display: none;
@@ -382,36 +389,41 @@ a{
   padding: 0;
 }
 #lazy-container>.item-list.cartMode{
-    width: 60vh;
-    height: 80vh;
+  width: 70vh;
+    height: 62.5vh;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.025);
     pointer-events: none;
     font-size: 16px;
     overflow-x: hidden;
-    /*margin-top: 8.75vh;*/
-    padding-top: 13.75vh;
-     padding-bottom: 13.75vh;
-    /*margin-bottom: 8.75vh;*/
-    margin-right: 5vh;
-    /*padding-right: 5vh;
-    padding-left: 5vh;*/
-    /*border: 2px solid black;*/
+    padding-top: 12.75vh;
+    padding-bottom: 27.25vh;
+    z-index: 90
+
 }
 #lazy-container>.item-list.bookMode{
   display: none;
 }
 .posterblurb{
   width: 30vw;
+  margin: 0;
 }
 .intro{
   width: calc(100vw - 70vh - 24.78vh);
   height: 72.5vh;
-  display: flex;
-  flex-direction: column;
+  display: block;
   margin-left: 10vh;
+}
+.intro h2{
+  font-size: 4vw;
+    margin-top: -1vh;
+    display: inline-block;
+    margin-bottom: 11.5vh;
+    height: 30vh;
+    width: 60vw;
+    line-height: 1;
 }
 .imgsquare{
   width: 51.33vh;
@@ -452,21 +464,30 @@ a{
   width: 14.16vh;
   height: 20vh;
   margin:7.08vh;
+  margin-bottom: 10.12vh;
   transition: .25s;
+  filter: grayscale(1);
 
 }
 .imgsquare.cartMode.selected{
   opacity: 1;
+  transform: scale(1.5);
+  filter: grayscale(0);
   /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);
   box-shadow: -2px 34px 97px 5px rgba(0,0,0,.7);*/
 }
+.imgsquare.cartMode.selected:hover{
+  /*transform: scale(1.3);*/
+
+}
+
 .imgsquare.cartMode:hover{
+  filter: grayscale(0);
   /*opacity: 1;*/
   /*-webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
   -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
   box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);*/
-
 }
 .quantity{
   pointer-events: none;
@@ -490,43 +511,90 @@ a{
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(255,255,255,.95);
-    color:rgba(0,0,0,1);
+    background-color: rgba(255,255,255,0);
+    color:rgba(0,0,0,0);
 }
 .selected.cartMode .quantity{
   background-color: rgba(0,0,0,0);
   color:transparent;
+  /*mix-blend-mode: multiply;*/
 }
 
 .selected.cartMode .quantity.hovered{
-  background-color: rgba(255,255,255,.95);
-  color:#000
+  background-color: rgba(220,20,60,.9);
+  color:transparent
 }
 
+.selected.cartMode .quantity.hovered:before{
+  border-color: crimson;
+}
+.selected.cartMode .quantity.hovered:after{
+  border-color: crimson;
 
-.quantity:after{
+}
+
+.quantity:before{
+  mix-blend-mode:multiply;
+
     content: '';
     display: block;
     position: absolute;
-    z-index: -1;
+    width: 0;
+    bottom:0;
+    /*margin-top: calc(100% + 6vh - 2px);*/
+    left:50%;
+    height: 5px;
+    /*background-color: rgba(0,0,0,1);*/
+    transition: .25s, height ease-in .45s;
+    /*border: solid 5px transparent;*/
+    border-bottom: solid transparent 5px;
+
+}
+/*.quantity:after{
+  mix-blend-mode:multiply;
+
+    content: '';
+    display: block;
+    position: absolute;
     width: 0;
     top:0;
-    margin-top: calc(100% + 6vh + 10px);
     left:50%;
-    height: 4px;
-    background-color: rgba(0,0,0,1);
-    transition: .25s;
-
+    height: 5px;
+    transition: .25s, height ease-in .45s;
+    border-top: solid transparent 5px;
 }
-.quantity:hover:after{
-    left:calc((100% - 25%) / 2);
-    width: 25%;
 
+.selected .quantity:before{
+  border: solid transparent 5px;
+  left:0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-left-color:  MediumSeaGreen ;
+  border-right-color:  MediumSeaGreen ;
+  border-bottom-color:  MediumSeaGreen ;
 }
 .selected .quantity:after{
+  border: solid transparent 5px;
   left:0;
-  width: 100%;
-}
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-left-color:  MediumSeaGreen ;
+  border-right-color:  MediumSeaGreen ;
+  border-top-color:  MediumSeaGreen ;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .minus, .plus{
@@ -558,13 +626,6 @@ a{
     height: 100%;
 }
 
-.qtyNum{
-    font-size: 10vh;
-    pointer-events: none;
-    font-family:'NHaasGroteskDSW01-75Bd';
-
-    display: none;
-}
 .selected .qtyNum{
   display: block;
 }
@@ -621,9 +682,13 @@ h2{
   width: 15vw;
   text-align: left;
   z-index: 5;
-  font-family:'NHaasGroteskDSW01-75Bd';
+  font-family:'Univers LT W01_75 Black1475980';
 
-
+}
+.item-list section{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 .item-list ul{
   margin: 0;
@@ -632,7 +697,6 @@ h2{
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  height: 80vh;
   width: 100%;
   margin-top: -.75vh;
 
@@ -643,9 +707,8 @@ h2{
   flex-direction: row;
   align-items: center;
   width: 100%;
-  padding-bottom: .65vh;
-  padding-top: .65vh;
-  overflow-y: hidden;
+  padding-bottom: .25vh;
+  padding-top: .25vh;
    position:relative;
 }
 .item-list ul li div{
@@ -653,18 +716,143 @@ h2{
 }
 .item-list ul li div:first-child{
   width: 40vh;
-  padding-left: 5vh;
-
+  padding-left: 10vh;
+  transition: padding .25s;
 }
 .item-list ul li.subTotal{
   position: fixed;
+  pointer-events: none;
   width: 60vh;
   right: 0;
-  bottom:0;
+  bottom:7.5vh;
   height: 7.5vh;
   display: flex;
-  font-family:'NHaasGroteskTXW01-75Bd';
+  font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
+  color: rgba(0,0,0,0.2)
+}
+.item-list ul li.subTotal.selected{
+  color: rgba(0,0,0,1)
+}
+
+.item-list .checkout{
+  position: fixed;
+  pointer-events: none;
+  color:rgba(0,0,0,0.2);
+  width: 70vh;
+  right: 0;
+  bottom:0vh;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  font-family:'Univers LT W01_65 Bold1475968';
+  font-size: 16px;
+  z-index: 92
+
+
+}
+.item-list .checkout.selected a{
+  color: rgba(0,0,0,1);
+  pointer-events: all;
+}
+.item-list .checkout a{
+  margin-left: 10vh;
+  display: inline-block;
+  width: auto;
+  position: relative;
+}
+.item-list .checkout a:hover{
+  cursor: pointer;
+  color:crimson
+}
+.item-list .checkout a:after{
+  margin-top: 2px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: crimson;
+
+
+}
+.item-list .checkout a:hover:after{
+  transition: .3s;
+  transition-delay: .35s ;
+  width: 100%;
+}
+.item-list .checkout:after{
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  margin-top: 100%;
+  height: 0;
+  background-color: white;
+  transition: .25s;
+  overflow-y: hidden;
+}
+.item-list .checkout:hover:after{
+  margin-top: 0;
+  height: 100%;
+}
+.item-list hr:nth-child(2){
+  width: 50vh;
+height: 1px;
+border: 0;
+margin: 0;
+border-top: solid 2px rgba(0,0,0,0.05);
+bottom: 14.5vh;
+position: fixed;
+right: 10vh;
+}
+.item-list hr:nth-child(3){
+  width: 50vh;
+height: 1px;
+border: 0;
+margin: 0;
+border-top: solid 2px rgba(0,0,0,0.05);
+bottom: 23vh;
+position: fixed;
+right: 10vh;
+}
+
+.tax{
+  height: 7.5vh;
+  width: 60vh;
+  position: fixed;
+  bottom: 14vh;
+  display: flex;
+  font-size: 1.6vh;
+  align-items: center;
+  color:rgba(0,0,0,0.2);
+}
+.tax.selected{
+  color:rgba(0,0,0,1);
+}
+.tax div{
+  margin-left: 10vh;
+  width: 40vh
+}
+.shipping{
+  height: 7.5vh;
+    width: 60vh;
+    position: fixed;
+    bottom: 16.5vh;
+    display: flex;
+    font-size: 1.6vh;
+    align-items: center;
+    color:rgba(0,0,0,0.2);
+}
+.shipping.selected{
+  color:rgba(0,0,0,1);
+}
+.shipping div{
+  margin-left: 10vh;
+  width: 40vh
 }
 .item-list ul li.subTotal div:first-child{
   width: 40vh;
@@ -675,14 +863,23 @@ h2{
   content: '';
   display: block;
   position: absolute;
-  left:0;
+  left:10vh;
+  top:0;
   width: 0;
-  height: 100%;
-  background-color: white;
+  height: calc(50% - 1px);
+  /*background-color: crimson;*/
+  border-bottom: solid 2px crimson;
   transition: .25s;
 }
+.item-list ul li.hovered{
+  color:crimson
+}
+.item-list ul li.hovered div:first-child{
+  padding-left: 12.5vh;
+  /*padding-right: 2.5vh;*/
+}
 .item-list ul li.hovered:after {
-  width: 100%
+  width: 1.5vh
 }
 @media screen and (max-width: 800px) {
   .nav-item{

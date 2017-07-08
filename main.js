@@ -1,14 +1,17 @@
 $(window).on('beforeunload', function() {
     $(window).scrollLeft(0);
+
   });
 
 
 
-var selectedItems = []
+var selectedItems = {}
 var state;
 var posterID;
 
 $( document ).ready(function() {
+  // $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
+  // $('.cartMode').attr('state', 'bookMode');
 
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
   if (isMobile.matches) {
@@ -41,8 +44,8 @@ $( document ).ready(function() {
                   else{
                       var imgcontainer = document.getElementById('imgloader');
                       imgcontainer.style.backgroundImage = 'url('+imgURL+')';
-                       $('.page1,.page2').css({'margin-top':'-99vh','transition':'.4s'});
-                      $('.main-nav').css({'top':'-99vh','transition':'.4s'});
+                       $('.page1,.page2').css({'margin-top':'-99vh','transition':'.25s'});
+                      $('.main-nav').css({'opacity':'0'});
                   }
               $('#imgTitle').html(imgTitle);
               $('#imgCopy').html(imgPara);
@@ -51,73 +54,37 @@ $( document ).ready(function() {
         $('.hidden-page').css({'top':'0'});
         $('body').attr('status', 'locked');
 
-        $('#buy').addClass(posterID)
+////////reloads saved status
+        if ($('#'+posterID).attr('status') === 'selected'){
+            $('#buy').attr('status','selected');
+            $('#buy h3').html('Remove from Bag');
+            $('#buy h3').addClass('selected');
+        }else{
+          $('#buy h3').html('Add to Bag');
+          $('#buy h3').removeClass('selected');
+        }
       }
 //////Cart view click
       else{
         var cartItem = '.'+posterID
-         $.getJSON("database.json", function(data) {
-           var imgTitle = data.posters[posterID].title
-           var price = data.posters[posterID].price
-              // imgTitle = imgTitle.replace('<br><br>', ", ");
-
-
-           $(cartItem).toggleClass('selected');
-
-
-        if ($(cartItem).attr('status') != 'selected') {
-          $(cartItem).attr('status', 'selected');
-          selectedItems.push(imgTitle);
-        }else{
-          $(cartItem).attr('status', '');
-          selectedItems = selectedItems.filter(function(item) {
-            return item !== imgTitle
-          })
-          }
-
-
-          var selectedItemscontainer = $('<ul></ul>')
-
-          for (i = 0; i < selectedItems.length; i++) {
-            var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
-              selectedItemscontainer.append(selectedItemsnode)
-          }
-          console.log(selectedItems.length);
-          console.log(selectedItems);
-          console.log(selectedItemscontainer);
-          $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
-          $('.item-list').html(selectedItemscontainer)
-
-        });
-
+        // addCart();
       }
    });
-
+   $('.quantity').click(function() {
+     addCart();
+    });
+    // $('.minus').click(function() {
+    //   addCart();
+    //  });
 
 
    $('#buy').click(function() {
-    //  buttonClass = $(this).attr('class')
-     $('.'+posterID).addClass('selected');
-     $('.'+posterID).attr('status', 'selected');
-      $.getJSON("database.json", function(data) {
-        var imgTitle = data.posters[posterID].title
-
-        selectedItems.push(imgTitle);
-
-        var selectedItemscontainer = $('<ul></ul>')
-
-        for (i = 0; i < selectedItems.length; i++) {
-          var selectedItemsnode = $('<li>'+selectedItems[i]+'</li>')
-            selectedItemscontainer.append(selectedItemsnode)
-        }
-        $('.cart').html("<a>Cart ("+selectedItems.length+")</a>")
-        $('.item-list').html(selectedItemscontainer)
-      });
+     addCart();
    });
 ///Back to poster view
    $('.button').click(function() {
-     $('.page1,.page2').css({'margin-top':'','transition':'.4s'});
-     $('.main-nav').css({'top':'','transition':'.4s'});
+     $('.page1,.page2').css({'margin-top':'','transition':'.25s'});
+     $('.main-nav').css({'opacity':''});
      $('.hidden-page').css({'top':''});
       $('body').css({'overflow-x':''});
       $('body').css({'overflow-y':''});
@@ -159,5 +126,33 @@ $( document ).ready(function() {
     $('.posterNav').addClass('selected');
     $('.cart,.book').removeClass('selected');
   });
+
+
+for(let s = 0; s < 25; s ++) {
+$('.poster'+s).on("mouseenter", function(){
+  $('li.poster'+s).addClass('hovered');
+  $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
+});
+$('.poster'+s).on("mouseleave", function(){
+  $('li.poster'+s).removeClass('hovered');
+  $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
+});
+
+}
+
+// $(document).on("mouseover",'.minus', function(){
+//   container = $(this).closest('.quantity').children('.qtyNum')
+//   container.css({'opacity':'.5'});
+// });
+// $(document).on("mouseout",'.minus', function(){
+//   container = $(this).closest('.quantity').children('.qtyNum')
+//   container.css({'opacity':''});
+// });
+
+
+
+
+
+
 
 });
