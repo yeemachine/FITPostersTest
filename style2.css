@@ -465,7 +465,7 @@ a{
   height: 20vh;
   margin:7.08vh;
   margin-bottom: 10.12vh;
-  transition: .15s;
+  transition: .1s;
   filter: grayscale(1);
 
 }
@@ -493,7 +493,7 @@ a{
 .quantity{
   pointer-events: none;
   opacity: 0;
-  transition: .15s;
+  transition: .1s;
   pointer-events: none;
 }
 .cartMode .quantity{
