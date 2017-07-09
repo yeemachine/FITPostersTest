@@ -124,7 +124,7 @@ a{
     width: 0;
     height: 2px;
     background: #fff;
-    transition: width .15s;
+    transition: width .25s;
 }
 #buy h3:hover::after {
     width: 100%;
@@ -148,7 +148,7 @@ a{
     width: 0;
     height: 2px;
     background: #fff;
-    transition: width .15s;
+    transition: width .25s;
 }
 #share h3:hover::after {
     width: 100%;
@@ -215,7 +215,7 @@ a{
   justify-content: flex-end;
   font-size: 16px;
   z-index: 999;
-  transition: opacity .15s;
+  transition: opacity .25s;
   overflow: auto;
 }
 .hidden-page{
@@ -225,7 +225,7 @@ a{
   position: fixed;
   top:100vh;
   left:0;
-  transition: .15s;
+  transition: .25s;
   z-index: 999;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -258,7 +258,7 @@ a{
     width: 0;
     height: 2px;
     background: #000;
-    transition: width .15s;
+    transition: width .25s;
 }
 .nav-item a:hover::after {
     width: 100%;
@@ -281,7 +281,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: .15s;
+  transition: .25s;
 }
 .button.fa{
   font-size: 10vh;
@@ -333,7 +333,7 @@ a{
 .page2{
   width: auto;
   height: 100vh;
-  transition: top .15s;
+  transition: top .25s;
   background-color: transparent;
   display:flex;flex-direction:row;justify-content:center;align-items:center;
 }
@@ -434,7 +434,7 @@ a{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  transition:.15s;
+  transition:.25s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -465,12 +465,12 @@ a{
  height: 36.25vh;
   margin:7.08vh;
   margin-bottom: 10.12vh;
-  transition: .15s;
+  transition: .25s;
   filter: grayscale(1);
 
 }
 .imgsquare.cartMode.selected{
-  transition: .15s;
+  transition: .25s;
   opacity: 1;
   transform: scale(1);
   filter: grayscale(0);
@@ -494,7 +494,7 @@ a{
 .quantity{
   pointer-events: none;
   opacity: 0;
-  transition: .15s;
+  transition: .25s;
   pointer-events: none;
 }
 .cartMode .quantity{
@@ -514,7 +514,7 @@ a{
 .cartMode .quantity:hover{
     opacity: 1;
     background-color: rgba(255,255,255,0.5);
-    color:rgba(0,0,0,0);
+    color:rgba(0,0,0,1);
 }
 .selected.cartMode .quantity{
   color:transparent;
@@ -658,7 +658,7 @@ a{
 }*/
 .imgsquare:hover{
 /*opacity: .3;*/
-transition: .15s;
+transition: .25s;
 cursor: pointer;
 /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
 -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
@@ -723,7 +723,7 @@ h2{
 .item-list ul li div:first-child{
   width: 40vh;
   padding-left: 10vh;
-  transition: padding .15s;
+  transition: padding .25s;
 }
 .item-list ul li.subTotal{
   position: fixed;
@@ -783,7 +783,7 @@ h2{
 
 }
 .item-list .checkout a:hover:after{
-  transition: .15s;
+  transition: .25s;
   transition-delay: .25s ;
   width: 100%;
 }
@@ -798,7 +798,7 @@ h2{
   margin-top: 100%;
   height: 0;
   background-color: white;
-  transition: .15s;
+  transition: .25s;
   overflow-y: hidden;
 }
 .item-list .checkout:hover:after{
@@ -875,7 +875,7 @@ right: 10vh;
   height: calc(50% - 1px);
   /*background-color: crimson;*/
   border-bottom: solid 2px crimson;
-  transition: .15s;
+  transition: .25s;
 }
 .item-list ul li.hovered{
   color:crimson
