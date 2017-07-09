@@ -461,8 +461,8 @@ a{
    -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
    -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
    box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);
-  width: 14.16vh;
-  height: 20vh;
+   width: 25.665vh;
+ height: 36.25vh;
   margin:7.08vh;
   margin-bottom: 10.12vh;
   transition: .15s;
@@ -517,15 +517,15 @@ a{
     color:rgba(0,0,0,0);
 }
 .selected.cartMode .quantity{
-  background-color: rgba(0,0,0,0);
   color:transparent;
+  height: 0;
 
   /*mix-blend-mode: multiply;*/
 }
 
 .selected.cartMode .quantity.hovered{
   background-color: rgba(255,255,255,.9);
-  color:rgba(119,119,119,1);
+  color:rgba(119,119,119,0);
 
 }
 .cartMode .quantity.hovered{
