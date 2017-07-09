@@ -124,7 +124,7 @@ a{
     width: 0;
     height: 2px;
     background: #fff;
-    transition: width .3s;
+    transition: width .15s;
 }
 #buy h3:hover::after {
     width: 100%;
