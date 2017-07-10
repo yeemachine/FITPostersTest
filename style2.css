@@ -928,11 +928,11 @@ right: 10vh;
 }
 @media screen and (max-width: 800px) {
   .nav-item{
-    display: none;
+    /*display: none;*/
     margin-left: 10vw;
   }
   .nav-item.show{
-    display: block;
+    /*display: block;*/
   }
   .nav-item.show a::after{
   }
@@ -953,11 +953,18 @@ right: 10vh;
     justify-content: center;
       -webkit-transform: translate3d(0, 0, 0);
   }
+  nav.main-nav .nav-item{
+    opacity: 0;
+    transition: .25s;
+  }
   nav.main-nav.show{
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,1);
     margin-left: 0;
+  }
+  nav.main-nav.show .nav-item{
+    opacity: 1
   }
   i.fa.hamburger{
     display: flex;
