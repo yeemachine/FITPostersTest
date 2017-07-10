@@ -74,6 +74,7 @@ $( document ).ready(function() {
       }
       if ($(this).hasClass('cartMode')){
         addCart();
+        console.log('hi');
       }
    });
   //  $('.imgsquare').click(function() {
