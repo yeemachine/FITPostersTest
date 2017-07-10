@@ -951,6 +951,7 @@ right: 10vh;
     align-items: flex-start;
     justify-content: center;
     margin-left: 100%;
+      -webkit-transform: translate3d(0, 0, 0);
   }
   nav.main-nav.show{
     width: 100%;
