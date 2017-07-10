@@ -1044,7 +1044,8 @@ right: 10vh;
   .hidden-page{
     top:0;
     left: -100vw;
-    background-color: rgba(0,0,0,0.85)
+    background-color: rgba(0,0,0,0.85);
+      -webkit-transform: translate3d(0, 0, 0);
   }
   .hidden-page.slide{
     left:0;
