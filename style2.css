@@ -221,8 +221,8 @@ a{
   overflow: auto;
 }
 .hidden-page{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: rgba(30,30,30,1);
   position: fixed;
   top:100vh;
