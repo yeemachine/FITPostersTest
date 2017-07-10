@@ -1057,11 +1057,11 @@ right: 10vh;
   }
   #lazy-container{
     display: block;
-    /*overflow-y: scroll;*/
+    overflow-y: scroll;
     overflow-x: hidden;
-    position: absolute;
-    height: auto;
-     /*-webkit-overflow-scrolling: touch;*/
+    /*position: absolute;*/
+    /*height: auto;*/
+     -webkit-overflow-scrolling: touch;
   }
   .quantity{
     display: none;
