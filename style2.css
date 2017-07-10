@@ -29,6 +29,9 @@
 .page2 .imgsquare{
     -webkit-transform: translate3d(0, 0, 0);
 }
+.page2{
+  -webkit-transform: translate3d(0, 0, 0);
+}
 body{
   background-color:white;
   margin: 0;
