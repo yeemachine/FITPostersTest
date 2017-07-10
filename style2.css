@@ -1034,7 +1034,7 @@ right: 10vh;
     display: block;
     overflow-y: scroll;
     overflow-x: hidden;
-     /*-webkit-overflow-scrolling: touch;*/
+     -webkit-overflow-scrolling: touch;
   }
   .quantity{
     display: none;
