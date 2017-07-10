@@ -1040,6 +1040,7 @@ right: 10vh;
     /*overflow-y: scroll;*/
     overflow-x: hidden;
     position: absolute;
+    height: auto;
      /*-webkit-overflow-scrolling: touch;*/
   }
   .quantity{
