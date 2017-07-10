@@ -47,14 +47,14 @@ $( document ).ready(function() {
                   else{
                       var imgcontainer = document.getElementById('imgloader');
                       imgcontainer.style.backgroundImage = 'url('+imgURL+')';
-                       $('.page1,.page2').css({'margin-top':'-99vh','transition':'.25s'});
+                       $('.page1,.page2').addClass('slide');
                       $('.main-nav').css({'opacity':'0'});
                   }
               $('#imgTitle').html(imgTitle);
               $('#imgCopy').html(imgPara);
          });
         $('body').css({'overflow-y':'hidden'});
-        $('.hidden-page').css({'top':'0'});
+        $('.hidden-page').addClass('slide');
         $('body').attr('status', 'locked');
 
 ////////reloads saved status
@@ -90,9 +90,9 @@ $( document ).ready(function() {
    });
 ///Back to poster view
    $('.button').click(function() {
-     $('.page1,.page2').css({'margin-top':'','transition':'.25s'});
+     $('.page1,.page2').removeClass('slide');
      $('.main-nav').css({'opacity':''});
-     $('.hidden-page').css({'top':''});
+     $('.hidden-page').removeClass('slide');
       $('body').css({'overflow-x':''});
       $('body').css({'overflow-y':''});
       $('body').attr('status', '');

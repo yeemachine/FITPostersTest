@@ -330,6 +330,13 @@ i.fa.hamburger{
   align-items:center;
   justify-content:center
 }
+.page1.slide, .page2.slide{
+  margin-top:-99vh;
+  transition:.25s
+}
+.hidden-page.slide{
+  top:0
+}
 #lazy-container>.page1.cartMode{
   display: none;
 }
@@ -1004,8 +1011,12 @@ right: 10vh;
     width: 80vw;
   }
   .hidden-page{
-    display: none;
+    top:0;
+    left: -100vw;
     background-color: rgba(0,0,0,0.85)
+  }
+  .hidden-page.slide{
+    left:0;
   }
   .imgsquare:hover{
   /*opacity: .3;*/
