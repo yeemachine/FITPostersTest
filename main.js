@@ -72,7 +72,7 @@ $( document ).ready(function() {
         var cartItem = '.'+posterID
         // addCart();
       }
-      if ($(this).hasClass('cardMode')){
+      if ($(this).hasClass('cartMode')){
         addCart();
       }
    });
