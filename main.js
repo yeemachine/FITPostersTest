@@ -16,14 +16,17 @@ $( document ).ready(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
   if (isMobile.matches) {
       state="mobile"
+      $('.home').html('Poster Works for FIT')
   }else{
     state="desktop"
   }
   $(window).resize(function() {
     if (isMobile.matches) {
         state="mobile"
+        $('.home').html('Poster Works for FIT')
     }else{
       state="desktop"
+      $('.home').html('Rocco Piscatello: Poster Works for FIT')
     }
     console.log(state);
   });
@@ -102,6 +105,10 @@ $( document ).ready(function() {
     $('.book, .posterNav').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
+    if (state === 'mobile'){
+      $('.show').removeClass('show');
+      $('.hamburger').toggleClass('fa-bars fa-times')
+    }
     $('.lazy').lazy({
                bind: "event",
                delay: 500
@@ -115,6 +122,10 @@ $( document ).ready(function() {
     $('.posterNav , .cart').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
     $('.cartMode').attr('state', 'bookMode');
+    if (state === 'mobile'){
+      $('.show').removeClass('show');
+      $('.hamburger').toggleClass('fa-bars fa-times')
+    }
   });
 
 
@@ -125,6 +136,10 @@ $( document ).ready(function() {
     $('.bookMode').removeClass('bookMode');
     $('.posterNav').addClass('selected');
     $('.cart,.book').removeClass('selected');
+    if (state === 'mobile'){
+      $('.show').removeClass('show');
+      $('.hamburger').toggleClass('fa-bars fa-times')
+    }
   });
 
 
@@ -132,14 +147,27 @@ for(let s = 0; s < 25; s ++) {
 $('.poster'+s).on("mouseenter", function(){
   $('li.poster'+s).addClass('hovered');
   $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
+  $('.poster'+s+'.selected.cartMode.imgsquare').addClass('hovered');
 });
 $('.poster'+s).on("mouseleave", function(){
   $('li.poster'+s).removeClass('hovered');
   $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
+  $('.poster'+s+'.cartMode.imgsquare').removeClass('hovered');
+
 });
 
 }
+$('.hamburger').on("click", function(){
+  console.log('ham')
+  // if ($('.home').hasClass('show')){
+  //   $('.home').css({'opacity':'1'})
+  // }else{
+  //   $('.home').css({'opacity':'0'})
+  // }
+  $('.main-nav, .nav-item, .home, .hamburger').toggleClass('show')
 
+  $(this).toggleClass('fa-bars fa-times')
+});
 // $(document).on("mouseover",'.minus', function(){
 //   container = $(this).closest('.quantity').children('.qtyNum')
 //   container.css({'opacity':'.5'});
