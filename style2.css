@@ -977,6 +977,7 @@ right: 10vh;
 
     /*flex-direction: column;*/
     -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
 
   }
   .home{
@@ -1061,7 +1062,6 @@ right: 10vh;
     overflow-x: hidden;
     position: absolute;
     height: auto;
-    -webkit-transform: translate3d(0, 0, 0);
      /*-webkit-overflow-scrolling: touch;*/
   }
   .quantity{
