@@ -483,6 +483,7 @@ i.fa.hamburger{
    -webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
    -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
    box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
+     -webkit-transform: translate3d(0, 0, 0);
 }
 .imgsquare.cartMode{
   background-color:gainsboro;
