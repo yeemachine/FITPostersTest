@@ -105,6 +105,10 @@ $( document ).ready(function() {
     $('.book, .posterNav').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
+    if (state === 'mobile'){
+      $('.show').removeClass('show');
+      $('.hamburger').toggleClass('fa-bars fa-times')
+    }
     $('.lazy').lazy({
                bind: "event",
                delay: 500
@@ -118,6 +122,10 @@ $( document ).ready(function() {
     $('.posterNav , .cart').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
     $('.cartMode').attr('state', 'bookMode');
+    if (state === 'mobile'){
+      $('.show').removeClass('show');
+      $('.hamburger').toggleClass('fa-bars fa-times')
+    }
   });
 
 
@@ -128,6 +136,10 @@ $( document ).ready(function() {
     $('.bookMode').removeClass('bookMode');
     $('.posterNav').addClass('selected');
     $('.cart,.book').removeClass('selected');
+    if (state === 'mobile'){
+      $('.show').removeClass('show');
+      $('.hamburger').toggleClass('fa-bars fa-times')
+    }
   });
 
 
