@@ -270,6 +270,8 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family:'Univers LT W01_65 Bold1475968';
+
 }
 i.fa.hamburger{
   display: none;
@@ -932,6 +934,7 @@ right: 10vh;
     position: fixed;
     height: 7.5vh;
     font-size: 24px;
+    z-index: 9999
   }
   i.fa.hamburger.show{
   }
@@ -945,9 +948,13 @@ right: 10vh;
   }
   .home{
     top: 0;
-    left:10vw
+    left:10vw;
+    z-index: 9999;
   }
   .home.show{
+    transition-delay: .25s;
+    transition: .25s;
+    opacity: 1 !important
   }
   .page2{
     display: inline-block;

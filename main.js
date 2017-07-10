@@ -159,7 +159,13 @@ $('.poster'+s).on("mouseleave", function(){
 }
 $('.hamburger').on("click", function(){
   console.log('ham')
+  // if ($('.home').hasClass('show')){
+  //   $('.home').css({'opacity':'1'})
+  // }else{
+  //   $('.home').css({'opacity':'0'})
+  // }
   $('.main-nav, .nav-item, .home, .hamburger').toggleClass('show')
+
   $(this).toggleClass('fa-bars fa-times')
 });
 // $(document).on("mouseover",'.minus', function(){
