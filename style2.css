@@ -254,6 +254,7 @@ a{
   z-index: 7;
   overflow-y: scroll;
   overflow-x: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .hidden-page.cartMode{
   display: none;
@@ -531,6 +532,7 @@ i.fa.hamburger{
   box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.41);*/
 }
 .quantity{
+  -webkit-transform: translate3d(0, 0, 0);
   pointer-events: none;
   opacity: 0;
   transition: .25s;
@@ -755,6 +757,10 @@ h2{
   padding-bottom: .25vh;
   padding-top: .25vh;
    position:relative;
+   -webkit-transform: translate3d(0, 0, 0);
+}
+.item-list ul li:after{
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .item-list ul li div{
   width: 10vh
@@ -951,7 +957,7 @@ right: 10vh;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-      -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
   nav.main-nav .nav-item{
     opacity: 0;
