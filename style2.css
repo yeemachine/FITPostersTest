@@ -471,6 +471,7 @@ i.fa.hamburger{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-backface-visibility: hidden;
   transition:.25s;
   display: flex;
   flex-direction: column;
