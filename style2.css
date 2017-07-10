@@ -969,6 +969,7 @@ right: 10vh;
     display: inline-block;
     width: 100vw;
     height: auto;
+    min-height: 101%;
 
   }
   .imgsquare{
