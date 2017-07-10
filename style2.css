@@ -262,6 +262,7 @@ a{
 .nav-item{
   margin-right: 7.5vh;
   height: 7.5vh;
+  width: 7.5vh;
   display: flex;
   align-items: center;
 }
