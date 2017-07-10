@@ -72,10 +72,13 @@ $( document ).ready(function() {
         var cartItem = '.'+posterID
         // addCart();
       }
+      if ($(this).hasClass('cardMode')){
+        addCart();
+      }
    });
-   $('.imgsquare.cartMode').click(function() {
-     addCart();
-    });
+  //  $('.imgsquare').click(function() {
+  //    addCart();
+  //   });
     // $('.minus').click(function() {
     //   addCart();
     //  });
