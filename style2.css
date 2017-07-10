@@ -216,7 +216,7 @@ a{
   align-items: center;
   justify-content: flex-end;
   font-size: 16px;
-  z-index: 999;
+  z-index: 5;
   transition: opacity .25s;
   overflow: auto;
 }
@@ -228,7 +228,7 @@ a{
   top:100vh;
   left:0;
   transition: .25s;
-  z-index: 999;
+  z-index: 7;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -386,7 +386,7 @@ i.fa.hamburger{
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: 91
+  z-index: 4
   /*box-shadow:-5px 27px 74px -8px rgba(0,0,0,0.41)*/
 }
 #lazy-container>.page2.bookMode{
@@ -414,7 +414,7 @@ i.fa.hamburger{
     overflow-x: hidden;
     padding-top: 12.75vh;
     padding-bottom: 27.25vh;
-    z-index: 90
+    z-index: 3
 
 }
 #lazy-container>.item-list.bookMode{
@@ -701,7 +701,7 @@ color:rgba(0,0,0,0.3);
 h2{
   width: 15vw;
   text-align: left;
-  z-index: 5;
+  z-index: 2;
   font-family:'Univers LT W01_75 Black1475980';
 
 }
@@ -767,7 +767,7 @@ h2{
   align-items: center;
   font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
-  z-index: 92
+  z-index: 5
 
 
 }
@@ -943,7 +943,7 @@ right: 10vh;
     position: fixed;
     height: 7.5vh;
     font-size: 24px;
-    z-index: 9999
+    z-index: 6
   }
   i.fa.hamburger.show{
   }
@@ -958,7 +958,7 @@ right: 10vh;
   .home{
     top: 0;
     left:10vw;
-    z-index: 9999;
+    z-index: 6;
   }
   .home.show{
     transition-delay: .25s;
@@ -1017,6 +1017,12 @@ right: 10vh;
   }
   .hidden-page.slide{
     left:0;
+  }
+  .button{
+    width: 20vw;
+  }
+  i.fa.fa-angle-up{
+    transform: rotate(-90deg);
   }
   .imgsquare:hover{
   /*opacity: .3;*/
