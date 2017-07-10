@@ -976,10 +976,7 @@ right: 10vh;
     font-size: 28px
   }
   body{
-
-    /*flex-direction: column;*/
     -webkit-overflow-scrolling: touch;
-
   }
   .home{
     top: 0;
@@ -1069,7 +1066,7 @@ right: 10vh;
     position: absolute;
     height: auto;
     -webkit-transform: translate3d(0, 0, 0);
-     /*-webkit-overflow-scrolling: touch;*/
+     -webkit-overflow-scrolling: touch;
   }
   .quantity{
     display: none;
