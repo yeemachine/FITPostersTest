@@ -104,9 +104,10 @@ $( document ).ready(function() {
 ///Go to cart state
   $('.cart').click(function() {
     $('.bookMode').removeClass('bookMode');
+    $('.aboutMode').removeClass('aboutMode');
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.cart').addClass('selected');
-    $('.book, .posterNav').removeClass('selected');
+    $('.book, .posterNav, .about').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
     if (state === 'mobile'){
@@ -123,7 +124,9 @@ $( document ).ready(function() {
   $('.book').click(function() {
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.book').addClass('selected');
-    $('.posterNav , .cart').removeClass('selected');
+    $('.cartMode').removeClass('cartMode');
+    $('.aboutMode').removeClass('aboutMode');
+    $('.posterNav , .cart, .about').removeClass('selected');
     $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
     $('.cartMode').attr('state', 'bookMode');
     if (state === 'mobile'){
@@ -132,14 +135,29 @@ $( document ).ready(function() {
     }
   });
 
+///
+$('.about').click(function() {
+  $('.page1,.page2,.main-nav').css({'transition':''});
+  $('.about').addClass('selected');
+  $('.posterNav , .cart, .book').removeClass('selected');
+  $('.cartMode').removeClass('cartMode');
+  $('.bookMode').removeClass('bookMode');
+  $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('aboutMode');
+  $('.cartMode').attr('state', 'aboutMode');
+  if (state === 'mobile'){
+    $('.show').removeClass('show');
+    $('.hamburger').toggleClass('fa-bars fa-times')
+  }
+});
 
 ///Return to poster state
   $('.posterNav').click(function() {
     $('.cartMode, .bookMode').attr('state', '');
     $('.cartMode').removeClass('cartMode');
     $('.bookMode').removeClass('bookMode');
+    $('.aboutMode').removeClass('aboutMode');
     $('.posterNav').addClass('selected');
-    $('.cart,.book').removeClass('selected');
+    $('.cart, .book, .about').removeClass('selected');
     if (state === 'mobile'){
       $('.show').removeClass('show');
       $('.hamburger').toggleClass('fa-bars fa-times')

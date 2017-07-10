@@ -228,16 +228,16 @@ a{
 .main-nav{
   background-color: rgba(30,30,30,0);
   color:rgba(0,0,0,.3);
-  width:100vw;
+  width:60vh;
   height: 7.5vh;
   font-family:'Univers LT W01_65 Bold1475968';
   position: fixed;
   top:0;
-  left:0;
+  right:0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-size: 16px;
   z-index: 5;
   transition: opacity .25s;
@@ -261,7 +261,6 @@ a{
 }
 .nav-item{
   margin-right: 7.5vh;
-  width: 7.5vh;
   height: 7.5vh;
   display: flex;
   align-items: center;
@@ -367,7 +366,9 @@ i.fa.hamburger{
 #lazy-container>.page1.bookMode{
   display: none;
 }
-
+#lazy-container>.page1.aboutMode{
+  display: none;
+}
 .page2{
   width: auto;
   height: 100vh;
@@ -416,6 +417,9 @@ i.fa.hamburger{
 #lazy-container>.page2.bookMode{
   display: none;
 }
+#lazy-container>.page2.aboutMode{
+  display: none;
+}
 .item-list{
   display: none;
 }
@@ -442,6 +446,9 @@ i.fa.hamburger{
 
 }
 #lazy-container>.item-list.bookMode{
+  display: none;
+}
+#lazy-container>.item-list.aboutMode{
   display: none;
 }
 .posterblurb{

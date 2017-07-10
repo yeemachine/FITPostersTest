@@ -10,11 +10,11 @@ $( document ).ready(function() {
           st = $(this).scrollTop();
           if(st > lastScrollTop && $(this).scrollTop()>page1Y && $('body').attr('status') != 'locked' ) {
             // console.log('down 1');
-            $('.main-nav').css({'opacity':'0'})
+            $('.main-nav, .home').css({'opacity':'0'})
           }
           else {
             // console.log('up 1');
-            $('.main-nav').css({'opacity':''})
+            $('.main-nav, .home').css({'opacity':''})
           }
           lastScrollTop = st;
       });
@@ -24,11 +24,11 @@ $( document ).ready(function() {
             st = $(this).scrollLeft();
             if(st > lastScrollLeft && $(this).scrollLeft()>page1X && $('body').attr('status') != 'locked' ) {
               // console.log('down 1');
-              $('.main-nav').css({'opacity':'0'})
+              $('.main-nav, .home').css({'opacity':'0'})
             }
             else {
               // console.log('up 1');
-              $('.main-nav').css({'opacity':''})
+              $('.main-nav, .home').css({'opacity':''})
             }
             lastScrollLeft = st;
         });
@@ -43,7 +43,7 @@ $( document ).ready(function() {
 
         //Check if we are in the top area of the page.
         if(event.clientY < windowHeight) {
-              $('.main-nav').css({'opacity':''})
+              $('.main-nav, .home').css({'opacity':''})
         }
 
     });
