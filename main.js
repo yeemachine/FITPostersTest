@@ -73,7 +73,7 @@ $( document ).ready(function() {
         // addCart();
       }
    });
-   $('.quantity').click(function() {
+   $('.imgsquare.cartMode').click(function() {
      addCart();
     });
     // $('.minus').click(function() {
