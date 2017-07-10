@@ -22,12 +22,11 @@
   100% {
     color: black
   }
-
 }
 *{
   font-weight: normal;
 }
-*:not(html) {
+body *{
     -webkit-transform: translate3d(0, 0, 0);
 }
 body{
