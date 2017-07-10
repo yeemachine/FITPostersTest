@@ -961,6 +961,7 @@ right: 10vh;
   .page2{
     display: inline-block;
     width: 100vw;
+    height: auto;
 
   }
   .imgsquare{
