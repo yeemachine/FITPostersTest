@@ -956,6 +956,7 @@ right: 10vh;
   body{
 
     /*flex-direction: column;*/
+    -webkit-overflow-scrolling: touch;
 
   }
   .home{
