@@ -393,9 +393,9 @@ i.fa.hamburger{
   justify-content: flex-start;
 }
 .bookIntro{
-  width: calc(100vw - 70vh - 24.78vh);
+  width: 100vw;
   height: 72.5vh;
-  display: block;
+  display: flex;
   margin-left: 10vh;
 }
 .bookIntro h2{
@@ -404,8 +404,11 @@ i.fa.hamburger{
   display: inline-block;
   margin-bottom: 11.5vh;
   height: 30vh;
-  width: 60vw;
+  width: calc(100vw - 70vh);
   line-height: 1;
+}
+.bookIntro h3{
+  width: 50vh
 }
 #lazy-container>.page1.aboutMode{
   display: none;
@@ -1041,7 +1044,8 @@ right: 10vh;
     align-items: center;
     color:rgba(119,119,119,1);
     top:0;
-    right:10vw;
+    right:0;
+    padding-right: 10vw;
     position: fixed;
     height: 7.5vh;
     font-size: 24px;
@@ -1067,6 +1071,7 @@ right: 10vh;
   }
   .page1{
       -webkit-transform: translate3d(0, 0, 0);
+      align-items: flex-start;
   }
   .page2{
     display: inline-block;
@@ -1086,9 +1091,12 @@ right: 10vh;
     width: 80vw;
     margin-left: 0;
     height: auto;
+    margin-top: 13.75vh;
   }
   .bookIntro{
     margin-left: 10vw;
+    margin-top: 13.75vh;
+    flex-direction: column;
   }
   .intro h2{
     margin-top:0;
@@ -1159,6 +1167,9 @@ right: 10vh;
     height: auto;
     -webkit-transform: translate3d(0, 0, 0);
      -webkit-overflow-scrolling: touch;
+  }
+  #lazy-container>.page3.bookMode{
+    align-items: flex-start;
   }
   .quantity{
     display: none;
