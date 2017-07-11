@@ -35,6 +35,7 @@ $( document ).ready(function() {
 
    $('.imgsquare').click(function() {
      posterID = $(this).attr('id');
+     console.log(posterID);
 //////Poster view click
      if ($('.imgsquare').attr('state') != 'cartMode') {
 

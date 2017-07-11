@@ -562,9 +562,9 @@ i.fa.hamburger{
 .imgsquare.posterbook.cartMode{
   width: 25.665vh;
   height: 33.2694444vh;
+  display: flex;
 }
 .imgsquare.cartMode.selected{
-  display: block;
   transition: .25s;
   opacity: 1;
   transform: scale(1);
@@ -1048,7 +1048,7 @@ right: 10vh;
     font-size: 28px
   }
   body{
-    -webkit-overflow-scrolling: touch;
+    /*-webkit-overflow-scrolling: touch;*/
   }
   .home{
     top: 0;
@@ -1133,10 +1133,10 @@ right: 10vh;
   }
   #lazy-container{
     display: block;
-    /*overflow-y: scroll;*/
+    overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
-    height: auto;
+    /*height: auto;*/
     -webkit-transform: translate3d(0, 0, 0);
      -webkit-overflow-scrolling: touch;
   }
