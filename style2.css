@@ -1003,6 +1003,13 @@ right: 10vh;
     /*display: none;*/
     margin-left: 10vw;
   }
+  .nav-item a:hover{
+    color:rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+  .nav-item a:hover:after{
+    width: 0;
+  }
   .nav-item.show{
     /*display: block;*/
   }
