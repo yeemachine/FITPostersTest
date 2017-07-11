@@ -468,19 +468,20 @@ i.fa.hamburger{
   padding: 0;
 }
 #lazy-container>.item-list.cartMode{
-  width: 70vh;
-    height: 62.5vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.025);
-    pointer-events: none;
-    font-size: 16px;
-    overflow-x: hidden;
-    padding-top: 12.75vh;
-    padding-bottom: 27.25vh;
-    z-index: 3
-
+  width: 60vh;
+  height: 62.5vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.035);
+  pointer-events: none;
+  font-size: 16px;
+  overflow-x: hidden;
+  padding-top: 5.25vh;
+  margin-top: 7.5vh;
+  margin-right: 5vh;
+  padding-bottom: 17.25vh;
+  z-index: 3;
 }
 #lazy-container>.item-list.bookMode{
   display: none;
@@ -530,6 +531,12 @@ i.fa.hamburger{
    box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
      -webkit-transform: translate3d(0, 0, 0);
 }
+.imgsquare.posterbook{
+  display: none;
+  background-image: url('img/PDC_Posterworks_07.10.17.png');
+  width: 51.33vh;
+  height: 66.5388889vh;
+}
 .imgsquare.cartMode{
   background-color:gainsboro;
   background-size: contain;
@@ -551,9 +558,13 @@ i.fa.hamburger{
   margin-bottom: 10.12vh;
   transition: .25s;
   filter: grayscale(1);
-
+}
+.imgsquare.posterbook.cartMode{
+  width: 25.665vh;
+  height: 33.2694444vh;
 }
 .imgsquare.cartMode.selected{
+  display: block;
   transition: .25s;
   opacity: 1;
   transform: scale(1);
@@ -793,7 +804,7 @@ h2{
 
 }
 .item-list ul li{
-  font-size: 1.8vh;
+  font-size: 1.7vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -811,7 +822,7 @@ h2{
 }
 .item-list ul li div:first-child{
   width: 40vh;
-  padding-left: 10vh;
+  padding-left: 5vh;
   transition: padding .25s;
 }
 .item-list ul li.subTotal{
@@ -842,13 +853,15 @@ h2{
   align-items: center;
   font-family:'Univers LT W01_65 Bold1475968';
   font-size: 16px;
-  z-index: 5
+  z-index: 5;
+
 
 
 }
 .item-list .checkout.selected a{
   color: rgba(0,0,0,1);
   pointer-events: all;
+  transition: .25s
 }
 .item-list .checkout a{
   margin-left: 10vh;
@@ -868,6 +881,7 @@ h2{
   width: 0;
   height: 2px;
   background: crimson;
+  transition: .25s
 
 
 }
@@ -877,7 +891,7 @@ h2{
   width: 100%;
 }
 .item-list .checkout:after{
-  z-index: -1;
+  /*z-index: -1;
   content: '';
   display: block;
   position: absolute;
@@ -888,7 +902,7 @@ h2{
   height: 0;
   background-color: white;
   transition: .25s;
-  overflow-y: hidden;
+  overflow-y: hidden;*/
 }
 .item-list .checkout:hover:after{
   margin-top: 0;
@@ -929,7 +943,7 @@ right: 10vh;
   color:rgba(0,0,0,1);
 }
 .tax div{
-  margin-left: 10vh;
+  margin-left: 5vh;
   width: 40vh
 }
 .shipping{
@@ -946,7 +960,7 @@ right: 10vh;
   color:rgba(0,0,0,1);
 }
 .shipping div{
-  margin-left: 10vh;
+  margin-left: 5vh;
   width: 40vh
 }
 .item-list ul li.subTotal div:first-child{
@@ -958,7 +972,7 @@ right: 10vh;
   content: '';
   display: block;
   position: absolute;
-  left:10vh;
+  left:5vh;
   top:0;
   width: 0;
   height: calc(50% - 1px);
@@ -970,7 +984,7 @@ right: 10vh;
   color:crimson
 }
 .item-list ul li.hovered div:first-child{
-  padding-left: 12.5vh;
+  padding-left: 7.5vh;
   /*padding-right: 2.5vh;*/
 }
 .item-list ul li.hovered:after {
