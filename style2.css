@@ -477,7 +477,7 @@ i.fa.hamburger{
 }
 #lazy-container>.item-list.cartMode{
   width: 60vh;
-  height: 62.5vh;
+  height: 63.5vh;
   position: fixed;
   top: 0;
   right: 0;
@@ -488,7 +488,7 @@ i.fa.hamburger{
   padding-top: 5.25vh;
   margin-top: 7.5vh;
   margin-right: 5vh;
-  padding-bottom: 17.25vh;
+  padding-bottom: 16.25vh;
   z-index: 3;
 }
 #lazy-container>.item-list.bookMode{
@@ -607,7 +607,7 @@ i.fa.hamburger{
     display: flex;
     width: 100%;
     background-color: rgba(255,255,255,0.9);
-    color:rgba(119,119,119,1);
+    color:rgba(0,0,0,0.1);
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -617,8 +617,8 @@ i.fa.hamburger{
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(255,255,255,0.5);
-    color:rgba(0,0,0,1);
+    background-color: rgba(255,255,255,0.3);
+    /*color:rgba(0,0,0,1);*/
 }
 .selected.cartMode .quantity{
   color:transparent;
@@ -735,6 +735,7 @@ i.fa.hamburger{
     width: 100%;
     align-items: center;
     height: 100%;
+
 }
 
 .selected .qtyNum{
@@ -742,10 +743,14 @@ i.fa.hamburger{
 }
 .plusMin{
   display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+/* position: absolute; */
+  top: 0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border: 5px dashed rgba(0,0,0,0.1);
+}
+.selected .plusMin{
+  border: 5px dashed rgba(0,0,0,0);
 }
 .selected .minus,.selected .plus{
     width: 100%;
@@ -932,7 +937,7 @@ height: 1px;
 border: 0;
 margin: 0;
 border-top: solid 2px rgba(0,0,0,0.05);
-bottom: 23vh;
+bottom: 22.25vh;
 position: fixed;
 right: 10vh;
 }
@@ -941,7 +946,7 @@ right: 10vh;
   height: 7.5vh;
   width: 60vh;
   position: fixed;
-  bottom: 14vh;
+  bottom: 13.5vh;
   display: flex;
   font-size: 1.8vh;
   align-items: center;
@@ -958,7 +963,7 @@ right: 10vh;
   height: 7.5vh;
     width: 60vh;
     position: fixed;
-    bottom: 17vh;
+    bottom: 16.5vh;
     display: flex;
     font-size: 1.8vh;
     align-items: center;
