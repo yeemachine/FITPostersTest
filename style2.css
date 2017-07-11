@@ -227,6 +227,10 @@ a{
   overflow-x:hidden;
   align-items: flex-start;
 }
+#lazy-container.bookMode{
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
 .main-nav{
   background-color: rgba(30,30,30,0);
   color:rgba(0,0,0,.3);
@@ -365,6 +369,7 @@ i.fa.hamburger{
 .hidden-page.slide{
   top:0
 }
+
 #lazy-container>.page1.cartMode{
   display: none;
 }
@@ -379,7 +384,7 @@ i.fa.hamburger{
 }
 .page3{
   display: none;
-  height: 100vh;
+  height: 300vh;
   width: 100vw;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1082,6 +1087,9 @@ right: 10vh;
     margin-left: 0;
     height: auto;
   }
+  .bookIntro{
+    margin-left: 10vw;
+  }
   .intro h2{
     margin-top:0;
     height: auto;
@@ -1092,6 +1100,13 @@ right: 10vh;
   .posterblurb{
     width: 80vw
   }
+  #buy, #share{
+    height: 7.5vh;
+    align-items: center;
+  }
+  #buy h3, #share h3{
+    margin: 0;
+  }
   #buy h3::after, #share h3::after{
     width: 100%;
   }
@@ -1099,16 +1114,22 @@ right: 10vh;
     display: none;
   }
   #copyContainer{
+    top:7.5vh;
     width: 80vw;
     margin-left: 10vw;
     left: auto
   }
   #copyContainer > h3{
     width: 80vw;
+    margin: 0;
 
   }
   #copyContainer > h2{
     width: 80vw;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
   }
   .hidden-page{
     top:0;
@@ -1120,11 +1141,10 @@ right: 10vh;
     left:0;
   }
   .button{
-    width: 20vw;
+    width: 10vw;
+    color:rgba(255,255,255,1);
   }
-  i.fa.fa-angle-up{
-    transform: rotate(-90deg);
-  }
+
   .imgsquare:hover{
   /*opacity: .3;*/
   /*-webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);

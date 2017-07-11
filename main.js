@@ -16,7 +16,9 @@ $( document ).ready(function() {
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
   if (isMobile.matches) {
       state="mobile"
-      $('.home').html('Poster Works for FIT')
+      $('.home').html('Poster Works for FIT');
+      $('.button i').removeClass('fa-angle-up')
+      $('.button i').addClass('fa-angle-left')
   }else{
     state="desktop"
   }
@@ -24,9 +26,13 @@ $( document ).ready(function() {
     if (isMobile.matches) {
         state="mobile"
         $('.home').html('Poster Works for FIT')
+        $('.button i').removeClass('fa-angle-up')
+        $('.button i').addClass('fa-angle-left')
     }else{
       state="desktop"
       $('.home').html('Rocco Piscatello: Poster Works for FIT')
+      $('.button i').removeClass('fa-angle-left')
+      $('.button i').addClass('fa-angle-up')
     }
     console.log(state);
   });
