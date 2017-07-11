@@ -1137,7 +1137,7 @@ right: 10vh;
     overflow-x: hidden;
     position: absolute;
     /*height: auto;*/
-    -webkit-transform: translate3d(0, 0, 0);
+    /*-webkit-transform: translate3d(0, 0, 0);*/
      -webkit-overflow-scrolling: touch;
   }
   .quantity{
