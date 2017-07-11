@@ -152,7 +152,7 @@ $('.about').click(function() {
 
 ///Return to poster state
   $('.posterNav').click(function() {
-    $('.cartMode, .bookMode').attr('state', '');
+    $('.cartMode, .bookMode, .aboutMode').attr('state', '');
     $('.cartMode').removeClass('cartMode');
     $('.bookMode').removeClass('bookMode');
     $('.aboutMode').removeClass('aboutMode');
