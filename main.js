@@ -125,6 +125,8 @@ $( document ).ready(function() {
                bind: "event",
                delay: 500
            });
+
+    $('#lazy-container').scrollTop(0);
   });
 
 ///Go to book page
@@ -140,6 +142,7 @@ $( document ).ready(function() {
       $('.show').removeClass('show');
       $('.hamburger').toggleClass('fa-bars fa-times')
     }
+    $('#lazy-container').scrollTop(0);
   });
 
 ///
@@ -155,6 +158,7 @@ $('.about').click(function() {
     $('.show').removeClass('show');
     $('.hamburger').toggleClass('fa-bars fa-times')
   }
+  $('#lazy-container').scrollTop(0);
 });
 
 ///Return to poster state
@@ -173,42 +177,29 @@ $('.about').click(function() {
 
 
 for(let s = 0; s < 25; s ++) {
-$('.poster'+s).on("mouseenter", function(){
-  $('li.poster'+s).addClass('hovered');
-  $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
-  $('.poster'+s+'.selected.cartMode.imgsquare').addClass('hovered');
-});
-$('.poster'+s).on("mouseleave", function(){
-  $('li.poster'+s).removeClass('hovered');
-  $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
-  $('.poster'+s+'.cartMode.imgsquare').removeClass('hovered');
+  $(document).on("mouseenter", '.imgsquare.poster'+s, function(){
+    $('li.poster'+s).addClass('hovered');
+    $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
+    $('.poster'+s+'.selected.cartMode.imgsquare').addClass('hovered');
+  });
+  $(document).on("mouseleave", '.imgsquare.poster'+s, function(){
+    $('li.poster'+s).removeClass('hovered');
+    $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
+    $('.poster'+s+'.cartMode.imgsquare').removeClass('hovered');
 
-});
-
+  });
 }
+///hamburger menu
 $('.hamburger').on("click", function(){
-  console.log('ham')
-  // if ($('.home').hasClass('show')){
-  //   $('.home').css({'opacity':'1'})
-  // }else{
-  //   $('.home').css({'opacity':'0'})
-  // }
   $('.main-nav, .nav-item, .home, .hamburger').toggleClass('show')
-
   $(this).toggleClass('fa-bars fa-times')
 });
-// $(document).on("mouseover",'.minus', function(){
-//   container = $(this).closest('.quantity').children('.qtyNum')
-//   container.css({'opacity':'.5'});
-// });
-// $(document).on("mouseout",'.minus', function(){
-//   container = $(this).closest('.quantity').children('.qtyNum')
-//   container.css({'opacity':''});
-// });
 
 
-
-
+///scroll over fixed element fix
+$('.bookIntro h2, .item-list').on('mousewheel DOMMouseScroll', function(event) {
+    $('#lazy-container').scrollTop($('#lazy-container').scrollTop() - (event.originalEvent.wheelDelta || -event.originalEvent.detail*30));
+});
 
 
 

@@ -31,6 +31,19 @@ $( document ).ready(function() {
               $('.main-nav').css({'opacity':''})
             }
             lastScrollLeft = st;
+
+            if ($(this).hasClass('bookMode')){
+              height = $('.main-nav').height()
+              st = $(this).scrollTop();
+              if(st > height){
+                $('.bookIntro h2').addClass('sticky')
+              }
+              if( st < height){
+                $('.bookIntro h2').removeClass('sticky')
+              }
+            }
+
+
         });
     }
 

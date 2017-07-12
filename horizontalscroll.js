@@ -30,7 +30,7 @@ $.event.special.mousewheel = {
     setup: function() {
         if ( this.addEventListener ) {
             for ( var i=types.length; i; ) {
-                this.addEventListener( types[--i], handler, false );
+                this.addEventListener( types[--i], handler, {passive: true} );
             }
         } else {
             this.onmousewheel = handler;
@@ -40,7 +40,7 @@ $.event.special.mousewheel = {
     teardown: function() {
         if ( this.removeEventListener ) {
             for ( var i=types.length; i; ) {
-                this.removeEventListener( types[--i], handler, false );
+                this.removeEventListener( types[--i], handler, {passive: true} );
             }
         } else {
             this.onmousewheel = null;
