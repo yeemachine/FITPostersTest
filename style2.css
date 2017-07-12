@@ -418,7 +418,6 @@ i.fa.hamburger{
   position: absolute;
   top:0;
   left: 10vh;
-  pointer-events: none;
 }
 .bookIntro h2.sticky{
   position: fixed;
@@ -510,7 +509,7 @@ i.fa.hamburger{
   top: 0;
   right: 0;
   background-color: rgba(0,0,0,0.035);
-  pointer-events: none;
+  /*pointer-events: none;*/
   font-size: 16px;
   overflow-x: hidden;
   padding-top: 5.25vh;
@@ -1244,6 +1243,9 @@ font-size: 36px;
   }
   #lazy-container>.page3.bookMode{
     align-items: flex-start;
+  }
+  #lazy-container.bookMode{
+    overflow-y: hidden;
   }
   .quantity{
     display: none;
