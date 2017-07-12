@@ -43,6 +43,39 @@
     color: black
   }
 }
+@keyframes splashM {
+  0% {
+    color: transparent;
+    background-color: black;
+    font-size: 36px;
+  }
+  20% {
+    color: transparent;
+    background-color: black;
+    font-size: 36px;
+  }
+  40% {
+    color: white;
+    background-color: black;
+    font-size: 36px;
+  }
+  50% {
+    color: white;
+    background-color: black;
+    font-size: 36px;
+  }
+  80% {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+  }
+  100% {
+    color: transparent;
+    background-color: transparent;
+    font-size: 16px;
+    pointer-events: none;
+  }
+}
 @keyframes splash {
   0% {
     color: transparent;

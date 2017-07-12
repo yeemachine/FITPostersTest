@@ -20,8 +20,12 @@ $( document ).ready(function() {
       $('.cover div').html('Poster Works for FIT');
       $('.button i').removeClass('fa-angle-up')
       $('.button i').addClass('fa-angle-left')
+      $('.cover').css({'animation':'splashM 3s forwards'});
+      $('.cover div').css({'animation':'splash2 3s forwards'});
   }else{
     state="desktop"
+    $('.cover').css({'animation':'splash 3s forwards'});
+    $('.cover div').css({'animation':'splash2 3s forwards'});
   }
   $(window).resize(function() {
     if (isMobile.matches) {
@@ -39,8 +43,8 @@ $( document ).ready(function() {
   });
 
 
-$('.cover div').css({'animation':'splash2 3s forwards'});
-$('.cover').css({'animation':'splash 3s forwards'});
+
+
 
 ////Click Posters for more info
 
