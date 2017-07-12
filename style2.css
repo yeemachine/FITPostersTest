@@ -367,6 +367,9 @@ section.cover{
   font-family: 'Univers LT W01_65 Bold1475968';
   transition: all 1s;
   animation-fill-mode: forwards;
+  position: fixed;
+  top:0;
+  left:0;
 }
 section.cover div{
   height: 7.5vh;
