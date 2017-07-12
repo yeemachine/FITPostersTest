@@ -5,7 +5,7 @@ var header2 = $('.intro');
 var home = $('.home');
 var range = 50;
 var range2 = 100;
-var range3 = 100;
+var range3 = 500;
 
 
 $('#lazy-container').on('scroll', function () {
@@ -17,10 +17,10 @@ $('#lazy-container').on('scroll', function () {
         height = header.height(),
         height2 = header2.width(),
         offset = height,
-        offset2 = height2,
+        offset2 = height2*.75,
         calc = 1 - (scrollTop - offset + range) / range;
         calc2 = 1 - (scrollTop - offset + range2) / range2;
-        calc3 = 1 - (scrollLeft - offset2*.7 + range3) / range3;
+        calc3 = -(scrollLeft - offset2) / offset2;
 
     home.css({ 'opacity': calc });
     $('.bookIntro h3').css({ 'opacity': calc2 });
