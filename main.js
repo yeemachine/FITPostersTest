@@ -198,7 +198,7 @@ $('.hamburger').on("click", function(){
 
 ///scroll over fixed element fix
 $('.bookIntro h2, .item-list').on('mousewheel DOMMouseScroll', function(event) {
-    $('#lazy-container').scrollTop($('#lazy-container').scrollTop() - (event.originalEvent.wheelDelta || -event.originalEvent.detail*30));
+    $('#lazy-container').scrollTop($('#lazy-container').scrollTop() - (event.originalEvent.wheelDelta*.5 || -event.originalEvent.detail/120));
 });
 
 
