@@ -1034,7 +1034,7 @@ right: 10vh;
 }
 @media screen and (max-width: 900px) {
   .nav-item{
-    /*display: none;*/
+    display: none;
     padding-left: 10vw;
     width: 90vw;
     font-size: 36px;
@@ -1048,7 +1048,7 @@ right: 10vh;
     width: 0;
   }
   .nav-item.show{
-    /*display: block;*/
+    display: block;
   }
   .nav-item.show a::after{
   }

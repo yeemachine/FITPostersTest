@@ -197,9 +197,14 @@ $('.hamburger').on("click", function(){
 
 
 ///scroll over fixed element fix
-// $('.bookIntro h2, .item-list').on('mousewheel DOMMouseScroll', function(event) {
-//     $('#lazy-container').scrollTop($('#lazy-container').scrollTop() - (event.originalEvent.wheelDelta*.5 || -event.originalEvent.detail/120));
-// });
+$('.bookIntro h2, .item-list').on('mousewheel DOMMouseScroll', function(event) {
+    if (state === 'mobile'){
+
+    }else{
+      $('#lazy-container').scrollTop($('#lazy-container').scrollTop() - (event.originalEvent.wheelDelta*.5 || -event.originalEvent.detail/120));
+    }
+
+});
 
 
 
