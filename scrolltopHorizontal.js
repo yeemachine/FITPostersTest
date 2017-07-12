@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 
   var isMobile = window.matchMedia("only screen and (max-width: 800px)");
-  var page1X = $('.page1').width()/2;
+  var page1X = $('.page1').width()*.65;
   var page1Y = $('.page1').height()/2;
     if (isMobile.matches) {
       var lastScrollTop = 0;
