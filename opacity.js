@@ -19,8 +19,8 @@ $('#lazy-container').on('scroll', function () {
         offset = height,
         offset2 = height2,
         calc = 1 - (scrollTop - offset + range) / range;
-        calc2 = 1 - (scrollTop - offset*2 + range2) / range2;
-        calc3 = 1 - (scrollLeft - offset2*.5 + range3) / range3;
+        calc2 = 1 - (scrollTop - offset + range2) / range2;
+        calc3 = 1 - (scrollLeft - offset2*.7 + range3) / range3;
 
     home.css({ 'opacity': calc });
     $('.bookIntro h3').css({ 'opacity': calc2 });
