@@ -92,7 +92,7 @@ function handler(event) {
 $(function(){
 
 		$('#lazy-container').mousewheel(function(event, delta) {
-      var isMobile = window.matchMedia("only screen and (max-width: 800px)");
+      var isMobile = window.matchMedia("only screen and (max-width: 900px)");
 
       if (isMobile.matches) {
      state="mobile"
