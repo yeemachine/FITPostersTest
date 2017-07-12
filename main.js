@@ -17,6 +17,7 @@ $( document ).ready(function() {
   if (isMobile.matches) {
       state="mobile"
       $('.home').html('Poster Works for FIT');
+      $('.cover div').html('Poster Works for FIT');
       $('.button i').removeClass('fa-angle-up')
       $('.button i').addClass('fa-angle-left')
   }else{

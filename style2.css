@@ -43,6 +43,53 @@
     color: black
   }
 }
+@keyframes splash {
+  0% {
+    color: transparent;
+    background-color: black;
+    font-size: 4vw;
+  }
+  20% {
+    color: transparent;
+    background-color: black;
+    font-size: 4vw;
+  }
+  40% {
+    color: white;
+    background-color: black;
+    font-size: 4vw;
+  }
+  50% {
+    color: white;
+    background-color: black;
+    font-size: 4vw;
+  }
+  80% {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+  }
+  100% {
+    color: transparent;
+    background-color: transparent;
+    font-size: 16px;
+    pointer-events: none;
+  }
+}
+@keyframes splash2 {
+  0% {
+    margin-top: 46.25vh
+  }
+  50% {
+    margin-top: 46.25vh
+  }
+  80% {
+    margin-top: 0vh
+  }
+  100% {
+    margin-top: 0
+  }
+}
 *{
   font-weight: normal;
 }
@@ -309,6 +356,27 @@ a{
   justify-content: center;
   font-family:'Univers LT W01_65 Bold1475968';
 
+}
+section.cover{
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: black;
+  z-index: 999;
+  opacity: 1;
+  font-family: 'Univers LT W01_65 Bold1475968';
+  transition: all 1s;
+  animation: splash 3s forwards;
+  animation-fill-mode: forwards;
+}
+section.cover div{
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  padding-left: 10vh;
+  animation: splash2 3s forwards;
+  animation-fill-mode: forwards;
 }
 i.fa.hamburger{
   display: none;
@@ -1033,6 +1101,9 @@ right: 10vh;
   width: 1.5vh
 }
 @media screen and (max-width: 900px) {
+  section.cover div{
+    padding-left: 10vw;
+  }
   .nav-item{
     display: none;
     padding-left: 10vw;
