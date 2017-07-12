@@ -360,13 +360,12 @@ a{
 section.cover{
   width: 100vw;
   height: 100vh;
-  color: white;
+  color: transparent;
   background: black;
   z-index: 999;
   opacity: 1;
   font-family: 'Univers LT W01_65 Bold1475968';
   transition: all 1s;
-  animation: splash 3s forwards;
   animation-fill-mode: forwards;
 }
 section.cover div{
@@ -375,7 +374,7 @@ section.cover div{
   align-items: center;
   width: 90vw;
   padding-left: 10vh;
-  animation: splash2 3s forwards;
+
   animation-fill-mode: forwards;
 }
 i.fa.hamburger{

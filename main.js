@@ -37,6 +37,11 @@ $( document ).ready(function() {
     }
     console.log(state);
   });
+
+
+$('.cover div').css({'animation':'splash2 3s forwards'});
+$('.cover').css({'animation':'splash 3s forwards'});
+
 ////Click Posters for more info
 
 
