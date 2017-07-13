@@ -475,7 +475,7 @@ i.fa.hamburger{
 .bookIntro{
   width: 90vw;
   height: auto;
-  display: flex;
+  display: block;
   margin-left: 10vh;
   margin-bottom: 7.5vh;
 }
@@ -583,7 +583,7 @@ i.fa.hamburger{
   background-color: rgba(0,0,0,0.035);
   /*pointer-events: none;*/
   font-size: 16px;
-  overflow-x: hidden;
+  overflow: visible;
   padding-top: 5.25vh;
   margin-top: 7.5vh;
   margin-right: 5vh;
@@ -1075,6 +1075,7 @@ right: 10vh;
   width: 60vh;
   position: fixed;
   bottom: 13.5vh;
+  right: 5vh;
   display: flex;
   font-size: 1.6vh;
   align-items: center;
@@ -1092,6 +1093,7 @@ right: 10vh;
     width: 60vh;
     position: fixed;
     bottom: 16.5vh;
+    right: 5vh;
     display: flex;
     font-size: 1.6vh;
     align-items: center;
