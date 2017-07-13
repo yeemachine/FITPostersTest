@@ -18,8 +18,8 @@ $('#lazy-container').on('scroll', function () {
         height2 = header2.width(),
         offset = height,
         offset2 = height2*.75,
-        calc = 1 - (scrollTop - offset + range) / range;
-        calc2 = 1 - (scrollTop - offset + range2) / range2;
+        calc = -(scrollTop - offset)/ offset;
+        calc2 =  -(scrollTop - offset)/ offset;
         calc3 = -(scrollLeft - offset2) / offset2;
 
     home.css({ 'opacity': calc });

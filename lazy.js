@@ -1,5 +1,5 @@
 $(function() {
-       $('#lazy-container .lazy').lazy({
+       $('img.lazy').lazy({
            appendScroll: $('#lazy-container'),
           //  effect: "fadeIn",
           //  effectTime: 500,
