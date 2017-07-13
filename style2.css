@@ -665,6 +665,8 @@ i.fa.hamburger{
 }
 .cartMode .imgCon{
   margin:7.08vh;
+  margin-right: 2.98vh;
+  margin-bottom: 2.98vh;
 }
 .cartMode .imgCon.hidden{
   display: block;
