@@ -186,7 +186,7 @@ $('.about').click(function() {
   });
 
 
-for(let s = 0; s < 25; s ++) {
+for(let s = 0; s < 26; s ++) {
   $(document).on("mouseenter", '.imgCon.poster'+s, function(){
     $('li.poster'+s).addClass('hovered');
     $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
