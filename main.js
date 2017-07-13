@@ -13,7 +13,7 @@ $( document ).ready(function() {
   // $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
   // $('.cartMode').attr('state', 'bookMode');
 
-  var isMobile = window.matchMedia("only screen and (max-width: 900px)");
+  var isMobile = window.matchMedia("only screen and (max-width: 1000px)");
   if (isMobile.matches) {
       state="mobile"
       $('.home').html('Poster Works for FIT');

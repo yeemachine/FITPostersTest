@@ -619,6 +619,8 @@ i.fa.hamburger{
 .imgCon.hidden{
   margin-right:0;
   margin-left:0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .imgCon{
   position: relative;
@@ -1130,7 +1132,7 @@ right: 10vh;
 .item-list ul li.hovered:after {
   width: 1.5vh
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   section.cover div{
     margin-left: 10vw;
   }
@@ -1236,6 +1238,7 @@ right: 10vh;
   .imgCon{
     margin-bottom: 40vw;
     margin-left: 10vw;
+    margin-right: 10vw;
   }
   .imgsquare{
     width: 80vw;
