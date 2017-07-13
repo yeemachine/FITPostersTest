@@ -49,7 +49,7 @@ $.getJSON("database.json", function(data) {
     fraction = 1 - objectSelector.length/24
     fontSize = 2 + 1 * fraction
 
-    var selectedItemsnode = $('<li class="'+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
+    var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + subPrice
       taxed = ((totalPrice * 1.1154) + 20.0).toFixed(2);
