@@ -18,7 +18,7 @@ $.getJSON("database.json", function(data) {
     selectedItems[posterID] = {imgTitle,price,qty};
     $('.'+posterID).addClass(imgTitle);
     console.log(Object.keys(selectedItems)[0]);
-    $('.'+posterID+' .plus').html('&minus;');
+    $('.'+posterID+' .plus').html('');
     $('.'+posterID+'.cartMode .quantity').removeClass('hovered');
 
 
@@ -75,7 +75,7 @@ $.getJSON("database.json", function(data) {
   $('.cart').html("<a>Bag ("+totalItems+")</a>")
 
   $('.item-list section').html(selectedItemscontainer)
-  $('li.'+posterID).css({'animation':'red .5s linear'});
+  $('li.'+posterID).css({'animation':'red 1s linear'});
   // $('li.'+posterID).addClass('hovered');
 
 

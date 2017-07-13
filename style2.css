@@ -35,7 +35,7 @@
 }
 @keyframes red {
   0% {
-    color: gainsboro;
+    color: transparent;
   }
 
 
@@ -575,7 +575,7 @@ i.fa.hamburger{
   padding: 0;
 }
 .item-list.cartMode{
-  display: block;
+  display: flex;
   width: 60vh;
   height: 63.5vh;
   position: fixed;
@@ -955,6 +955,9 @@ h2{
   padding-top: .25vh;
    position:relative;
    -webkit-transform: translate3d(0, 0, 0);
+   transition: .25s;
+   /*color:transparent;
+   animation-fill-mode: forwards;*/
 }
 .item-list ul li:after{
   -webkit-transform: translate3d(0, 0, 0);
