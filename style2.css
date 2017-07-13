@@ -303,7 +303,7 @@ a{
   position: fixed;
   top:100vh;
   left:0;
-  transition: .25s;
+  transition: .25s ease;
   z-index: 7;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -395,7 +395,7 @@ i.fa.hamburger{
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: .25s;
+  transition: .25s ease;
 }
 .button.fa{
   font-size: 10vh;
@@ -688,7 +688,7 @@ i.fa.hamburger{
    width: 25.665vh;
  height: 36.25vh;
 
-  transition: .25s;
+  transition: .25s ease;
   filter: grayscale(1);
 }
 .imgsquare.posterbook.cartMode{
@@ -697,7 +697,7 @@ i.fa.hamburger{
   display: flex;
 }
 .imgsquare.cartMode.selected{
-  transition: .25s;
+  transition: .25s ease;
   opacity: 1;
   transform: scale(1);
   filter: grayscale(0);
@@ -724,7 +724,7 @@ i.fa.hamburger{
   -webkit-transform: translate3d(0, 0, 0);
   pointer-events: none;
   opacity: 0;
-  transition: .25s;
+  transition: .25s ease;
   pointer-events: none;
   display: none;
 }
@@ -896,7 +896,7 @@ i.fa.hamburger{
 }*/
 .imgsquare:hover{
 /*opacity: .3;*/
-transition: .25s;
+transition: .25s ease;
 cursor: pointer;
 /*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
 -moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
@@ -955,7 +955,7 @@ h2{
   padding-top: .25vh;
    position:relative;
    -webkit-transform: translate3d(0, 0, 0);
-   transition: .25s;
+   transition: .25s ease;
    /*color:transparent;
    animation-fill-mode: forwards;*/
 }
@@ -1031,7 +1031,7 @@ h2{
 
 }
 .item-list .checkout a:hover:after{
-  transition: .25s;
+  transition: .25s ease;
   transition-delay: .25s ;
   width: 100%;
 }
@@ -1046,7 +1046,7 @@ h2{
   margin-top: 100%;
   height: 0;
   background-color: white;
-  transition: .25s;
+  transition: .25s ease;
   overflow-y: hidden;*/
 }
 .item-list .checkout:hover:after{
@@ -1125,7 +1125,7 @@ right: 10vh;
   height: calc(50% - 1px);
   /*background-color: crimson;*/
   border-bottom: solid 2px crimson;
-  transition: .25s;
+  transition: .25s ease;
 }
 .item-list ul li.hovered{
   color:crimson;
@@ -1172,7 +1172,7 @@ right: 10vh;
     width: 100%;
     height: 7.5vh;
     background-color: rgba(255,255,255,0.9);
-    transition: .25s;
+    transition: .25s ease;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -1180,7 +1180,7 @@ right: 10vh;
   }
   nav.main-nav .nav-item{
     opacity: 0;
-    transition: .25s;
+    transition: .25s ease;
   }
   nav.main-nav.show{
     width: 100%;
@@ -1220,7 +1220,7 @@ right: 10vh;
   }
   .home.show{
     transition-delay: .25s;
-    transition: .25s;
+    transition: .25s ease;
     opacity: 1 !important
   }
   .page1{
@@ -1378,6 +1378,7 @@ font-size: 36px;
     margin-right: 10vw;
     margin-left: 0;
     margin-bottom: 10vw;
+    margin-top: 0;
   }
   .cartMode .imgCon.hidden{
     margin: 5vw;
