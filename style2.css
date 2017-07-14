@@ -539,9 +539,13 @@ i.fa.hamburger{
   font-size: 4vw;
   font-family:'Univers LT W01_75 Black1475980';
   margin:7.08vh;
-  margin-top: 6.08vh;
+  margin-bottom: calc(20vh - 7.08vh);
+  margin-top: calc(20vh - 10.12vh);
   line-height: 1
 
+}
+.cartMode .bookheader:nth-child(1){
+  margin-top: 6.08vh;
 }
 .posterheader{
   display: none
@@ -551,8 +555,9 @@ i.fa.hamburger{
   width: 100%;
   font-size: 4vw;
   font-family:'Univers LT W01_75 Black1475980';
-
   margin:7.08vh;
+  margin-bottom: calc(20vh - 7.08vh);
+  margin-top: calc(20vh - 10.12vh);
 
 }
 #lazy-container>.page2.cartMode{
@@ -1478,15 +1483,15 @@ font-size: 36px;
     padding-top: 0;
   }
   .cartMode .bookheader{
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 15vw;
+    margin-bottom: 15vw;
     margin-left: 0;
     font-size: 36px;
   }
 
   .cartMode .posterheader{
-    margin-bottom: 10vw;
-    margin-top: 5vw;
+    margin-bottom: 15vw;
+    margin-top: 10vw;
     margin-left: 0;
     font-size: 36px;
   }
