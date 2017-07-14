@@ -322,6 +322,13 @@ a{
 .hidden-page.cartMode{
   display: none;
 }
+.progress{
+    position: absolute;
+    background-color: black;
+    margin-top: 2px;
+    height: 2px;
+    width: 0;
+}
 .nav-item{
   margin-right: 7.5vh;
   height: 7.5vh;
@@ -335,12 +342,18 @@ a{
   display: inline-block;
   position: relative;
 }
+.nav-item a p{
+  margin: 0;
+}
 .nav-item.selected a::after{
   width: 100%;
 }
 .nav-item a:hover{
-  color:rgba(0,0,0,1);
+  color:rgba(0,0,0,0.3);
   cursor: pointer;
+}
+.nav-item.selected a:hover{
+  color:rgba(0,0,0,1);
 }
 
 .nav-item a::after {
@@ -349,7 +362,7 @@ a{
     display: block;
     width: 0;
     height: 2px;
-    background: #000;
+    background: rgba(0,0,0,0.3);
     transition: width .25s;
     position: absolute;
 

@@ -72,7 +72,7 @@ $.getJSON("database.json", function(data) {
   }
 
   selectedItemscontainer.append(subTotal)
-  $('.cart').html("<a>Bag ("+totalItems+")</a>")
+  $('.cart a p').html("Bag ("+totalItems+")")
 
   $('.item-list section').html(selectedItemscontainer)
   $('li.'+posterID).css({'animation':'red 1s linear'});
