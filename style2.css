@@ -328,12 +328,16 @@ a{
     margin-top: 2px;
     height: 2px;
     width: 0;
+    pointer-events: none;
 }
 .nav-item{
   margin-right: 7.5vh;
   height: 7.5vh;
   display: flex;
   align-items: center;
+}
+.nav-item:hover{
+  cursor: pointer;
 }
 .nav-item:last-child{
   margin-right: 0;
@@ -347,10 +351,10 @@ a{
 }
 .nav-item.selected a::after{
   width: 100%;
+  pointer-events: none;
 }
 .nav-item a:hover{
   color:rgba(0,0,0,0.3);
-  cursor: pointer;
 }
 .nav-item.selected a:hover{
   color:rgba(0,0,0,1);
@@ -365,6 +369,7 @@ a{
     background: rgba(0,0,0,0.3);
     transition: width .25s;
     position: absolute;
+    pointer-events: none;
 
 }
 .nav-item a:hover::after {
