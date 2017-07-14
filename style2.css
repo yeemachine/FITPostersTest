@@ -93,6 +93,7 @@
 *{
   font-weight: normal;
 }
+
 .page2 .imgsquare{
     -webkit-transform: translate3d(0, 0, 0);
 }
@@ -1226,6 +1227,11 @@ right: 10vh;
   width: 1.5vh
 }
 @media screen and (max-width: 1000px) {
+  *:not(html) {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+
   section.cover div{
     margin-left: 10vw;
   }
