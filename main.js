@@ -1,5 +1,6 @@
 $(window).on('beforeunload', function() {
     $(window).scrollLeft(0);
+    $(window).scrollTop(0);
 
   });
 
