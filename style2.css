@@ -501,7 +501,7 @@ i.fa.hamburger{
   margin-left: calc(100vw - 70vh);
 }
 .bookModule{
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: rebeccapurple;
   background-image: url('img/FullSizeRender 2.jpg');
@@ -673,83 +673,77 @@ i.fa.hamburger{
   margin:7.08vh;
   margin-bottom: 10.12vh;
 }
+
+.imgCon.poster25.posterColle.hidden.cartMode section img{
+  position:absolute;
+  top:0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 .imgCon.poster25.posterColle.hidden.cartMode section{
-  opacity: .5
+  opacity: .1
 }
 .imgCon.poster25.posterColle.hidden.cartMode.selected section{
   opacity: 1
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(1){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*7/49);
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(2){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*6/49);
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(3){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*5/49);
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(4){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*4/49);
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(5){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*3/49);
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(6){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*2/49);
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(7){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*1/49);
 }
 
 
 
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(1){
-  position:absolute;
-  top:0;
+
   left:calc(100vw - 110.5vh)
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(2){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*6/7)
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(3){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*5/7)
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(4){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*4/7)
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(5){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*3/7)
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(6){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*2/7)
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img.selected:nth-child(7){
-  position:absolute;
-  top:0;
+
   left:calc((100vw - 110.5vh)*1/7)
 }
 
