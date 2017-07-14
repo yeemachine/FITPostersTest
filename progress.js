@@ -18,7 +18,6 @@ $( document ).ready(function() {
         $('.nav-item.selected.book .progress').css({ 'width': offsetY });
       }
       else if($('body').hasClass('aboutMode')){
-        console.log(offsetY);
       }
       else if($('body').hasClass('cartMode')){
         $('.nav-item.selected.cart .progress').css({ 'width': offsetY });
@@ -29,18 +28,15 @@ $( document ).ready(function() {
     });
 
     $(document).on('scroll', function () {
-      console.log('iwork')
       var bodyHeight = $('body')[0].scrollHeight
       var windowHeight = $(window).height();
       var scrollTop = $(this).scrollTop()
           offsetY = scrollTop/(bodyHeight - windowHeight) * 100 + '%'
-          console.log(offsetY)
             if (state === 'mobile'){
               if($('body').hasClass('bookMode')){
                 $('.nav-item.selected.book .progress').css({ 'width': offsetY });
               }
               else if($('body').hasClass('aboutMode')){
-                console.log(offsetY);
               }
               else if($('body').hasClass('cartMode')){
                 $('.nav-item.selected.cart .progress').css({ 'width': offsetY });
