@@ -1014,13 +1014,13 @@ box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);*/
   position: absolute;
   text-align: center;
   width: 100%;
-    top: 75vh;
-    font-size: 5vh;
-    pointer-events: none;
-    /*-webkit-filter: blur(2px);
-    filter: blur(2px);*/
-    /*animation: bob 1s forwards;
-    animation-iteration-count: infinite;*/
+  height: 13.75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 72.5vh;
+  font-size: 5vh;
+  pointer-events: none;
 }
 
 h2{
