@@ -1508,6 +1508,7 @@ font-size: 36px;
     height: 15vh;
     width: 50vw;
     justify-content: flex-end;
+    color: transparent;
   }
   .item-list .checkout a{
     margin-left: 0;
