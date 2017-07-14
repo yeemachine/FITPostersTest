@@ -1472,21 +1472,29 @@ font-size: 36px;
     overflow-y: hidden;
   }
   #lazy-container>.page2.cartMode{
-    margin-top: 22.5vh;
+    margin-top: calc(22.5vh + 5vw);
     width: 100%;
     padding-left: 10vw;
     padding-top: 0;
   }
   .cartMode .bookheader{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     margin-left: 0;
+    font-size: 36px;
   }
+
   .cartMode .posterheader{
+    margin-bottom: 10vw;
+    margin-top: 5vw;
     margin-left: 0;
+    font-size: 36px;
   }
   .cartMode .imgCon{
     margin-right: 10vw;
     margin-left: 0;
     margin-bottom: 10vw;
+    margin-top: 0;
 
   }
   .cartMode .imgCon.hidden{
