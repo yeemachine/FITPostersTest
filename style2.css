@@ -1448,6 +1448,7 @@ font-size: 36px;
     height: auto;
     -webkit-transform: translate3d(0, 0, 0);
      -webkit-overflow-scrolling: touch;
+     -webkit-backface-visibility:hidden
   }
   #lazy-container>.page3.bookMode{
     align-items: flex-start;
