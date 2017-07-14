@@ -1227,7 +1227,7 @@ right: 10vh;
   width: 1.5vh
 }
 @media screen and (max-width: 1000px) {
-  
+
 
 
   section.cover div{
@@ -1337,6 +1337,7 @@ right: 10vh;
     margin-bottom: 40vw;
     margin-left: 10vw;
     margin-right: 10vw;
+      -webkit-transform: translate3d(0, 0, 0);
   }
   .imgsquare{
     width: 80vw;
@@ -1470,6 +1471,7 @@ font-size: 36px;
     margin-right: 10vw;
     margin-left: 0;
     margin-bottom: 10vw;
+
   }
   .cartMode .imgCon.hidden{
     margin: 5vw;
