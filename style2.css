@@ -1482,6 +1482,9 @@ font-size: 36px;
     padding-left: 10vw;
     padding-top: 0;
   }
+  .cartMode .bookheader:nth-child(1){
+    margin-top: 15vw;
+  }
   .cartMode .bookheader{
     margin-top: 15vw;
     margin-bottom: 15vw;
