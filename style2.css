@@ -694,9 +694,11 @@ i.fa.hamburger{
 .imgCon.poster25.posterColle.hidden.cartMode section{
   opacity: .1;
   transition: opacity .25s;
+  pointer-events: none;
 }
 .imgCon.poster25.posterColle.hidden.cartMode.selected section{
-  opacity: 1
+  opacity: 1;
+  pointer-events: all;
 }
 .imgCon.poster25.posterColle.hidden.cartMode section img:nth-child(1){
 
