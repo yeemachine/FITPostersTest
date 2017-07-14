@@ -617,6 +617,7 @@ i.fa.hamburger{
   height: 72.5vh;
   display: block;
   margin-left: 10vh;
+  position: relative;
 }
 .intro h2{
   font-size: 4vw;
@@ -629,7 +630,8 @@ i.fa.hamburger{
   line-height: 1;
 }
 .intro .posterblurb{
-  min-width:51.33vh
+    position: absolute;
+    bottom: 0;
 }
 .imgCon.hidden{
   margin-right:0;
