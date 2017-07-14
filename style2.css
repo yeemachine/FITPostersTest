@@ -1307,7 +1307,6 @@ right: 10vh;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0)
   }
   .home{
     top: 0;
@@ -1446,10 +1445,10 @@ font-size: 36px;
   }
   #lazy-container{
     display: block;
-    /*overflow-y: scroll;*/
+    overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
-    height: auto;
+    /*height: auto;*/
     -webkit-transform: translate3d(0, 0, 0);
 
   }
