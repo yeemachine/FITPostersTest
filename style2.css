@@ -110,7 +110,7 @@ body{
   overflow-y:auto;
   align-items: flex-start;
 }
-/*body.cartMode{
+body.cartMode{
   overflow-x: hidden;
 }
 body.aboutMode{
@@ -118,7 +118,7 @@ body.aboutMode{
 }
 body.bookMode{
   overflow-x: hidden;
-}*/
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -1429,7 +1429,7 @@ font-size: 36px;
     top:0;
     left: -100vw;
     background-color: rgba(0,0,0,0.85);
-      /*-webkit-transform: translate3d(0, 0, 0);*/
+      -webkit-transform: translate3d(0, 0, 0);
   }
   .hidden-page.slide{
     left:0;
