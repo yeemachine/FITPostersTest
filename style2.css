@@ -1372,6 +1372,10 @@ justify-content: center;
 font-size: 36px;
 
   }
+  .intro .posterblurb{
+      position: relative;
+      bottom: 0;
+  }
   .bookIntro{
     margin-left: 10vw;
     margin-top: 108px;
