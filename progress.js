@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-
+  var lastScrollTop = 0;
+  var lastScrollLeft = 0;
 
   $('#lazy-container').on('scroll', function () {
     var lazyHeight = $('#lazy-container')[0].scrollHeight
@@ -9,20 +10,25 @@ $( document ).ready(function() {
     var scrollTop = $(this).scrollTop()
     var scrollLeft = $(this).scrollLeft()
 
-        offsetY = scrollTop/(lazyHeight - windowHeight) * 100 + '%'
-        offsetX = scrollLeft/(lazyWidth - windowWidth) * 100 + '%'
+        offsetY = scrollTop/(lazyHeight - windowHeight) * 100
+        offsetX = scrollLeft/(lazyWidth - windowWidth) * 100
+
+
 
     if (state === 'mobile'){
     }else{
       if($('body').hasClass('bookMode')){
-        $('.nav-item.selected.book .progress').css({ 'width': offsetY });
+        $('.nav-item.selected.book .progress').css({ 'width': offsetY + '%' });
+
       }
       else if($('body').hasClass('aboutMode')){
       }
       else if($('body').hasClass('cartMode')){
-        $('.nav-item.selected.cart .progress').css({ 'width': offsetY });
+        $('.nav-item.selected.cart .progress').css({ 'width': offsetY + '%'});
+
       }else{
-        $('.nav-item.selected.posterNav .progress').css({ 'width': offsetX });
+        $('.nav-item.selected.posterNav .progress').css({ 'width': offsetX + '%'});
+
       }
     }
     });
@@ -31,17 +37,17 @@ $( document ).ready(function() {
       var bodyHeight = $('body')[0].scrollHeight
       var windowHeight = $(window).height();
       var scrollTop = $(this).scrollTop()
-          offsetY = scrollTop/(bodyHeight - windowHeight) * 100 + '%'
+          offsetY = scrollTop/(bodyHeight - windowHeight) * 100
             if (state === 'mobile'){
               if($('body').hasClass('bookMode')){
-                $('.nav-item.selected.book .progress').css({ 'width': offsetY });
+                $('.nav-item.selected.book .progress').css({ 'width': offsetY + '%'});
               }
               else if($('body').hasClass('aboutMode')){
               }
               else if($('body').hasClass('cartMode')){
-                $('.nav-item.selected.cart .progress').css({ 'width': offsetY });
+                $('.nav-item.selected.cart .progress').css({ 'width': offsetY + '%'});
               }else{
-                $('.nav-item.selected.posterNav .progress').css({ 'width': offsetY });
+                $('.nav-item.selected.posterNav .progress').css({ 'width': offsetY + '%'});
               }
             }
 
