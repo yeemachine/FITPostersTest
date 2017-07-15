@@ -19,6 +19,11 @@ $( document ).ready(function() {
     }else{
       if($('body').hasClass('bookMode')){
         $('.nav-item.selected.book .progress').css({ 'width': offsetY + '%' });
+        if (offsetY > 99){
+          $('.posterNav').addClass('preview')
+        }else{
+          $('.posterNav').removeClass('preview')
+        }
 
       }
       else if($('body').hasClass('aboutMode')){
@@ -28,6 +33,11 @@ $( document ).ready(function() {
 
       }else{
         $('.nav-item.selected.posterNav .progress').css({ 'width': offsetX + '%'});
+        if (offsetX > 99){
+          $('.cart').addClass('preview')
+        }else{
+          $('.cart').removeClass('preview')
+        }
 
       }
     }

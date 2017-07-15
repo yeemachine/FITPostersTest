@@ -331,7 +331,7 @@ a{
     pointer-events: none;
 }
 .nav-item{
-  margin-right: 7.5vh;
+  margin-right: 0;
   height: 7.5vh;
   display: flex;
   align-items: center;
@@ -341,6 +341,18 @@ a{
 }
 .nav-item:last-child{
   margin-right: 0;
+}
+.nav-item i{
+  width: 7.5vh;
+  height: 7.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:transparent;
+  transition: color .25s;
+}
+.nav-item i.selected{
+  color: rgba(0,0,0,0.3);
 }
 .nav-item a{
   display: inline-block;
@@ -370,7 +382,9 @@ a{
     transition: width .25s;
     position: absolute;
     pointer-events: none;
-
+}
+.nav-item.preview a::after {
+  width: 50%;
 }
 .nav-item a:hover::after {
     width: 100%;

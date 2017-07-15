@@ -121,6 +121,7 @@ $( document ).ready(function() {
 
 ///Go to cart state
   $('.cart').click(function() {
+    $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.bookMode').removeClass('bookMode');
     $('.aboutMode').removeClass('aboutMode');
@@ -143,6 +144,7 @@ $( document ).ready(function() {
 
 ///Go to book page
   $('.book').click(function() {
+    $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.book').addClass('selected');
@@ -160,6 +162,7 @@ $( document ).ready(function() {
 
 ///
 $('.about').click(function() {
+  $('.preview').removeClass('preview');
   $('.progress').css({'width':''});
   $('.page1,.page2,.main-nav').css({'transition':''});
   $('.about').addClass('selected');
@@ -177,6 +180,7 @@ $('.about').click(function() {
 
 ///Return to poster state
   $('.posterNav').click(function() {
+    $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.cartMode, .bookMode, .aboutMode').attr('state', '');
     $('.cartMode').removeClass('cartMode');
