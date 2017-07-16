@@ -1011,7 +1011,8 @@ i.fa.hamburger{
   top: -5px;
   width: calc(100%);
   height: calc(100%);
-  border: 5px dashed rgba(0,0,0,0.5);
+  border: 5px dashed rgba(0,0,0,0.1);
+  transition: border .25s ease;
 }
 
 .selected .plusMin{
