@@ -1011,7 +1011,7 @@ i.fa.hamburger{
   top: -5px;
   width: calc(100%);
   height: calc(100%);
-  border: 5px dashed rgba(0,0,0,0.1);
+  border: 5px dashed rgba(0,0,0,0.2);
   transition: border .25s ease;
 }
 
