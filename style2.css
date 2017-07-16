@@ -864,7 +864,7 @@ i.fa.hamburger{
     display: flex;
     width: 100%;
     background-color: rgba(255,255,255,0.7);
-    color:rgba(0,0,0,0.3);
+    color:rgba(0,0,0,0.5);
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -1011,11 +1011,11 @@ i.fa.hamburger{
   top: -5px;
   width: calc(100%);
   height: calc(100%);
-  border: 5px dashed rgba(0,0,0,0.3);
+  border: 5px dashed rgba(0,0,0,0.5);
 }
 
 .selected .plusMin{
-  border: 5px solid rgba(0,0,0,0.1);
+  border: 5px solid rgba(0,0,0,0.5);
 }
 .selected.cartMode .quantity.hovered .plusMin{
   border: 5px dashed rgba(220,20,60,0.5);
