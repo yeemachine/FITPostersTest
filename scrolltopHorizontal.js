@@ -14,22 +14,22 @@ $( document ).ready(function() {
           st = $(this).scrollTop();
           if(st > lastScrollTop && $(this).scrollTop()>page1Y && $('body').attr('status') != 'locked' ) {
             // console.log('down 1');
-            $('.main-nav').css({'opacity':'0'})
+            // $('.main-nav').css({'opacity':'0'})
           }
           else {
             // console.log('up 1');
-            $('.main-nav').css({'opacity':''})
+            // $('.main-nav').css({'opacity':''})
           }
           lastScrollTop = st;
           }else{
             st = $(this).scrollLeft();
             if(st > lastScrollLeft && $(this).scrollLeft()>page1X && $('body').attr('status') != 'locked' ) {
               // console.log('down 1');
-              $('.main-nav').css({'opacity':'0'})
+              // $('.main-nav').css({'opacity':'0'})
             }
             else {
               // console.log('up 1');
-              $('.main-nav').css({'opacity':''})
+              // $('.main-nav').css({'opacity':''})
             }
             lastScrollLeft = st;
 
@@ -49,16 +49,16 @@ $( document ).ready(function() {
 
 
 
-    document.body.addEventListener("mousemove", function(event) {
-        window.innerHTML = event.clientY;
-        windowHeight = document.documentElement.clientHeight * 0.075;
-
-        //Check if we are in the top area of the page.
-        if(event.clientY < windowHeight) {
-              $('.main-nav').css({'opacity':''})
-        }
-
-    });
+    // document.body.addEventListener("mousemove", function(event) {
+    //     window.innerHTML = event.clientY;
+    //     windowHeight = document.documentElement.clientHeight * 0.075;
+    //
+    //     //Check if we are in the top area of the page.
+    //     if(event.clientY < windowHeight) {
+    //           $('.main-nav').css({'opacity':''})
+    //     }
+    //
+    // });
 
 
 });
