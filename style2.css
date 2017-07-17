@@ -270,6 +270,7 @@ a{
   width:100vw;
   height:100vh;
   align-items: center;
+  background-color: white;
 }
 #lazy-container>.cartMode{
   display:flex;
@@ -532,16 +533,24 @@ i.fa.hamburger{
   top:0;
   left: 10vh;
 }
+.bookIntro h2 span{
+  color:rgba(0,0,0,0.2)
+}
 .bookIntro h2.sticky{
   position: fixed;
   top: 6.25vh;
+  mix-blend-mode: difference;
+  color: white;
+}
+.bookIntro h2.sticky span{
+  color: rgba(255,255,255,0.2);
 }
 .bookIntro h3{
   width: 50vh;
   position: relative;
   margin-left: calc(100vw - 70vh);
 }
-.bookModule{
+/*.bookModule{
   width: calc(100% - 24vw - 25vh);
   margin-left: calc(20vh + 24vw);
   height: 100vh;
@@ -550,14 +559,75 @@ i.fa.hamburger{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+   overflow: hidden;
 }
 .page3 .bookModule:nth-child(even){
   margin-left: calc(10vh - 2vw);
+}*/
+.bookModule{
+  width: calc(100% - 24vw - 25vh);
+  margin-left: calc(100% - (100% - 24vw - 25vh));
+  height: 100vh;
+  position: relative;
+   overflow: hidden;
 }
+.page3 .bookModule:nth-child(even){
+  margin-left: 0;
+}
+.bookModule:nth-child(odd):before{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: url('img/VAP_Milton.jpg') no-repeat;
+  background-size: contain;
+  background-position: left;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.bookModule:nth-child(even):before{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url('img/VAP_Milton.jpg') no-repeat;
+  background-size: contain;
+  background-position: left;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
 .page3 .bookModule:last-child{
   width: calc(100% - (10vh - 2vw)*2);
-  margin-left: calc(10vh - 2vw);
+  margin-left: 0;
   height: 200vh;
+  position: relative;
+
+  background-image: none;
+  overflow:hidden;
+
+}
+
+.page3 .bookModule:last-child:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url('img/VAP_Milton.jpg') no-repeat;
+  background-size: contain;
+  background-position: left;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
 }
 #lazy-container>.page1.aboutMode{
   display: none;
