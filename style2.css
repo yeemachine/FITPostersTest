@@ -542,7 +542,8 @@ i.fa.hamburger{
   margin-left: calc(100vw - 70vh);
 }
 .bookModule{
-  width: 100%;
+  width: calc(100% - 24vw - 25vh);
+  margin-left: calc(20vh + 24vw);
   height: 100vh;
   background-color: transparent;
   background-image: url('img/VAP_Milton.jpg');
