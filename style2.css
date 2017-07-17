@@ -532,11 +532,22 @@ i.fa.hamburger{
   margin-bottom: 0;
 }
 .page4 .bookIntro h2{
-  position: relative;
-  left: 0;
+  font-size: 4vw;
+    margin-top: -1vh;
+    display: inline-block;
+    margin-bottom: 0;
+    height: 30vh;
+    width: calc(100vw - 70vh);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .page4 .bookIntro h3{
   margin-left: 0;
+width: 50vh;
+position: relative;
+margin-left: calc(100vw - 70vh);
 }
 .page4 .bookIntro h3 div{
   padding-bottom: 5vh;
@@ -550,6 +561,7 @@ i.fa.hamburger{
   display: block;
   margin-left: 10vh;
   margin-bottom: 7.5vh;
+  position: relative;
 }
 .bookIntro h2{
   font-size: 4vw;
@@ -561,7 +573,7 @@ i.fa.hamburger{
   line-height: 1;
   position: absolute;
   top:0;
-  left: 10vh;
+  left: 0;
 }
 .bookIntro h2 span{
   color:rgba(0,0,0,0.2)
@@ -569,6 +581,7 @@ i.fa.hamburger{
 .bookIntro h2.sticky{
   position: fixed;
   top: 6.25vh;
+  left: 10vh;
   mix-blend-mode: difference;
   color: white;
 }
