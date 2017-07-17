@@ -22,7 +22,7 @@ $('#lazy-container').on('scroll', function () {
         calc3 = -(scrollLeft - offset2) / offset2;
 
     home.css({ 'opacity': calc });
-    $('.bookIntro h3').css({ 'opacity': calc2 });
+    $('.page3 .bookIntro h3').css({ 'opacity': calc2 });
     $('.intro').css({ 'opacity': calc3 });
 
     if (calc > '1') {
@@ -31,9 +31,9 @@ $('#lazy-container').on('scroll', function () {
       home.css({ 'opacity': 0 });
     }
     if (calc2 > '1') {
-        $('.bookIntro h3').css({ 'opacity': 1 });
+        $('.page3 .bookIntro h3').css({ 'opacity': 1 });
     } else if ( calc2 < '0' ) {
-        $('.bookIntro h3').css({ 'opacity': 0 });
+        $('.page3 .bookIntro h3').css({ 'opacity': 0 });
     }
     if (calc3 > '1') {
         $('.intro').css({ 'opacity': 1 });

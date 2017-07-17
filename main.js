@@ -170,7 +170,7 @@ if (identifier === "#bag"){
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.cart').addClass('selected');
     $('.book, .posterNav, .about').removeClass('selected');
-    $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
+    $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .page4,.posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
     if (state === 'mobile'){
       $('.show').removeClass('show');
@@ -193,7 +193,7 @@ if (identifier === "#bag"){
     $('.cartMode').removeClass('cartMode');
     $('.aboutMode').removeClass('aboutMode');
     $('.posterNav , .cart, .about').removeClass('selected');
-    $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
+    $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .page4,.posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
     $('.cartMode').attr('state', 'bookMode');
     if (state === 'mobile'){
       $('.show').removeClass('show');
@@ -211,7 +211,7 @@ $('.about a').click(function() {
   $('.posterNav , .cart, .book').removeClass('selected');
   $('.cartMode').removeClass('cartMode');
   $('.bookMode').removeClass('bookMode');
-  $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('aboutMode');
+  $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .page4, .posterNav, .cart, .hidden-page, .item-list').addClass('aboutMode');
   $('.cartMode').attr('state', 'aboutMode');
   if (state === 'mobile'){
     $('.show').removeClass('show');

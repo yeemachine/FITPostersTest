@@ -289,6 +289,10 @@ a{
   overflow-y:scroll;
   overflow-x:hidden;
 }
+#lazy-container.aboutMode{
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
 .main-nav{
   background-color: rgba(30,30,30,0);
   color:rgba(0,0,0,.3);
@@ -419,7 +423,7 @@ section.cover div{
   display: flex;
   align-items: center;
   width: 90vw;
-  font-size: 48px;
+  font-size: 6.6066vh;
   margin-left: 10vh;
   transform-origin: left;
   animation-fill-mode: forwards;
@@ -501,6 +505,15 @@ i.fa.hamburger{
 #lazy-container>.page3.cartMode{
   display: none
 }
+#lazy-container>.page4.bookMode{
+  display: none;
+}
+#lazy-container>.page4.cartMode{
+  display: none
+}
+#lazy-container>.page4.aboutMode{
+  display: flex
+}
 .page3{
   display: none;
   height: auto;
@@ -513,6 +526,16 @@ i.fa.hamburger{
   position: absolute;
   top: 13.75vh;
   left: 0;
+}
+.page4 .bookIntro{
+  display: flex;
+}
+.page4 .bookIntro h2{
+  position: relative;
+  left: 0;
+}
+.page4 .bookIntro h3{
+  margin-left: 0;
 }
 .bookIntro{
   width: 90vw;
@@ -628,6 +651,19 @@ i.fa.hamburger{
   background-position: left;
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
+}
+.page4{
+  display: none;
+  height: auto;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  top: 13.75vh;
+  left: 0;
 }
 #lazy-container>.page1.aboutMode{
   display: none;

@@ -37,10 +37,10 @@ $( document ).ready(function() {
               height = $('.main-nav').height()
               st = $(this).scrollTop();
               if(st > height){
-                $('.bookIntro h2').addClass('sticky')
+                $('.page3 .bookIntro h2').addClass('sticky')
               }
               if( st < height){
-                $('.bookIntro h2').removeClass('sticky')
+                $('.page3 .bookIntro h2').removeClass('sticky')
               }
             }
           }

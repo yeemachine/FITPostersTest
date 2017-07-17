@@ -27,6 +27,12 @@ $( document ).ready(function() {
 
       }
       else if($('body').hasClass('aboutMode')){
+        $('.nav-item.selected.about .progress').css({ 'width': offsetY + '%' });
+        if (offsetY > 99){
+          $('.cart').addClass('preview')
+        }else{
+          $('.cart').removeClass('preview')
+        }
       }
       else if($('body').hasClass('cartMode')){
         $('.nav-item.selected.cart .progress').css({ 'width': offsetY + '%'});
@@ -34,9 +40,9 @@ $( document ).ready(function() {
       }else{
         $('.nav-item.selected.posterNav .progress').css({ 'width': offsetX + '%'});
         if (offsetX > 99){
-          $('.cart').addClass('preview')
+          $('.about').addClass('preview')
         }else{
-          $('.cart').removeClass('preview')
+          $('.about').removeClass('preview')
         }
 
       }
