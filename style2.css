@@ -544,10 +544,11 @@ i.fa.hamburger{
 .bookModule{
   width: 100%;
   height: 100%;
-  background-color: rebeccapurple;
-  background-image: url('img/FullSizeRender 2.jpg');
-  background-size: cover;
-  background-position: center;
+  background-color: transparent;
+  background-image: url('img/VAP_Milton.jpg');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 #lazy-container>.page1.aboutMode{
   display: none;

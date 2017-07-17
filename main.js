@@ -32,7 +32,7 @@ if (identifier === "#posters"){
   }
   $('#lazy-container, body').scrollTop(0);
 }
-if (identifier === "#cart"){
+if (identifier === "#bag"){
   $('.preview').removeClass('preview');
   $('.progress').css({'width':''});
   $('.bookMode').removeClass('bookMode');
