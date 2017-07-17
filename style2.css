@@ -311,13 +311,12 @@ a{
   width: 100%;
   background-color: rgba(30,30,30,1);
   position: fixed;
-  top:100vh;
+-webkit-transform: translate3d(0, 100vh, 0);
   left:0;
   transition: .25s;
   z-index: 7;
   overflow-y: scroll;
   overflow-x: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 .hidden-page.cartMode{
   display: none;
@@ -486,7 +485,7 @@ i.fa.hamburger{
   transition:.25s
 }*/
 .hidden-page.slide{
-  top:0
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 #lazy-container>.page1.cartMode{
@@ -1342,7 +1341,7 @@ right: 10vh;
     justify-content: center;
     align-items: center;
     color:rgba(119,119,119,1);
-    top:0;
+    -webkit-transform: translate3d(0, 0, 0);
     right:0;
     padding-right: 10vw;
     padding-left: 10vw;
@@ -1483,12 +1482,11 @@ font-size: 36px;
   }
   .hidden-page{
     top:0;
-    left: -100vw;
     background-color: rgba(0,0,0,0.85);
-      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(-100vw, 0, 0);
   }
   .hidden-page.slide{
-    left:0;
+    -webkit-transform: translate3d(0, 0, 0);
   }
   .button{
     width: 10vw;
