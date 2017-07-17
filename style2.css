@@ -551,6 +551,14 @@ i.fa.hamburger{
   background-position: center;
   background-repeat: no-repeat;
 }
+.page3 .bookModule:nth-child(even){
+  margin-left: calc(10vh - 2vw);
+}
+.page3 .bookModule:last-child{
+  width: calc(100% - (10vh - 2vw)*2);
+  margin-left: calc(10vh - 2vw);
+  height: 200vh;
+}
 #lazy-container>.page1.aboutMode{
   display: none;
 }
