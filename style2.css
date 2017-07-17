@@ -502,7 +502,7 @@ i.fa.hamburger{
 }
 .page3{
   display: none;
-  height: 300vh;
+  height: auto;
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -543,7 +543,7 @@ i.fa.hamburger{
 }
 .bookModule{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: transparent;
   background-image: url('img/VAP_Milton.jpg');
   background-size: contain;
