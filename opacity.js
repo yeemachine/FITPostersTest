@@ -11,7 +11,6 @@ var range3 = 500;
 $('#lazy-container').on('scroll', function () {
   if (state === 'mobile'){
   }else{
-    console.log('this works');
     var scrollTop = $(this).scrollTop(),
         scrollLeft = $(this).scrollLeft(),
         height = header.height(),

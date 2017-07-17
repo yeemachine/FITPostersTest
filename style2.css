@@ -1510,10 +1510,8 @@ font-size: 36px;
   }
 
   .imgsquare:hover{
-  /*opacity: .3;*/
-  /*-webkit-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
-  -moz-box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);
-  box-shadow: -5px 27px 74px -8px rgba(0,0,0,0.71);*/
+    transform: scale3d(1,1,1);
+
   }
   #lazy-container{
     display: block;
