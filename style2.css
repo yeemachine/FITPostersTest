@@ -383,7 +383,7 @@ a{
     pointer-events: none;
 }
 .nav-item.preview a::after {
-  width: 50%;
+  width: 30%;
 }
 .nav-item a:hover::after {
     width: 100%;
@@ -1052,9 +1052,7 @@ i.fa.hamburger{
 /*opacity: .3;*/
 transition: .25s;
 cursor: pointer;
-/*-webkit-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
--moz-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);
-box-shadow: -2px 34px 97px 5px rgba(0,0,0,0.82);*/
+transform: scale3d(1.05,1.05,1.05);
 
 }
 .imgsquare.selected:hover{
