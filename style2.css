@@ -529,6 +529,7 @@ i.fa.hamburger{
 }
 .page4 .bookIntro{
   display: flex;
+  margin-bottom: 0;
 }
 .page4 .bookIntro h2{
   position: relative;
@@ -536,6 +537,12 @@ i.fa.hamburger{
 }
 .page4 .bookIntro h3{
   margin-left: 0;
+}
+.page4 .bookIntro h3 div{
+  padding-bottom: 5vh;
+}
+.page4 .bookIntro:nth-child(3) h3 div:last-child{
+  padding-bottom: 5vh;
 }
 .bookIntro{
   width: 90vw;

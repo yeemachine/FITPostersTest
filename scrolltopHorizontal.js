@@ -43,6 +43,16 @@ $( document ).ready(function() {
                 $('.page3 .bookIntro h2').removeClass('sticky')
               }
             }
+            if ($(this).hasClass('aboutMode')){
+              height = $('.main-nav').height()
+              st = $(this).scrollTop();
+              if(st > height){
+                // $('.page4 .bookIntro h2').addClass('sticky')
+              }
+              if( st < height){
+                // $('.page4 .bookIntro h2').removeClass('sticky')
+              }
+            }
           }
       });
 
