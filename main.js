@@ -192,6 +192,7 @@ $('.about').click(function() {
       $('.show').removeClass('show');
       $('.hamburger').toggleClass('fa-bars fa-times')
     }
+    $('#lazy-container, body').scrollTop(0);
   });
 
 
