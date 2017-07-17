@@ -45,8 +45,13 @@ $( document ).ready(function() {
             }
             if ($(this).hasClass('aboutMode')){
               height = $('.main-nav').height()
-              stickypad = $(window).height()*.2
+              stickypad = $(window).height()*.25
+              stickypad2 = $(window).height()*.1
+
               height2 = height + $('.page4 .bookIntro:nth-child(1)').height() - stickypad
+              height3 = height + $('.page4 .bookIntro:nth-child(1)').height() + stickypad2
+              height4 = height3 + $('.page4 .bookIntro:nth-child(2)').height() - stickypad
+
               st = $(this).scrollTop();
               if(height < st < height2){
                 $('.page4 .bookIntro:nth-child(1) h2').addClass('sticky')
@@ -59,6 +64,18 @@ $( document ).ready(function() {
               }
               if( st < height){
                 $('.page4 .bookIntro:nth-child(1) h2').removeClass('sticky')
+              }
+              if (height3 < st < height4){
+                $('.page4 .bookIntro:nth-child(2) h2').addClass('sticky')
+              }
+              if (st > height4){
+                $('.page4 .bookIntro:nth-child(2) h2').addClass('sticky2')
+              }
+              if (st < height4){
+                $('.page4 .bookIntro:nth-child(2) h2').removeClass('sticky2')
+              }
+              if (st < height3){
+                $('.page4 .bookIntro:nth-child(2) h2').removeClass('sticky')
               }
             }
           }

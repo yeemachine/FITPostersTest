@@ -529,14 +529,15 @@ i.fa.hamburger{
 }
 .page4 .bookIntro{
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 10vh;
+  border-bottom: 5px solid black;
 }
 .page4 .bookIntro h2{
   font-size: 4vw;
     margin-top: -1vh;
     display: inline-block;
     margin-bottom: 0;
-    height: 20vh;
+    height: 30vh;
     width: calc(100vw - 70vh);
     line-height: 1;
     position: absolute;
@@ -545,19 +546,24 @@ i.fa.hamburger{
 }
 .page4 .bookIntro h3{
   margin-left: 0;
-width: 50vh;
-position: relative;
+  width: 50vh;
+  position: relative;
 margin-left: calc(100vw - 70vh);
 }
 .page4 .bookIntro h3 div{
   padding-bottom: 5vh;
 }
-.page4 .bookIntro:nth-child(3) h3 div:last-child{
-  padding-bottom: 5vh;
+.page4 .bookIntro h3 div:last-child{
+  padding-bottom: 10vh;
 }
 .page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 20vh);
+  top: calc(100% - 25vh);
+  left: 0;
+}
+.page4 .bookIntro:nth-child(2) h2.sticky.sticky2{
+  position: absolute;
+  top: calc(100% - 25vh);
   left: 0;
 }
 .bookIntro{
@@ -573,7 +579,7 @@ margin-left: calc(100vw - 70vh);
   margin-top: -1vh;
   display: inline-block;
   margin-bottom: 0;
-  height: 30vh;
+  height: 25vh;
   width: calc(100vw - 70vh);
   line-height: 1;
   position: absolute;
@@ -597,6 +603,9 @@ margin-left: calc(100vw - 70vh);
   width: 50vh;
   position: relative;
   margin-left: calc(100vw - 70vh);
+}
+.bookIntro h3 div{
+  padding-bottom: 5vh;
 }
 /*.bookModule{
   width: calc(100% - 24vw - 25vh);
