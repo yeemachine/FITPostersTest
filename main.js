@@ -14,6 +14,48 @@ $( document ).ready(function() {
   // $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
   // $('.cartMode').attr('state', 'bookMode');
 
+var identifier = window.location.hash;
+console.log(identifier);
+
+if (identifier === "#posters"){
+  $('.preview').removeClass('preview');
+  $('.progress').css({'width':''});
+  $('.cartMode, .bookMode, .aboutMode').attr('state', '');
+  $('.cartMode').removeClass('cartMode');
+  $('.bookMode').removeClass('bookMode');
+  $('.aboutMode').removeClass('aboutMode');
+  $('.posterNav').addClass('selected');
+  $('.cart, .book, .about').removeClass('selected');
+  if (state === 'mobile'){
+    $('.show').removeClass('show');
+    $('.hamburger').toggleClass('fa-bars fa-times')
+  }
+  $('#lazy-container, body').scrollTop(0);
+}
+if (identifier === "#cart"){
+  $('.preview').removeClass('preview');
+  $('.progress').css({'width':''});
+  $('.bookMode').removeClass('bookMode');
+  $('.aboutMode').removeClass('aboutMode');
+  $('.page1,.page2,.main-nav').css({'transition':''});
+  $('.cart').addClass('selected');
+  $('.book, .posterNav, .about').removeClass('selected');
+  $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
+  $('.cartMode').attr('state', 'cartMode');
+  if (state === 'mobile'){
+    $('.show').removeClass('show');
+    $('.hamburger').toggleClass('fa-bars fa-times')
+  }
+  $('.lazy').lazy({
+             bind: "event",
+             delay: 500
+         });
+
+  $('#lazy-container, body').scrollTop(0);
+}
+
+
+
   var isMobile = window.matchMedia("only screen and (max-width: 1000px)");
   if (isMobile.matches) {
       state="mobile"
@@ -120,7 +162,7 @@ $( document ).ready(function() {
    });
 
 ///Go to cart state
-  $('.cart').click(function() {
+  $('.cart a').click(function() {
     $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.bookMode').removeClass('bookMode');
@@ -143,7 +185,7 @@ $( document ).ready(function() {
   });
 
 ///Go to book page
-  $('.book').click(function() {
+  $('.book a').click(function() {
     $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.page1,.page2,.main-nav').css({'transition':''});
@@ -161,7 +203,7 @@ $( document ).ready(function() {
   });
 
 ///
-$('.about').click(function() {
+$('.about a').click(function() {
   $('.preview').removeClass('preview');
   $('.progress').css({'width':''});
   $('.page1,.page2,.main-nav').css({'transition':''});
@@ -179,7 +221,7 @@ $('.about').click(function() {
 });
 
 ///Return to poster state
-  $('.posterNav').click(function() {
+  $('.posterNav a').click(function() {
     $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.cartMode, .bookMode, .aboutMode').attr('state', '');
