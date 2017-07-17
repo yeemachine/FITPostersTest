@@ -15,13 +15,15 @@ $('#lazy-container').on('scroll', function () {
         scrollLeft = $(this).scrollLeft(),
         height = header.height(),
         paddingHeight = $(window).height()*.05,
+        paddingHeight2 = $(window).height()*.1,
+
         height2 = header2.width(),
         offset = height*2,
         offset2 = height2*.75,
 
         offsetA = $('.page3 .bookIntro:nth-child(1) h3 div:nth-child(1)').height() + paddingHeight
         offsetX1 = $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(1)').height() + paddingHeight
-        offsetX2 = offsetX1 + $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').height() + paddingHeight
+        offsetX2 = offsetX1 + $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').height() + paddingHeight + paddingHeight2
         offsetX3 = offsetX2 + $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(1)').height() + paddingHeight
 
         calc = -(scrollTop - offset)/ offset;
