@@ -92,6 +92,7 @@ function handler(event) {
 $(function(){
 
 		$('#lazy-container').mousewheel(function(event, delta) {
+      var scroller = $(this)
       var isMobile = window.matchMedia("only screen and (max-width: 1000px)");
 
       if (isMobile.matches) {
@@ -99,7 +100,7 @@ $(function(){
       }else{
         state="desktop"
         if ($('body').attr('status') != 'locked') {
-  			$('#lazy-container').scrollLeft -= (delta * 100);
+  			this.scrollLeft -= (delta * 100);
         }
       }
 
