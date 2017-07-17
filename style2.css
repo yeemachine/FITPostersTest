@@ -1379,6 +1379,7 @@ right: 10vh;
     top: 0;
     left:10vw;
     z-index: 6;
+    background-color: white;
   }
   .home.show{
     transition-delay: .25s;
