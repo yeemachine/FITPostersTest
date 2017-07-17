@@ -536,7 +536,7 @@ i.fa.hamburger{
     margin-top: -1vh;
     display: inline-block;
     margin-bottom: 0;
-    height: 30vh;
+    height: 20vh;
     width: calc(100vw - 70vh);
     line-height: 1;
     position: absolute;
@@ -554,6 +554,11 @@ margin-left: calc(100vw - 70vh);
 }
 .page4 .bookIntro:nth-child(3) h3 div:last-child{
   padding-bottom: 5vh;
+}
+.page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
+  position: absolute;
+  top: calc(100% - 20vh);
+  left: 0;
 }
 .bookIntro{
   width: 90vw;

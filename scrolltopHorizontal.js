@@ -45,12 +45,20 @@ $( document ).ready(function() {
             }
             if ($(this).hasClass('aboutMode')){
               height = $('.main-nav').height()
+              stickypad = $(window).height()*.2
+              height2 = height + $('.page4 .bookIntro:nth-child(1)').height() - stickypad
               st = $(this).scrollTop();
-              if(st > height){
-                // $('.page4 .bookIntro h2').addClass('sticky')
+              if(height < st < height2){
+                $('.page4 .bookIntro:nth-child(1) h2').addClass('sticky')
+              }
+              if(st > height2){
+                $('.page4 .bookIntro:nth-child(1) h2').addClass('sticky2')
+              }
+              if(st < height2){
+                $('.page4 .bookIntro:nth-child(1) h2').removeClass('sticky2')
               }
               if( st < height){
-                // $('.page4 .bookIntro h2').removeClass('sticky')
+                $('.page4 .bookIntro:nth-child(1) h2').removeClass('sticky')
               }
             }
           }
