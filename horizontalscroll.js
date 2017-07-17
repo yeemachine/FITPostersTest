@@ -99,7 +99,7 @@ $(function(){
       }else{
         state="desktop"
         if ($('body').attr('status') != 'locked') {
-  			this.scrollLeft -= (delta * 100);
+  			$('#lazy-container').scrollLeft -= (delta * 100);
         }
       }
 
