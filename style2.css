@@ -541,17 +541,18 @@ i.fa.hamburger{
     display: inline-block;
     margin-bottom: 0;
     height: 30vh;
-    width: calc(100vw - 70vh);
+    width: auto;
     line-height: 1;
     position: absolute;
     top: 0;
-    left: 0;
+    left: calc(100vw - 70vh);
+    transition: opacity .25s;
 }
 .page4 .bookIntro h3{
   margin-left: 0;
   width: 50vh;
   position: relative;
-margin-left: calc(100vw - 70vh);
+/*margin-left: calc(100vw - 70vh);*/
 }
 .page4 .bookIntro:first-child h3{
   /*margin-left: 0;*/
@@ -582,13 +583,15 @@ margin-left: calc(100vw - 70vh);
 }
 .page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 25vh);
-  left: 0;
+  top: calc(100% - 50vh);
+  left: calc(100vw - 70vh);
+  opacity: 0
 }
 .page4 .bookIntro:nth-child(2) h2.sticky.sticky2{
   position: absolute;
   top: calc(100% - 50vh);
-  left: 0;
+  left: calc(100vw - 70vh);
+  opacity: 0
 }
 .bookIntro{
   width: calc(100vw - 20vh);
@@ -619,6 +622,10 @@ margin-left: calc(100vw - 70vh);
   left: 10vh;
   /*mix-blend-mode: difference;
   color: white;*/
+}
+.page4 .bookIntro h2.sticky{
+  top: 13.75vh;
+  left: calc(100vw - 60vh);
 }
 .bookIntro h2.sticky span{
   /*color: rgba(255,255,255,0.2);*/
