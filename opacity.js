@@ -21,10 +21,10 @@ $('#lazy-container').on('scroll', function () {
         offset = height*2,
         offset2 = height2*.75,
 
-        offsetA = $('.page3 .bookIntro:nth-child(1) h3 div:nth-child(1)').height() + paddingHeight
-        offsetX1 = $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(1)').height() + paddingHeight
-        offsetX2 = offsetX1 + $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').height() + paddingHeight + paddingHeight2
-        offsetX3 = offsetX2 + $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(1)').height()
+        offsetA = $('.page3 .bookIntro:nth-child(1) h3 div:nth-child(1)').outerHeight()
+        offsetX1 = $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(1)').outerHeight() - paddingHeight2
+        offsetX2 = offsetX1 + $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').outerHeight() + paddingHeight2 *2
+        offsetX3 = offsetX2 + $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(1)').outerHeight()
 
         calc = -(scrollTop - offset)/ offset;
         calc2 =  -(scrollTop - offset)/ offset;
@@ -43,7 +43,7 @@ $('#lazy-container').on('scroll', function () {
         $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(1)').css({ 'opacity': calc2 });
         $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').css({ 'opacity': calc4 });
         $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(1)').css({ 'opacity': calc5 });
-        $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(2),.page4 .bookIntro:nth-child(2) h2 img').css({ 'opacity': calc6 });
+        $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(2)').css({ 'opacity': calc6 });
 
         $('.intro').css({ 'opacity': calc3 });
 

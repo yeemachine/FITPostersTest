@@ -47,7 +47,7 @@ $( document ).ready(function() {
               height = $('.main-nav').height()
               stickypad = $(window).height()*.25
               stickypad2 = $(window).height()*.1
-              stickypad3 = $(window).height()*.15
+              stickypad3 = $(window).height()*.5
 
 
               height2 = height + $('.page4 .bookIntro:nth-child(1)').height() - stickypad

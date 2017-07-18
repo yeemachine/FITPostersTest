@@ -553,6 +553,14 @@ i.fa.hamburger{
   position: relative;
 margin-left: calc(100vw - 70vh);
 }
+.page4 .bookIntro:first-child h3{
+  margin-left: 0;
+  margin-top: -1vh;
+
+}
+.page4 .bookIntro:first-child h3 b{
+  color: transparent;
+}
 .page4 .bookIntro h3 div{
   padding-bottom: 5vh;
 }
@@ -565,6 +573,13 @@ margin-left: calc(100vw - 70vh);
 .page4 .bookIntro h2 img{
   width: 51.33vh;
 }
+.page4 .bookIntro h3 div b{
+  font-size: 4vw;
+  font-family: 'Univers LT W01_75 Black1475980';
+  line-height: 1;
+  padding-bottom: 5vh;
+  display: block;
+}
 .page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
   position: absolute;
   top: calc(100% - 25vh);
@@ -572,7 +587,7 @@ margin-left: calc(100vw - 70vh);
 }
 .page4 .bookIntro:nth-child(2) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 15vh);
+  top: calc(100% - 50vh);
   left: 0;
 }
 .bookIntro{
