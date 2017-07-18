@@ -23,7 +23,7 @@ $('#lazy-container').on('scroll', function () {
 
         offsetA = $('.page3 .bookIntro:nth-child(1) h3 div:nth-child(1)').height() + paddingHeight
         offsetX1 = $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(1)').height() + paddingHeight
-        offsetX2 = offsetX1 + $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').height() + paddingHeight + paddingHeight2
+        offsetX2 = offsetX1 + $('.page4 .bookIntro:nth-child(1) h3 div:nth-child(2)').height() + paddingHeight + paddingHeight2 * 1.5
         offsetX3 = offsetX2 + $('.page4 .bookIntro:nth-child(2) h3 div:nth-child(1)').height() + paddingHeight
 
         calc = -(scrollTop - offset)/ offset;
