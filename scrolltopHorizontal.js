@@ -47,10 +47,12 @@ $( document ).ready(function() {
               height = $('.main-nav').height()
               stickypad = $(window).height()*.25
               stickypad2 = $(window).height()*.1
+              stickypad3 = $(window).height()*.15
+
 
               height2 = height + $('.page4 .bookIntro:nth-child(1)').height() - stickypad
               height3 = height + $('.page4 .bookIntro:nth-child(1)').height() + stickypad2
-              height4 = height3 + $('.page4 .bookIntro:nth-child(2)').height() - stickypad
+              height4 = height3 + $('.page4 .bookIntro:nth-child(2)').height() - stickypad3
 
               st = $(this).scrollTop();
               if(height < st < height2){

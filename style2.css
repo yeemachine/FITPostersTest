@@ -341,7 +341,6 @@ a{
   align-items: center;
 }
 .nav-item:hover{
-  cursor: pointer;
 }
 .nav-item:last-child{
   margin-right: 0;
@@ -563,6 +562,9 @@ margin-left: calc(100vw - 70vh);
 .page4 .bookIntro:last-child h3 div:last-child{
   padding-bottom: 9vh;
 }
+.page4 .bookIntro h2 img{
+  width: 51.33vh;
+}
 .page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
   position: absolute;
   top: calc(100% - 25vh);
@@ -570,11 +572,11 @@ margin-left: calc(100vw - 70vh);
 }
 .page4 .bookIntro:nth-child(2) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 25vh);
+  top: calc(100% - 15vh);
   left: 0;
 }
 .bookIntro{
-  width: 90vw;
+  width: calc(100vw - 20vh);
   height: auto;
   display: block;
   margin-left: 10vh;
@@ -600,11 +602,11 @@ margin-left: calc(100vw - 70vh);
   position: fixed;
   top: 6.25vh;
   left: 10vh;
-  mix-blend-mode: difference;
-  color: white;
+  /*mix-blend-mode: difference;
+  color: white;*/
 }
 .bookIntro h2.sticky span{
-  color: rgba(255,255,255,0.2);
+  /*color: rgba(255,255,255,0.2);*/
 }
 .bookIntro h3{
   width: 50vh;

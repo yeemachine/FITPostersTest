@@ -163,6 +163,8 @@ if (identifier === "#bag"){
 
 ///Go to cart state
   $('.cart a').click(function() {
+    $('.sticky').removeClass('sticky');
+    $('.sticky2').removeClass('sticky2');
     $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.bookMode').removeClass('bookMode');
@@ -186,6 +188,8 @@ if (identifier === "#bag"){
 
 ///Go to book page
   $('.book a').click(function() {
+    $('.sticky').removeClass('sticky');
+    $('.sticky2').removeClass('sticky2');
     $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.page1,.page2,.main-nav').css({'transition':''});
@@ -204,6 +208,8 @@ if (identifier === "#bag"){
 
 ///
 $('.about a').click(function() {
+  $('.sticky').removeClass('sticky');
+  $('.sticky2').removeClass('sticky2');
   $('.preview').removeClass('preview');
   $('.progress').css({'width':''});
   $('.page1,.page2,.main-nav').css({'transition':''});
@@ -222,6 +228,8 @@ $('.about a').click(function() {
 
 ///Return to poster state
   $('.posterNav a').click(function() {
+    $('.sticky').removeClass('sticky');
+    $('.sticky2').removeClass('sticky2');
     $('.preview').removeClass('preview');
     $('.progress').css({'width':''});
     $('.cartMode, .bookMode, .aboutMode').attr('state', '');
