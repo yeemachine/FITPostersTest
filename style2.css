@@ -547,6 +547,7 @@ i.fa.hamburger{
     top: 0;
     left: calc(100vw - 70vh);
     transition: opacity .25s;
+    margin-top: 15vh;
 }
 .page4 .bookIntro h3{
   margin-left: 0;
@@ -583,13 +584,13 @@ i.fa.hamburger{
 }
 .page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 50vh);
+  top: calc(100% - 65vh);
   left: calc(100vw - 70vh);
   opacity: 0
 }
 .page4 .bookIntro:nth-child(2) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 50vh);
+  top: calc(100% - 65vh);
   left: calc(100vw - 70vh);
   opacity: 0
 }
