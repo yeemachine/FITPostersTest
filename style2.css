@@ -105,7 +105,7 @@ body{
   margin: 0;
   font-family:'Univers LT W01_55 Roman1475956';
   font-size: 2vh;
-  font-size: 2.25vh;
+  font-size: 1.75vh;
   display: flex;
   flex-direction: row;
   overflow-y:auto;
@@ -309,7 +309,7 @@ a{
   align-items: center;
   justify-content: flex-start;
   font-size: 1.75vh;
-  font-size: 2.25vh;
+  font-size: 1.75vh;
   z-index: 5;
   transition: opacity .25s;
   overflow: visible;
@@ -833,7 +833,7 @@ i.fa.hamburger{
   margin: 0;
 
   font-size: 2vh;
-  font-size: 2.25vh;
+  font-size: 1.75vh;
 }
 .intro{
   width: calc(100vw - 70vh - 24.78vh);
@@ -846,7 +846,6 @@ i.fa.hamburger{
   font-size: 4vw;
 
   margin-top: -1vh;
-  margin-top: 0;
   display: inline-block;
   /* margin-bottom: 11.5vh; */
    height: 30vh;
@@ -1322,7 +1321,7 @@ h2{
   font-family:'Univers LT W01_65 Bold1475968';
 
   font-size: 2vh;
-  font-size: 2.25vh;
+  font-size: 1.75vh;
   color: rgba(0,0,0,0.2)
 }
 .item-list ul li.subTotal.selected{
@@ -1342,7 +1341,7 @@ h2{
   font-family:'Univers LT W01_65 Bold1475968';
 
   font-size: 2vh;
-  font-size: 2.25vh;
+  font-size: 1.75vh;
   z-index: 5;
 
 
