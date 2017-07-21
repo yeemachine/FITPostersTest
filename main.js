@@ -1,5 +1,6 @@
 $(window).on('beforeunload', function() {
     $(window).scrollLeft(0);
+    $(window).scrollTop(0);
 
   });
 
@@ -12,6 +13,48 @@ var posterID;
 $( document ).ready(function() {
   // $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
   // $('.cartMode').attr('state', 'bookMode');
+
+var identifier = window.location.hash;
+console.log(identifier);
+
+if (identifier === "#posters"){
+  $('.preview').removeClass('preview');
+  $('.progress').css({'width':''});
+  $('.cartMode, .bookMode, .aboutMode').attr('state', '');
+  $('.cartMode').removeClass('cartMode');
+  $('.bookMode').removeClass('bookMode');
+  $('.aboutMode').removeClass('aboutMode');
+  $('.posterNav').addClass('selected');
+  $('.cart, .book, .about').removeClass('selected');
+  if (state === 'mobile'){
+    $('.show').removeClass('show');
+    $('.hamburger').toggleClass('fa-bars fa-times')
+  }
+  $('#lazy-container, body').scrollTop(0);
+}
+if (identifier === "#bag"){
+  $('.preview').removeClass('preview');
+  $('.progress').css({'width':''});
+  $('.bookMode').removeClass('bookMode');
+  $('.aboutMode').removeClass('aboutMode');
+  $('.page1,.page2,.main-nav').css({'transition':''});
+  $('.cart').addClass('selected');
+  $('.book, .posterNav, .about').removeClass('selected');
+  $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
+  $('.cartMode').attr('state', 'cartMode');
+  if (state === 'mobile'){
+    $('.show').removeClass('show');
+    $('.hamburger').toggleClass('fa-bars fa-times')
+  }
+  $('.lazy').lazy({
+             bind: "event",
+             delay: 500
+         });
+
+  $('#lazy-container, body').scrollTop(0);
+}
+
+
 
   var isMobile = window.matchMedia("only screen and (max-width: 1000px)");
   if (isMobile.matches) {
@@ -119,13 +162,17 @@ $( document ).ready(function() {
    });
 
 ///Go to cart state
-  $('.cart').click(function() {
+  $('.cart a').click(function() {
+    $('.sticky').removeClass('sticky');
+    $('.sticky2').removeClass('sticky2');
+    $('.preview').removeClass('preview');
+    $('.progress').css({'width':''});
     $('.bookMode').removeClass('bookMode');
     $('.aboutMode').removeClass('aboutMode');
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.cart').addClass('selected');
     $('.book, .posterNav, .about').removeClass('selected');
-    $('#lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
+    $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .page4,.posterNav, .cart, .hidden-page, .item-list').addClass('cartMode');
     $('.cartMode').attr('state', 'cartMode');
     if (state === 'mobile'){
       $('.show').removeClass('show');
@@ -140,13 +187,17 @@ $( document ).ready(function() {
   });
 
 ///Go to book page
-  $('.book').click(function() {
+  $('.book a').click(function() {
+    $('.sticky').removeClass('sticky');
+    $('.sticky2').removeClass('sticky2');
+    $('.preview').removeClass('preview');
+    $('.progress').css({'width':''});
     $('.page1,.page2,.main-nav').css({'transition':''});
     $('.book').addClass('selected');
     $('.cartMode').removeClass('cartMode');
     $('.aboutMode').removeClass('aboutMode');
     $('.posterNav , .cart, .about').removeClass('selected');
-    $('#lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
+    $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .page4,.posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
     $('.cartMode').attr('state', 'bookMode');
     if (state === 'mobile'){
       $('.show').removeClass('show');
@@ -156,13 +207,17 @@ $( document ).ready(function() {
   });
 
 ///
-$('.about').click(function() {
+$('.about a').click(function() {
+  $('.sticky').removeClass('sticky');
+  $('.sticky2').removeClass('sticky2');
+  $('.preview').removeClass('preview');
+  $('.progress').css({'width':''});
   $('.page1,.page2,.main-nav').css({'transition':''});
   $('.about').addClass('selected');
   $('.posterNav , .cart, .book').removeClass('selected');
   $('.cartMode').removeClass('cartMode');
   $('.bookMode').removeClass('bookMode');
-  $('#lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .posterNav, .cart, .hidden-page, .item-list').addClass('aboutMode');
+  $('body, #lazy-container, .imgsquare, .imgCon, .page1, .page2, .page3, .page4, .posterNav, .cart, .hidden-page, .item-list').addClass('aboutMode');
   $('.cartMode').attr('state', 'aboutMode');
   if (state === 'mobile'){
     $('.show').removeClass('show');
@@ -172,7 +227,11 @@ $('.about').click(function() {
 });
 
 ///Return to poster state
-  $('.posterNav').click(function() {
+  $('.posterNav a').click(function() {
+    $('.sticky').removeClass('sticky');
+    $('.sticky2').removeClass('sticky2');
+    $('.preview').removeClass('preview');
+    $('.progress').css({'width':''});
     $('.cartMode, .bookMode, .aboutMode').attr('state', '');
     $('.cartMode').removeClass('cartMode');
     $('.bookMode').removeClass('bookMode');
@@ -183,6 +242,7 @@ $('.about').click(function() {
       $('.show').removeClass('show');
       $('.hamburger').toggleClass('fa-bars fa-times')
     }
+    $('#lazy-container, body').scrollTop(0);
   });
 
 
