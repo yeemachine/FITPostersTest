@@ -25,7 +25,6 @@ $( document ).ready(function() {
 
  function showInfo(data, tabletop) {
    response = data
-   console.log(response[0]);
  };
 
 
