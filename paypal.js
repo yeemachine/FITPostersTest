@@ -8,7 +8,11 @@ paypal.Button.render({
         sandbox:    'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
         production: '<insert production client id>'
     },
-
+    style: {
+                     size:   'tiny', // tiny, small, medium
+                     color:  'blue', // orange, blue, silver
+                     shape:  'pill'    // pill, rect
+             },
     // Show the buyer a 'Pay Now' button in the checkout flow
     commit: true,
 
