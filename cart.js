@@ -49,16 +49,13 @@ $.getJSON("database.json", function(data) {
     subPrice = pricePer * unit
 
 
-
-    fraction = 1 - objectSelector.length/24
-    fontSize = 2 + 1 * fraction
-
     var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
       selectedItemscontainer.append(selectedItemsnode)
       totalPrice = totalPrice + subPrice
       taxed = ((totalPrice * 1.1154) + 20.0).toFixed(2);
       tax = ((totalPrice + 20) * 0.1154).toFixed(2);
       totalItems = totalItems + unit
+
   }
   console.log(totalPrice);
   if (objectSelector.length === 0){
