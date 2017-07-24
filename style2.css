@@ -1351,12 +1351,13 @@ h2{
   font-size: 2vh;
   font-size: 1.75vh;
   z-index: 5;
-
+  opacity: 0.5
 
 
 }
-.item-list .checkout.selected a{
+.item-list .checkout.selected{
   color: rgba(0,0,0,1);
+  opacity: 1;
   pointer-events: all;
   transition: .25s
 }
