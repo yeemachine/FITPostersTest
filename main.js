@@ -9,7 +9,7 @@ $(window).on('beforeunload', function() {
 var selectedItems = {}
 var state;
 var posterID;
-
+var paypalformat = []
 $( document ).ready(function() {
   // $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
   // $('.cartMode').attr('state', 'bookMode');

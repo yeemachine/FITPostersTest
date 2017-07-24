@@ -1,21 +1,22 @@
 function addCart(){
 
 $.getJSON("database.json", function(data) {
-  var imgTitle = data.posters[posterID].title
+  var name = data.posters[posterID].title
   if (imgTitle.length > 34){
     console.log('too long');
-    imgTitle = imgTitle.substring(0, 34) + '...';
+    name = imgTitle.substring(0, 34) + '...';
   }
   var price = data.posters[posterID].price
-  var qty = 1
+  var quantity = 1
   var selectedItemscontainer = $('<ul></ul>')
+  var currency = 'USD'
   if ($('.'+posterID).attr('status') != 'selected') {
     $('.'+posterID).addClass('selected');
     $('.'+posterID).attr('status', 'selected');
     $('#buy').attr('status','selected');
     $('#buy h3').html('Remove from Bag');
     $('#buy h3').addClass('selected');
-    selectedItems[posterID] = {imgTitle,price,qty};
+    selectedItems[posterID] = {name,quantity,price,currency};
     $('.'+posterID).addClass(imgTitle);
     console.log(Object.keys(selectedItems)[0]);
     $('.'+posterID+' .plus').html('');
@@ -38,13 +39,16 @@ $.getJSON("database.json", function(data) {
   totalItems = 0
   taxed = 0
 
+
   for (i = 0; i < objectSelector.length; i++) {
     objectSelector2 = objectSelector[i];
 
-    name = selectedItems[objectSelector2].imgTitle
+    name = selectedItems[objectSelector2].name
     pricePer = selectedItems[objectSelector2].price
-    unit = selectedItems[objectSelector2].qty
+    unit = selectedItems[objectSelector2].quantity
     subPrice = pricePer * unit
+
+
 
     fraction = 1 - objectSelector.length/24
     fontSize = 2 + 1 * fraction
@@ -78,6 +82,8 @@ $.getJSON("database.json", function(data) {
   $('li.'+posterID).css({'animation':'red 1s linear'});
   // $('li.'+posterID).addClass('hovered');
 
+paypalformat = Object.values(selectedItems)
 
+console.log(paypalformat);
 });
 }

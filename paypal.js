@@ -18,11 +18,12 @@ paypal.Button.render({
         // Make a call to the REST api to create the payment
         return actions.payment.create({
             payment: {
-                transactions: [
-                    {
-                        amount: { total: taxed, currency: 'USD' }
-                    }
-                ]
+              transactions: [{
+              		amount: { total: totalPrice, currency: 'USD' },
+              		item_list: {
+              			items: paypalformat
+              		}
+              	}]
             }
         });
     },
