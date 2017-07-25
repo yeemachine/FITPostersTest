@@ -166,7 +166,7 @@
             "title":"Marshall Arisman, Scott Stowell",
             "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra sit amet sapien sed interdum. Suspendisse potenti. In eleifend ex sapien, quis aliquet quam eleifend nec. Mauris vitae leo vitae nisi lacinia rhoncus sed eu orci. Nullam malesuada cursus nulla, sit amet iaculis mi fringilla ut. Nunc pretium orci ut augue varius, vel varius ex maximus. Duis ut semper orci, vel tempus justo. Nunc tempor mauris placerat feugiat scelerisque. Duis venenatis magna ut nisi ullamcorper, eget mollis erat accumsan.",
             "price":125,
-            "quantity":125,
+            "quantity":125
         },
         "poster24": {
             "url":"img/weboptimized/noshadow/poster24.png",
