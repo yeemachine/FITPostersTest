@@ -18,7 +18,7 @@ $('#lazy-container').on('scroll', function () {
         paddingHeight2 = $(window).height()*.1,
 
         height2 = header2.width(),
-        offset = height*2,
+        offset = height,
         offset2 = height2*.75,
 
         offsetA = $('.page3 .bookIntro:nth-child(1) h3 div:nth-child(1)').outerHeight()
@@ -44,7 +44,6 @@ $('#lazy-container').on('scroll', function () {
 
 
 
-        console.log(calc4);
         home.css({ 'opacity': calc });
         $('.page3 .bookIntro h3 div:nth-child(1)').css({ 'opacity': calc2 });
         $('.page3 .bookIntro h3 div:nth-child(2)').css({ 'opacity': calc2a });

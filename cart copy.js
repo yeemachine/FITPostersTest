@@ -1,13 +1,12 @@
 function addCart(){
 
 $.getJSON("database.json", function(data) {
-  var name = response[posterIDnum].title
-  if (name.length > 34){
+  var name = data.posters[posterID].title
+  if (imgTitle.length > 34){
     console.log('too long');
-    name = name.substring(0, 34) + '...';
+    name = imgTitle.substring(0, 34) + '...';
   }
-  var price = response[posterIDnum].price
-  var stock = response[posterIDnum].quantity
+  var price = data.posters[posterID].price
   var quantity = 1
   var selectedItemscontainer = $('<ul></ul>')
   var currency = 'USD'

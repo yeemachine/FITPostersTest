@@ -135,8 +135,8 @@ a{
 
 }
 #imgloader{
-  width: calc(100vw - 77.5vh);
-      height: calc((100vw - 77.5vh)* 1.41242938);
+  width: calc(100vw - 79.5vh);
+      height: calc((100vw - 79.5vh)* 1.41242938);
       margin: 0;
       margin-left: 7.5vh;
       margin-top: 12.5vh;
@@ -558,7 +558,7 @@ i.fa.hamburger{
     top: 0;
     left: calc(100vw - 70vh);
     transition: opacity .25s;
-    margin-top: 15vh;
+    margin-top: 0;
 }
 .page4 .bookIntro h3{
   margin-left: 0;
@@ -595,18 +595,18 @@ i.fa.hamburger{
 }
 .page4 .bookIntro:nth-child(1) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 65vh);
+  top: calc(100% - 55vh);
   left: calc(100vw - 70vh);
   opacity: 0
 }
 .page4 .bookIntro:nth-child(2) h2.sticky.sticky2{
   position: absolute;
-  top: calc(100% - 65vh);
+  top: calc(100% - 55vh);
   left: calc(100vw - 70vh);
   opacity: 0
 }
 .bookIntro{
-  width: calc(100vw - 20vh);
+  width: calc(100vw - 15vh);
   height: auto;
   display: block;
   margin-left: 7.5vh;
@@ -630,7 +630,7 @@ i.fa.hamburger{
 }
 .bookIntro h2.sticky{
   position: fixed;
-  top: 6.25vh;
+  top: 5.25vh;
   left: 7.5vh;
   /*mix-blend-mode: difference;
   color: white;*/
@@ -1227,6 +1227,8 @@ i.fa.hamburger{
 
 .selected .plusMin{
   border: 5px solid rgba(0,0,0,.7);
+
+  border: 5px solid rgba(0,0,0,0.7);
 }
 .selected.cartMode .quantity.hovered .plusMin{
   border: 5px dashed rgba(220,20,60,1);
@@ -1351,12 +1353,13 @@ h2{
   font-size: 2vh;
   font-size: 1.75vh;
   z-index: 5;
-
+  opacity: 0.5
 
 
 }
-.item-list .checkout.selected a{
+.item-list .checkout.selected{
   color: rgba(0,0,0,1);
+  opacity: 1;
   pointer-events: all;
   transition: .25s
 }

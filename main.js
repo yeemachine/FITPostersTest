@@ -9,10 +9,24 @@ $(window).on('beforeunload', function() {
 var selectedItems = {}
 var state;
 var posterID;
-
+var posterIDnum;
+var paypalformat = []
+var response = {}
 $( document ).ready(function() {
-  // $('#lazy-container, .imgsquare, .page1, .page2, .posterNav, .cart, .hidden-page, .item-list').addClass('bookMode');
-  // $('.cartMode').attr('state', 'bookMode');
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/17W4qTyN9c_vzsb1JxyGLnzCX6qQbichYeSqQQNXzmrM/edit?usp=sharing';
+  init()
+  function init() {
+   Tabletop.init( { key: public_spreadsheet_url,
+                    callback: showInfo,
+                    simpleSheet: true,
+                    parseNumbers:true } )
+ }
+
+ function showInfo(data, tabletop) {
+   response = data
+ };
+
 
 var identifier = window.location.hash;
 console.log(identifier);
@@ -94,15 +108,35 @@ if (identifier === "#bag"){
 
    $('.imgCon').click(function() {
      posterID = jQuery(this).find("img").attr('id');
-     console.log(posterID);
+     posterIDnum =  parseInt(posterID.replace(/[^0-9\.]+/g, ""));
+     console.log(posterIDnum);
 //////Poster view click
      if ($('.imgsquare').attr('state') != 'cartMode') {
 
-         $.getJSON("database.json", function(data) {
-             var imgURL = data.posters[posterID].url
-             var imgTitle = data.posters[posterID].title
-             var imgPara = data.posters[posterID].para
-                  if (state === 'mobile'){
+//////JSON File Fallback
+        //  $.getJSON("database.json", function(data) {
+        //      var imgURL = data.posters[posterID].url
+        //      var imgTitle = data.posters[posterID].title
+        //      var imgPara = data.posters[posterID].para
+        //           if (state === 'mobile'){
+        //           }
+        //           else{
+        //               var imgcontainer = document.getElementById('imgloader');
+        //               imgcontainer.style.backgroundImage = 'url('+imgURL+')';
+        //                $('.page1,.page2').addClass('slide');
+        //               $('.main-nav').css({'opacity':'0'});
+        //           }
+        //       $('#imgTitle').html(imgTitle);
+        //       $('#imgCopy').html(imgPara);
+        //  });
+
+
+        console.log(response[posterIDnum].url)
+        var imgURL = response[posterIDnum].url
+         var imgTitle = response[posterIDnum].title
+         var imgPara = response[posterIDnum].para
+
+         if (state === 'mobile'){
                   }
                   else{
                       var imgcontainer = document.getElementById('imgloader');
@@ -110,9 +144,10 @@ if (identifier === "#bag"){
                        $('.page1,.page2').addClass('slide');
                       $('.main-nav').css({'opacity':'0'});
                   }
-              $('#imgTitle').html(imgTitle);
-              $('#imgCopy').html(imgPara);
-         });
+                  $('#imgTitle').html(imgTitle);
+                       $('#imgCopy').html(imgPara);
+
+
         $('body').css({'overflow-y':'hidden'});
         $('.hidden-page').addClass('slide');
         $('body').attr('status', 'locked');
