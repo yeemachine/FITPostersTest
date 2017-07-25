@@ -44,7 +44,6 @@ $('#lazy-container').on('scroll', function () {
 
 
 
-        console.log(calc4);
         home.css({ 'opacity': calc });
         $('.page3 .bookIntro h3 div:nth-child(1)').css({ 'opacity': calc2 });
         $('.page3 .bookIntro h3 div:nth-child(2)').css({ 'opacity': calc2a });
