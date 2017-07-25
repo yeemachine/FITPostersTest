@@ -135,8 +135,8 @@ a{
 
 }
 #imgloader{
-  width: calc(100vw - 79.5vh);
-      height: calc((100vw - 79.5vh)* 1.41242938);
+  width: calc(100vw - 77.5vh);
+      height: calc((100vw - 77.5vh)* 1.41242938);
       margin: 0;
       margin-left: 7.5vh;
       margin-top: 12.5vh;

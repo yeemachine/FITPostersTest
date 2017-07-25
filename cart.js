@@ -8,7 +8,7 @@ function addCart(){
       }
     var price = response[posterIDnum].price
     var stock = response[posterIDnum].quantity
-    var quantity = 1
+    var quantity = 2
     var selectedItemscontainer = $('<ul></ul>')
     var currency = 'USD'
       if ($('.'+posterID).attr('status') != 'selected') {
@@ -52,7 +52,7 @@ function addCart(){
         subPrice = pricePer * unit
 
 
-      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+quantity+"</div><div> $"+pricePer+' </div></li>')
+      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+quantity+"</div><div> $"+pricePer*quantity+' </div></li>')
         selectedItemscontainer.append(selectedItemsnode)
         totalPrice = totalPrice + subPrice
         tax = +((totalPrice + shipping) * 0.1154).toFixed(2);
