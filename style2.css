@@ -1376,7 +1376,7 @@ h2{
   transition-delay: .25s ;
 }
 
-.item-list .checkout .paypalCover:after{
+/*.item-list .checkout .paypalCover:after{
   margin-top: 2px;
   content: '';
   display: block;
@@ -1385,9 +1385,7 @@ h2{
   height: 2px;
   background: crimson;
   transition: .25s
-
-
-}
+}*/
 /*.item-list .checkout:hover .paypalCover:after{
   transition: .25s;
   transition-delay: .25s ;
@@ -1800,6 +1798,14 @@ font-size: 36px;
     width: 50vw;
     justify-content: flex-end;
     color: transparent;
+  }
+  .item-list .checkout:after{
+    display: none;
+  }
+  .item-list .checkout:hover .paypalCover{
+    cursor: pointer;
+    color:black;
+    transition-delay: 0 ;
   }
   .item-list .checkout a{
     margin-left: 0;
