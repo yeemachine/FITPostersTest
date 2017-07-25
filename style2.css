@@ -1316,7 +1316,7 @@ h2{
   width: 10vh
 }
 .item-list ul li div:first-child{
-  width: 40vh;
+  width: 30vh;
   padding-left: 5vh;
   transition: padding .25s;
 }

@@ -52,7 +52,7 @@ function addCart(){
         subPrice = pricePer * unit
 
 
-      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div> $"+pricePer+' </div></li>')
+      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+quantity+"</div><div> $"+pricePer+' </div></li>')
         selectedItemscontainer.append(selectedItemsnode)
         totalPrice = totalPrice + subPrice
         tax = +((totalPrice + shipping) * 0.1154).toFixed(2);
