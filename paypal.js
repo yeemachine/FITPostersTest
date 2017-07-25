@@ -9,8 +9,8 @@ paypal.Button.render({
         production: '<insert production client id>'
     },
     style: {
-                     size:   'tiny', // tiny, small, medium
-                     color:  'blue', // orange, blue, silver
+                     size:   'responsive', // tiny, small, medium
+                     color:  'blue', // gold, blue, silver
                      shape:  'pill'    // pill, rect
              },
     // Show the buyer a 'Pay Now' button in the checkout flow
@@ -23,7 +23,7 @@ paypal.Button.render({
         return actions.payment.create({
             payment: {
               transactions: [{
-              		amount: { total: totalPrice, currency: 'USD' },
+              		amount: { total: taxed, currency: 'USD' },
               		item_list: {
               			items: paypalformat
               		}

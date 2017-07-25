@@ -1226,9 +1226,9 @@ i.fa.hamburger{
 }
 
 .selected .plusMin{
-  border: 5px solid rgba(0,0,0,.7);
+  border: 5px solid #009cde;
+  color:rgba(0,0,0,0);
 
-  border: 5px solid rgba(0,0,0,0.7);
 }
 .selected.cartMode .quantity.hovered .plusMin{
   border: 5px dashed rgba(220,20,60,1);
@@ -1492,6 +1492,9 @@ right: 12.5vh;
 }
 .item-list ul li.hovered:after {
   width: 1.5vh
+}
+.paypal-button .paypal-button-tag-content{
+  display: none;
 }
 @media screen and (max-width: 1000px) {
   * {  -webkit-backface-visibility:  hidden;
