@@ -1369,11 +1369,12 @@ h2{
   width: auto;
   position: relative;
 }
-.item-list .checkout a:hover{
+.item-list .checkout:hover .paypalCover{
   cursor: pointer;
   color:crimson
 }
-.item-list .checkout a:after{
+
+.item-list .checkout .paypalCover:after{
   margin-top: 2px;
   content: '';
   display: block;
@@ -1385,7 +1386,7 @@ h2{
 
 
 }
-.item-list .checkout a:hover:after{
+.item-list .checkout:hover .paypalCover:after{
   transition: .25s;
   transition-delay: .25s ;
   width: 100%;
