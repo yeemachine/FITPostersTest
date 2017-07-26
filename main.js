@@ -287,18 +287,18 @@ $('.about a').click(function() {
 for(let s = 0; s < 26; s ++) {
   $(document).on("mouseenter", '.imgCon.poster'+s, function(){
     $('li.poster'+s).addClass('hovered');
-    $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
-    $('.poster'+s+'.selected.cartMode.imgsquare').addClass('hovered');
+    // $('.poster'+s+'.selected.cartMode .quantity').addClass('hovered');
+    // $('.poster'+s+'.selected.cartMode.imgsquare').addClass('hovered');
   });
   $(document).on("mouseleave", '.imgCon.poster'+s, function(){
     $('li.poster'+s).removeClass('hovered');
-    $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
-    $('.poster'+s+'.cartMode.imgsquare').removeClass('hovered');
+    // $('.poster'+s+'.cartMode .quantity').removeClass('hovered');
+    // $('.poster'+s+'.cartMode.imgsquare').removeClass('hovered');
 
   });
 }
   $(document).on("mouseenter", '.plus', function(){
-    
+
   });
 
 ///hamburger menu
