@@ -12,32 +12,28 @@ var posterID;
 var posterIDnum;
 var paypalformat = []
 var response = {}
-var country;
 var shipping;
 $( document ).ready(function() {
-  var requestUrl = "http://ip-api.com/json";
 
-  $.ajax({
-    url: requestUrl,
-    type: 'GET',
-    success: function(json)
-    {
-      console.log("My country is: " + json.country);
-      country = json.country
-      if (json.country === "United States"){
-        shipping = 7.50
+  $.getJSON('https://ipapi.co/json/', function(data){
+    console.log(data.country_name)
+    if (data.country_name === "United States"){
+      shipping = 7.50
 
-      }else{
-        shipping = 14.50
+    }else{
+      shipping = 14.50
 
-      }
-        $('.shipping a').html('$' + shipping.toFixed(2))
-    },
-    error: function(err)
-    {
-      console.log("Request failed, error= " + err);
     }
-  });
+      $('.shipping a').html('$' + shipping.toFixed(2))
+  })
+
+
+
+
+
+
+
+
 
   var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/17W4qTyN9c_vzsb1JxyGLnzCX6qQbichYeSqQQNXzmrM/edit?usp=sharing';
   init()
