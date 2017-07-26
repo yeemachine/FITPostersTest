@@ -99,5 +99,6 @@ function plus(){
       });
       paypalformat.push(paypalShip, paypalTax)
       console.log(paypalformat);
+      $('.'+posterID+' .pricePer' ).html('$'+selectedItems[posterID].quantity * selectedItems[posterID].price);
     });
 }

@@ -1279,6 +1279,18 @@ i.fa.hamburger{
 .selected .plusMin{
   border: 5px solid black;
 }
+.pricePer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 87%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  font-size: 1.7vh;
+}
 .selected .minus,.selected .plus{
     width: 50%;
     height: 90%;

@@ -11,6 +11,17 @@ function minus(){
     var quantity = 1
     var selectedItemscontainer = $('<ul></ul>')
     var currency = 'USD'
+    if ($('.'+posterID).attr('status') === 'selected' &&  selectedItems[posterID].quantity <= 1) {
+      $('.'+posterID).removeClass('selected');
+        $('.'+posterID).attr('status', '');
+        $('#buy').attr('status','');
+        $('#buy h3').html('Add to Bag');
+        $('#buy h3').removeClass('selected');
+        delete selectedItems[posterID];
+        $('.'+posterID).removeClass(imgTitle);
+        $('.'+posterID+' .qtyNum').html('0');
+        $('.'+posterID+' .pricePer' ).html('');
+    }
     if ($('.'+posterID).attr('status') === 'selected' && 1 <= selectedItems[posterID].quantity) {
         quantity = selectedItems[posterID].quantity - 1;
         selectedItems[posterID] = {name,quantity,price,currency};
@@ -18,16 +29,7 @@ function minus(){
         $('.'+posterID+' .qtyNum').html(selectedItems[posterID].quantity);
       }
 
-      if ($('.'+posterID).attr('status') === 'selected' &&  selectedItems[posterID].quantity <= 1) {
-        $('.'+posterID).removeClass('selected');
-          $('.'+posterID).attr('status', '');
-          $('#buy').attr('status','');
-          $('#buy h3').html('Add to Bag');
-          $('#buy h3').removeClass('selected');
-          delete selectedItems[posterID];
-          $('.'+posterID).removeClass(imgTitle);
-          $('.'+posterID+' .qtyNum').html('0');
-      }
+
 
     objectSelector = Object.keys(selectedItems)
     totalPrice = 0
@@ -80,5 +82,6 @@ function minus(){
       paypalformat = Object.values(selectedItems)
       paypalformat.push(paypalShip, paypalTax)
       console.log(paypalformat);
+      $('.'+posterID+' .pricePer' ).html('$'+selectedItems[posterID].quantity * selectedItems[posterID].price);
     });
 }
