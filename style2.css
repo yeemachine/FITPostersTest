@@ -799,7 +799,7 @@ i.fa.hamburger{
 }
 #lazy-container>.page2.cartMode{
   height: initial;
-  width: calc(100vw - 68vh);
+  width: calc(100vw - 68vh + 7.5vh);
   padding-top: 6.25vh;
   padding-left: calc(7.5vh - 7.08vh);
   padding-bottom: calc(8.75vh - 2.08vh);
@@ -926,8 +926,8 @@ i.fa.hamburger{
 }
 .cartMode .imgCon{
   margin:7.08vh;
-  margin-right: calc(2.92vh - 2.5vh + 10px);
-  margin-bottom: calc(2.92vh - 2.5vh + 10px);
+  margin-right: calc(2.92vh - 2.5vh + 10px + 7.5vh);
+  margin-bottom: calc(2.92vh - 2.5vh + 10px + 7.5vh);
 }
 .cartMode .imgCon.hidden{
   display: block;
