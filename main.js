@@ -12,7 +12,7 @@ var posterID;
 var posterIDnum;
 var paypalformat = []
 var response = {}
-var shipping;
+var shipping = 7.50;
 $( document ).ready(function() {
 
   $.getJSON('https://ipapi.co/json/', function(data){

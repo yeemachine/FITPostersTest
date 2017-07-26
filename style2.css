@@ -1216,16 +1216,16 @@ i.fa.hamburger{
 
 .cartMode .quantity:hover{
     opacity: 1;
-    background-color: rgba(0,0,0,.7);
-    color:rgba(255,255,255,1);
+    background-color: rgba(255,255,255,.9);
+    color:rgba(0,0,0,1);
 }
 .selected.cartMode .quantity{
   opacity: 1;
-    background-color: rgba(0,0,0,.7);
-    color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,.9);
+  color:rgba(0,0,0,1);
 }
 .selected.cartMode .quantity:hover{
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(255,255,255,.9);
 }
 .minus, .plus{
 
