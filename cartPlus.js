@@ -92,7 +92,11 @@ function plus(){
       paypalShip = {name:'Shipping', quantity:1, price:shipping, currency:'USD'}
       paypalTax = {name:'Tax', quantity:1, price:tax, currency:'USD'}
 
-      paypalformat = Object.values(selectedItems)
+      // paypalformat = Object.values(selectedItems)
+
+      paypalformat = Object.keys(selectedItems).map(function(key) {
+          return selectedItems[key];
+      });
       paypalformat.push(paypalShip, paypalTax)
       console.log(paypalformat);
     });

@@ -926,8 +926,8 @@ i.fa.hamburger{
 }
 .cartMode .imgCon{
   margin:7.08vh;
-  margin-right: calc(2.92vh - 2.5vh + 10px + 7.5vh);
-  margin-bottom: calc(2.92vh - 2.5vh + 10px + 7.5vh);
+  margin-right: calc(2.92vh - 2.5vh + 10px + 5vh);
+  margin-bottom: calc(2.92vh - 2.5vh + 10px + 5vh);
 }
 .cartMode .imgCon.hidden{
   display: block;
@@ -1278,8 +1278,8 @@ i.fa.hamburger{
 }
 .selected .minus,.selected .plus{
     width: 50%;
-    height: 95%;
-    padding-bottom: 5%;
+    height: 90%;
+    padding-bottom: 10%;
     align-items: flex-end;
     opacity: .3;
     font-size: 4vh;
