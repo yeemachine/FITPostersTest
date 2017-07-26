@@ -645,6 +645,7 @@ i.fa.hamburger{
   position: fixed;
   top: 5.25vh;
   left: 7.5vh;
+  pointer-events: none;
   /*mix-blend-mode: difference;
   color: white;*/
 }
@@ -818,6 +819,8 @@ i.fa.hamburger{
 }
 .item-list{
   display: none;
+  pointer-events: none;
+
 }
 .item-list>ul>li{
   text-decoration: none;
