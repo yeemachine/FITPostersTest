@@ -12,7 +12,32 @@ var posterID;
 var posterIDnum;
 var paypalformat = []
 var response = {}
+var country;
+var shipping;
 $( document ).ready(function() {
+  var requestUrl = "http://ip-api.com/json";
+
+  $.ajax({
+    url: requestUrl,
+    type: 'GET',
+    success: function(json)
+    {
+      console.log("My country is: " + json.country);
+      country = json.country
+      if (json.country === "United States"){
+        shipping = 7.50
+
+      }else{
+        shipping = 14.50
+
+      }
+        $('.shipping a').html('$' + shipping.toFixed(2))
+    },
+    error: function(err)
+    {
+      console.log("Request failed, error= " + err);
+    }
+  });
 
   var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/17W4qTyN9c_vzsb1JxyGLnzCX6qQbichYeSqQQNXzmrM/edit?usp=sharing';
   init()

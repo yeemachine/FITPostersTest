@@ -49,7 +49,6 @@ function plus(){
     totalItems = 0
     tax = 0
     taxed = 0
-    shipping = 20
 
 
       for (i = 0; i < objectSelector.length; i++) {
@@ -64,7 +63,7 @@ function plus(){
       var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+unit+"</div><div> $"+pricePer*unit+' </div></li>')
         selectedItemscontainer.append(selectedItemsnode)
         totalPrice = totalPrice + subPrice
-        tax = +((totalPrice + shipping) * 0.1154).toFixed(2);
+        tax = +((totalPrice + shipping) * 0.08875).toFixed(2);
         taxed = +(totalPrice + shipping + tax).toFixed(2);
         totalItems = totalItems + unit
 
@@ -73,11 +72,11 @@ function plus(){
       if (objectSelector.length === 0){
         idleCart = $('<li class="idleCart"><div>You currently have no items selected.</div></li>')
         selectedItemscontainer.append(idleCart)
-        $('.tax').html("<div>Tax(11.54%):</div><a>$"+0+"</a>")
+        $('.tax').html("<div>Tax(8.875%):</div><a>$"+0+"</a>")
       }
       if (objectSelector.length > 0){
         $('.checkout, .tax, .shipping, .subtotal').addClass('selected')
-        $('.tax').html("<div>Tax(11.54%):</div><a>$"+tax+"</a>")
+        $('.tax').html("<div>Tax(8.875%):</div><a>$"+tax+"</a>")
          subTotal = $('<li class="subTotal selected"><div>Total:</div><div>$'+taxed+'</div></li>')
       }else{
         $('.checkout, .tax, .shipping, .subtotal').removeClass('selected')
