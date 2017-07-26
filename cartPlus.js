@@ -26,10 +26,15 @@ function plus(){
 
       }
       if (selectedItems[posterID].quantity === stock){
-        alert("We do not have any more of this item.")
+        $('#alert').html("We do not have any more of this item.");
+        $('#alert').css({"transform":"translate3d(0px, 0px, 0px)"});
+        setTimeout(function(){ $('#alert').css({"transform":""}); }, 3000);
+
       }
       if(selectedItems[posterID].quantity === 10){
-        alert("You've reached the maximum amount.")
+        $('#alert').html("You've reached the maximum quantity for this product.");
+        $('#alert').css({"transform":"translate3d(0px, 0px, 0px)"});
+        setTimeout(function(){ $('#alert').css({"transform":""}); }, 3000);
       }
 
       if ($('.'+posterID).attr('status') === 'selected' && 0 <= selectedItems[posterID].quantity && selectedItems[posterID].quantity < 10 && selectedItems[posterID].quantity < stock) {
