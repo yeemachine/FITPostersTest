@@ -167,17 +167,20 @@ if (identifier === "#bag"){
         var cartItem = '.'+posterID
         // addCart();
       }
-      if (jQuery(this).find("img").hasClass('cartMode')){
-        addCart();
-        console.log('hi');
-      }
+      // if (jQuery(this).find("img").hasClass('cartMode')){
+      //   addCart();
+      //   console.log('hi');
+      // }
    });
   //  $('.imgsquare').click(function() {
   //    addCart();
   //   });
-    // $('.minus').click(function() {
-    //   addCart();
-    //  });
+    $('.plus').click(function() {
+      plus();
+     });
+     $('.minus').click(function() {
+       minus();
+      });
 
 
    $('#buy').click(function() {
@@ -294,6 +297,10 @@ for(let s = 0; s < 26; s ++) {
 
   });
 }
+  $(document).on("mouseenter", '.plus', function(){
+    
+  });
+
 ///hamburger menu
 $('.hamburger').on("click", function(){
   $('.main-nav, .nav-item, .home, .hamburger').toggleClass('show')

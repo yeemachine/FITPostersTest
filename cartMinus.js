@@ -1,4 +1,4 @@
-function addCart(){
+function minus(){
 
   $.getJSON("database.json", function(data) {
     var name = response[posterIDnum].title
@@ -8,31 +8,25 @@ function addCart(){
       }
     var price = response[posterIDnum].price
     var stock = response[posterIDnum].quantity
-    var quantity = 0
+    var quantity = 1
     var selectedItemscontainer = $('<ul></ul>')
     var currency = 'USD'
-      if ($('.'+posterID).attr('status') != 'selected') {
-        $('.'+posterID).addClass('selected');
-        $('.'+posterID).attr('status', 'selected');
-        $('#buy').attr('status','selected');
-        $('#buy h3').html('Remove from Bag');
-        $('#buy h3').addClass('selected');
+    if ($('.'+posterID).attr('status') === 'selected' && 1 <= selectedItems[posterID].quantity) {
+        quantity = selectedItems[posterID].quantity - 1;
         selectedItems[posterID] = {name,quantity,price,currency};
-        $('.'+posterID).addClass(imgTitle);
-        console.log(Object.keys(selectedItems)[0]);
-        // $('.'+posterID+' .plus').html('');
-        $('.'+posterID+'.cartMode .quantity').removeClass('hovered');
+        console.log(selectedItems[posterID].quantity);
+        $('.'+posterID+' .qtyNum').html(selectedItems[posterID].quantity);
+      }
 
-
-      }else{
+      if ($('.'+posterID).attr('status') === 'selected' &&  selectedItems[posterID].quantity <= 1) {
         $('.'+posterID).removeClass('selected');
-        $('.'+posterID).attr('status', '');
-        $('#buy').attr('status','');
-        $('#buy h3').html('Add to Bag');
-        $('#buy h3').removeClass('selected');
-        delete selectedItems[posterID];
-        $('.'+posterID).removeClass(imgTitle);
-        // $('.'+posterID+' .plus').html('+');
+          $('.'+posterID).attr('status', '');
+          $('#buy').attr('status','');
+          $('#buy h3').html('Add to Bag');
+          $('#buy h3').removeClass('selected');
+          delete selectedItems[posterID];
+          $('.'+posterID).removeClass(imgTitle);
+          $('.'+posterID+' .qtyNum').html('0');
       }
 
     objectSelector = Object.keys(selectedItems)
@@ -52,7 +46,7 @@ function addCart(){
         subPrice = pricePer * unit
 
 
-      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+quantity+"</div><div> $"+pricePer*quantity+' </div></li>')
+      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+unit+"</div><div> $"+pricePer*unit+' </div></li>')
         selectedItemscontainer.append(selectedItemsnode)
         totalPrice = totalPrice + subPrice
         tax = +((totalPrice + shipping) * 0.1154).toFixed(2);
@@ -79,7 +73,7 @@ function addCart(){
       $('.cart a p').html("Bag ("+totalItems+")")
 
       $('.item-list section').html(selectedItemscontainer)
-      $('li.'+posterID).css({'animation':'red 1s linear'});
+      // $('li.'+posterID).css({'animation':'red 1s linear'});
 
       paypalShip = {name:'Shipping', quantity:1, price:shipping, currency:'USD'}
       paypalTax = {name:'Tax', quantity:1, price:tax, currency:'USD'}

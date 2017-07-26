@@ -1,4 +1,4 @@
-function addCart(){
+function plus(){
 
   $.getJSON("database.json", function(data) {
     var name = response[posterIDnum].title
@@ -24,15 +24,19 @@ function addCart(){
         $('.'+posterID+'.cartMode .quantity').removeClass('hovered');
 
 
-      }else{
-        $('.'+posterID).removeClass('selected');
-        $('.'+posterID).attr('status', '');
-        $('#buy').attr('status','');
-        $('#buy h3').html('Add to Bag');
-        $('#buy h3').removeClass('selected');
-        delete selectedItems[posterID];
-        $('.'+posterID).removeClass(imgTitle);
-        // $('.'+posterID+' .plus').html('+');
+      }
+      if (selectedItems[posterID].quantity === stock){
+        alert("We do not have any more of this item.")
+      }
+      if(selectedItems[posterID].quantity === 10){
+        alert("You've reached the maximum amount.")
+      }
+
+      if ($('.'+posterID).attr('status') === 'selected' && 0 <= selectedItems[posterID].quantity && selectedItems[posterID].quantity < 10 && selectedItems[posterID].quantity < stock) {
+        quantity = selectedItems[posterID].quantity + 1;
+        selectedItems[posterID] = {name,quantity,price,currency};
+        console.log(selectedItems[posterID].quantity);
+        $('.'+posterID+' .qtyNum').html(selectedItems[posterID].quantity);
       }
 
     objectSelector = Object.keys(selectedItems)
@@ -52,7 +56,7 @@ function addCart(){
         subPrice = pricePer * unit
 
 
-      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+quantity+"</div><div> $"+pricePer*quantity+' </div></li>')
+      var selectedItemsnode = $('<li class="listItem '+objectSelector2+'"><div>'+name+" </div><div>"+unit+"</div><div> $"+pricePer*unit+' </div></li>')
         selectedItemscontainer.append(selectedItemsnode)
         totalPrice = totalPrice + subPrice
         tax = +((totalPrice + shipping) * 0.1154).toFixed(2);
@@ -79,7 +83,7 @@ function addCart(){
       $('.cart a p').html("Bag ("+totalItems+")")
 
       $('.item-list section').html(selectedItemscontainer)
-      $('li.'+posterID).css({'animation':'red 1s linear'});
+      // $('li.'+posterID).css({'animation':'red 1s linear'});
 
       paypalShip = {name:'Shipping', quantity:1, price:shipping, currency:'USD'}
       paypalTax = {name:'Tax', quantity:1, price:tax, currency:'USD'}
