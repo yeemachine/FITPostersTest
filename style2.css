@@ -1362,13 +1362,13 @@ transform: scale3d(1.05,1.05,1.05);
   justify-content: center;
   align-items: center;
   top: 75vh;
-  font-size: 5vh;
+  font-size: 4vh;
   pointer-events: none;
   margin: 0;
 }
 .angle-up{
   transform: scale3d(1,-1,1);
-  font-size: 5vh;
+  font-size: 4vh;
 }
 
 h2{
@@ -1763,7 +1763,7 @@ justify-content: center;
 font-size: 36px;
   }
 
-  .imgCon .fa{
+  .imgCon .angle-down{
     display: none;
   }
   .posterblurb{
@@ -1814,6 +1814,9 @@ font-size: 36px;
   .button{
     width: 10vw;
     color:rgba(255,255,255,1);
+  }
+  .angle-up{
+    transform: scale3d(-1,1,1);
   }
 
   .imgsquare:hover{

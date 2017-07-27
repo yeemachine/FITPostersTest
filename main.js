@@ -96,8 +96,7 @@ if (identifier === "#bag"){
       state="mobile"
       $('.home').html('Poster Works for FIT');
       $('.cover div').html('Poster Works for FIT');
-      $('.button i').removeClass('fa-angle-up')
-      $('.button i').addClass('fa-angle-left')
+      $('.button p').html('&#9656;')
       $('.cover').css({'animation':'splash 3s forwards'});
       $('.cover div').css({'animation':'splash2 3s forwards'});
   }else{
@@ -109,13 +108,12 @@ if (identifier === "#bag"){
     if (isMobile.matches) {
         state="mobile"
         $('.home').html('Poster Works for FIT')
-        $('.button i').removeClass('fa-angle-up')
-        $('.button i').addClass('fa-angle-left')
+        $('.button p').html('&#9656;')
     }else{
       state="desktop"
       $('.home').html('Rocco Piscatello: Poster Works for FIT')
-      $('.button i').removeClass('fa-angle-left')
-      $('.button i').addClass('fa-angle-up')
+      $('.button p').html('&#9662;')
+
     }
     console.log(state);
   });
