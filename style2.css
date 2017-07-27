@@ -1250,8 +1250,15 @@ i.fa.hamburger{
 .minus{
   width: 0%;
   opacity: .3;
+}
+.minus p{
+  transform-origin: center;
+  transform: scale3d(-1,1,1);
+  padding-left: 20%;
 
-
+}
+.selected .plus P{
+  padding-left: 20%;
 }
 .plus{
     width: 100%;
@@ -1283,7 +1290,7 @@ i.fa.hamburger{
   position: absolute;
   top: 0;
   left: 0;
-  height: 87%;
+  height: 95%;
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -1293,9 +1300,8 @@ i.fa.hamburger{
 }
 .selected .minus,.selected .plus{
     width: 50%;
-    height: 90%;
-    padding-bottom: 10%;
-    align-items: flex-end;
+    height: 100%;
+    align-items: center;
     opacity: .3;
     font-size: 4vh;
 
@@ -1344,10 +1350,10 @@ transform: scale3d(1.05,1.05,1.05);
 .imgsquare.selected:hover{
   color:rgba(0,0,0,1);
 }
-.imgCon.cartMode .fa{
+.imgCon.cartMode .angle-down{
   display: none;
 }
-.imgCon .fa{
+.imgCon .angle-down{
   position: absolute;
   text-align: center;
   width: 100%;
@@ -1358,6 +1364,11 @@ transform: scale3d(1.05,1.05,1.05);
   top: 75vh;
   font-size: 5vh;
   pointer-events: none;
+  margin: 0;
+}
+.angle-up{
+  transform: scale3d(1,-1,1);
+  font-size: 5vh;
 }
 
 h2{

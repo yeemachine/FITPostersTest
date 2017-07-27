@@ -21,6 +21,8 @@ function minus(){
         $('.'+posterID).removeClass(imgTitle);
         $('.'+posterID+' .qtyNum').html('0');
         $('.'+posterID+' .pricePer' ).html('');
+        $('.'+posterID+' .plus p').html('+');
+
     }
     if ($('.'+posterID).attr('status') === 'selected' && 1 <= selectedItems[posterID].quantity) {
         quantity = selectedItems[posterID].quantity - 1;
@@ -75,6 +77,7 @@ function minus(){
 
       $('.item-list section').html(selectedItemscontainer)
       // $('li.'+posterID).css({'animation':'red 1s linear'});
+      $('li.'+posterID).addClass('hovered');
 
       paypalShip = {name:'Shipping', quantity:1, price:shipping, currency:'USD'}
       paypalTax = {name:'Tax', quantity:1, price:tax, currency:'USD'}

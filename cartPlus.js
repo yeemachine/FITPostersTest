@@ -20,7 +20,7 @@ function plus(){
         selectedItems[posterID] = {name,quantity,price,currency};
         $('.'+posterID).addClass(imgTitle);
         console.log(Object.keys(selectedItems)[0]);
-        // $('.'+posterID+' .plus').html('');
+        $('.'+posterID+' .plus p').html('&#9656;');
         $('.'+posterID+'.cartMode .quantity').removeClass('hovered');
 
 
@@ -88,6 +88,7 @@ function plus(){
 
       $('.item-list section').html(selectedItemscontainer)
       // $('li.'+posterID).css({'animation':'red 1s linear'});
+      $('li.'+posterID).addClass('hovered');
 
       paypalShip = {name:'Shipping', quantity:1, price:shipping, currency:'USD'}
       paypalTax = {name:'Tax', quantity:1, price:tax, currency:'USD'}

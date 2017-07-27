@@ -20,7 +20,7 @@ function addCart(){
         selectedItems[posterID] = {name,quantity,price,currency};
         $('.'+posterID).addClass(imgTitle);
         console.log(Object.keys(selectedItems)[0]);
-        // $('.'+posterID+' .plus').html('');
+        $('.'+posterID+' .plus p').html('&#9656;');
         $('.'+posterID+'.cartMode .quantity').removeClass('hovered');
 
 
@@ -32,7 +32,7 @@ function addCart(){
         $('#buy h3').removeClass('selected');
         delete selectedItems[posterID];
         $('.'+posterID).removeClass(imgTitle);
-        // $('.'+posterID+' .plus').html('+');
+        $('.'+posterID+' .plus p').html('+');
       }
 
     objectSelector = Object.keys(selectedItems)
@@ -80,7 +80,9 @@ function addCart(){
       $('.cart a p').html("Bag ("+totalItems+")")
 
       $('.item-list section').html(selectedItemscontainer)
-      $('li.'+posterID).css({'animation':'red 1s linear'});
+      // $('li.'+posterID).css({'animation':'red 1s linear'});
+      $('li.'+posterID).addClass('hovered');
+
 
       paypalShip = {name:'Shipping', quantity:1, price:shipping, currency:'USD'}
       paypalTax = {name:'Tax', quantity:1, price:tax, currency:'USD'}
